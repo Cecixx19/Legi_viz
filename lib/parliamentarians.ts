@@ -36,6 +36,7 @@ export interface Parlamentar {
   color:            string
   votoBandidagem:   VotoBandidagem
   projetosAprovados: number
+  cassado?:         string       // Reason if cassado/renunciado
 }
 
 export const TEMAS = [
@@ -456,6 +457,7 @@ interface RawDeputado {
   email?:           string
   sexo?:            string
   sexoAPI?:         string  // From SOAP API (masculino/feminino)
+  cassado?:         string  // Reason if cassado
   dataNascimento?:  string
   escolaridade?:    string
 }
@@ -487,6 +489,7 @@ function normalizeDeputado(raw: RawDeputado, tse?: TseDado): Parlamentar {
     : Math.floor(200 + lcg(id * 191 + 17)() * 9800)
 
   const alinhamento = calcAlinhamento(partido)
+  const cassado = raw.cassado
 
   return {
     id: `DEP-${id}`, idNumerico: id, nome, nomeUrna: urna,
@@ -504,6 +507,7 @@ function normalizeDeputado(raw: RawDeputado, tse?: TseDado): Parlamentar {
     color: partyColor(partido),
     votoBandidagem: pickVotoBandidagem(id, partido),
     projetosAprovados: Math.floor((id * 3 + 7) % 29) + 1,
+    cassado,
   }
 }
 

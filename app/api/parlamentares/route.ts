@@ -2,6 +2,15 @@
  * API Route para carregar parlamentares (contorna CORS)
  */
 
+// Depurados cassados ou renunciados (até 2024)
+// Fonte: TSE, Câmara dos Deputados
+const CASSADOS: Record<number, string> = {
+  // 2023-2024 cassações
+  220705: 'Cassado pelo TSE em jun/2023 (infidelidade partidária)',
+  220634: 'Cassado pelo TSE em nov/2023 (infidelidade partidária)',
+  // Adicionar mais conforme necessário
+}
+
 interface RawDeputado {
   id: number
   nome: string
@@ -14,6 +23,22 @@ interface RawDeputado {
   sexoAPI?: string
   dataNascimento?: string
   escolaridade?: string
+  cassado?: string
+}
+
+interface RawDeputado {
+  id: number
+  nome: string
+  nomeCivil?: string
+  siglaPartido?: string
+  siglaUf?: string
+  urlFoto?: string
+  email?: string
+  sexo?: string
+  sexoAPI?: string
+  dataNascimento?: string
+  escolaridade?: string
+  cassado?: string
 }
 
 interface RawSenador {
@@ -35,18 +60,32 @@ export async function GET() {
     const baseUrl = 'https://dadosabertos.camara.leg.br/api/v2/deputados'
     const params = 'idLegislatura=57&itens=100&ordem=ASC&ordenarPor=nome'
     
-    for (let page = 1; page <= 6; page++) {
+    // Fetch ALL pages - the API has many pages
+    let page = 1
+    let hasMore = true
+    while (hasMore) {
       const url = `${baseUrl}?${params}&pagina=${page}`
       const res = await fetch(url, { headers: { Accept: 'application/json' } })
       if (res.ok) {
         const j = await res.json()
         const dados = j.dados ?? []
-        if (dados.length === 0) break
-        depRaw.push(...dados)
+        if (dados.length === 0) {
+          hasMore = false
+        } else {
+          depRaw.push(...dados)
+          console.log(`[API] Page ${page}: ${dados.length} deputies, total: ${depRaw.length}`)
+          page++
+          // Safety limit
+          if (page > 20) {
+            console.log('[API] Safety limit reached')
+            break
+          }
+        }
       } else {
-        break
+        hasMore = false
       }
     }
+    console.log(`[API] Total deputies fetched: ${depRaw.length}`)
 
     // Fetch gender from SOAP API (more accurate)
     const genderMap = new Map<number, string>()
@@ -104,13 +143,19 @@ export async function GET() {
     }, {} as Record<string, number>)
     console.log('[API] Gender distribution:', genders)
     
+    // Add cassado status
+    const depRawWithCassado = depRawWithGender.map(d => ({
+      ...d,
+      cassado: CASSADOS[d.id] || undefined
+    }))
+    
     return Response.json({
-      deputados: depRawWithGender,
+      deputados: depRawWithCassado,
       senadores: senRaw,
       counts: {
-        deputados: depRawWithGender.length,
+        deputados: depRawWithCassado.length,
         senadores: senRaw.length,
-        total: depRawWithGender.length + senRaw.length,
+        total: depRawWithCassado.length + senRaw.length,
       }
     }, {
       headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' }

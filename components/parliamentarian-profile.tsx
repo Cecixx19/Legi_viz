@@ -567,6 +567,21 @@ function C0({p,votes,palette,pats}:{p:Parlamentar;votes:ReturnType<typeof mockVo
           }}>
             {p.nomeUrna}
           </h2>
+          {p.cassado && (
+            <div style={{
+              fontSize: 11,
+              fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+              fontWeight: 600,
+              color: '#DC2626',
+              marginTop: 4,
+              backgroundColor: '#FEE2E2',
+              padding: '4px 8px',
+              borderRadius: 4,
+              display: 'inline-block',
+            }}>
+              {p.cassado}
+            </div>
+          )}
         </div>
       </div>
 
