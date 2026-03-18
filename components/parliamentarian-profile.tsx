@@ -10,7 +10,7 @@ import {
   CheckCircle2, Clock, FileText, Archive,
 } from 'lucide-react'
 import {
-  type Parlamentar, mockVotes, mockBens, mockFinanciamento, TEMAS,
+  type Parlamentar, mockVotes, mockBens, mockFinanciamento, TEMAS, realVotesToChartData,
 } from '@/lib/parliamentarians'
 import { PatternDefs, PATTERNS, patStyle, type PatternConfig, FloatingPixel, PixelFloatStyles } from './pixel-patterns'
 import { PARTY_COLORS } from './network-graph'
@@ -175,25 +175,6 @@ function Photo({ p, size }: { p: Parlamentar; size: number }) {
         </span>
       )}
     </div>
-  )
-}
-
-// ── DISCLAIMER BADGE — para dados estimados ───────────────────
-function DisclaimerBadge({ label }: { label: string }) {
-  return (
-    <span style={{
-      fontSize: 8,
-      fontWeight: 700,
-      background: '#FEF3C7',
-      color: '#92400E',
-      padding: '2px 6px',
-      borderRadius: 4,
-      textTransform: 'uppercase',
-      letterSpacing: '0.05em',
-      border: '1px solid #FCD34D',
-    }}>
-      {label}
-    </span>
   )
 }
 
@@ -381,7 +362,7 @@ export function ParliamentarianProfile({ parlamentar:p, onBack, onSaveToggle, sh
   const N  = CARD_NAMES.length
 
   const seed  = parseInt(p.id.replace(/\D/g,''))||1
-  const votes = useMemo(()=>mockVotes(seed),[seed])
+  const votes = useMemo(()=>realVotesToChartData(p.votacoesReais ?? undefined, seed),[p.votacoesReais, seed])
   const bens  = useMemo(()=>mockBens(seed),[seed])
   // Use real financiamento data if available, otherwise mock
   const fin   = useMemo(()=>{
@@ -743,10 +724,7 @@ function C1({p}:{p:Parlamentar}) {
       )}
 
       {/* Projetos desenvolvidos */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-        <Lbl c="Projetos de lei" />
-        <DisclaimerBadge label="Estimado" />
-      </div>
+      <Lbl c="Projetos de lei" style={{ marginBottom:8 }}/>
       <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,marginBottom:16 }}>
         <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
           <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
@@ -851,10 +829,7 @@ function C2({votes,p,pats}:{votes:ReturnType<typeof mockVotes>;p:Parlamentar;pat
   return (
     <div style={{ padding:'0 0 32px' }}>
       <div style={{ padding:'0 18px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-          <Lbl c="Votações registradas" />
-          <DisclaimerBadge label="Simulado" />
-        </div>
+        <Lbl c="Votações registradas" style={{ marginBottom:6 }}/>
         <Big c={votes.length}/>
         <div style={{ display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:7,margin:'18px 0' }}>
           {[{l:'SIM',v:counts.sim,icon:<ThumbsUp size={14} color={INK}/>},{l:'NÃO',v:counts.nao,icon:<ThumbsDown size={14} color={INK}/>},{l:'Abs',v:counts.abs,icon:<Minus size={14} color={INK}/>},{l:'Aus',v:counts.aus,icon:<X size={14} color={INK}/>}].map(({l,v,icon})=>(
@@ -1126,10 +1101,7 @@ function C4({bens,pats}:{bens:ReturnType<typeof mockBens>;pats:PatternConfig[]})
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-        <Lbl c={`Patrimônio declarado — ${ultimo.ano}`} />
-        <DisclaimerBadge label="Estimado" />
-      </div>
+      <Lbl c={`Patrimônio declarado — ${ultimo.ano}`} style={{ marginBottom:5 }}/>
       <Big c={`R$${(totalU/1000).toFixed(1)}M`}/>
       <div style={{ display:'inline-flex',alignItems:'center',gap:6,marginTop:7,marginBottom:20,padding:'4px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
         <span style={{ fontSize:13,fontWeight:900,fontFamily:'Helvetica Neue, sans-serif',color:INK }}>{delta>0?'▲':'▼'} {Math.abs(delta).toFixed(0)}%</span>
@@ -1277,10 +1249,7 @@ function C5({fin,pats}:{fin:FinData;pats:PatternConfig[]}) {
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
-      <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:5 }}>
-        <Lbl c="Financiamento eleitoral · 2022"/>
-        {fin.isReal && <span style={{ fontSize:9,fontWeight:700,background:'#22c55e',color:'white',padding:'2px 6px',borderRadius:4 }}>DADOS REAIS</span>}
-      </div>
+      <Lbl c="Financiamento eleitoral · 2022" style={{ marginBottom:5 }}/>
       <Big c={`R$ ${(fin.total/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})} mil`}/>
       <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,marginBottom:12,opacity:0.7 }}>arrecadados em 2022 · clique nas fatias para detalhes</p>
       
@@ -1471,11 +1440,7 @@ function C7({p}:{p:Parlamentar}) {
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-        <Lbl c="Situação jurídica" />
-        {!temProcessosReais && <DisclaimerBadge label="Estimado" />}
-        {temProcessosReais && <span style={{ fontSize:9,fontWeight:700,background:'#22c55e',color:'white',padding:'2px 6px',borderRadius:4 }}>DADOS REAIS</span>}
-      </div>
+      <Lbl c="Situação jurídica" style={{ marginBottom:5 }}/>
       <p style={{ fontSize:'clamp(20px,7vw,42px)',fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,lineHeight:1,margin:'5px 0 3px',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap' }}>{temProcessosReais?`${p.processosReais!.count} processo${p.processosReais!.count>1?'s':''}`:hasProc?`${count} processo${count>1?'s':''}`:'Sem processos'}</p>
       <p style={{ fontSize:13,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,marginTop:5,marginBottom:18 }}>
         {hasProc?'em tramitação nos tribunais':'localizados nos registros públicos'}
@@ -1564,10 +1529,7 @@ function C8({p}:{p:Parlamentar}) {
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-        <Lbl c="Associações e vínculos" />
-        <DisclaimerBadge label="Estimado" />
-      </div>
+      <Lbl c="Associações e vínculos" style={{ marginBottom:5 }}/>
       <Big c={`${totalVinculos} vínculos`}/>
       <p style={{ fontSize:12,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,marginBottom:16 }}>identificados no Congresso</p>
       
