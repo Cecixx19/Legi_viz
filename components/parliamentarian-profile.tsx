@@ -17,7 +17,7 @@ import { PARTY_COLORS } from './network-graph'
 
 // ── CARD NAMES ────────────────────────────────────────────────
 const CARD_NAMES = [
-  'Quem é','Mandato','Associações','Temas','Patrimônio',
+  'Quem é','Mandato','Votações','Associações','Temas','Patrimônio',
   'Campanha','Jurídico','Notícias',
 ]
 
@@ -175,6 +175,25 @@ function Photo({ p, size }: { p: Parlamentar; size: number }) {
         </span>
       )}
     </div>
+  )
+}
+
+// ── DISCLAIMER BADGE — para dados estimados ───────────────────
+function DisclaimerBadge({ label }: { label: string }) {
+  return (
+    <span style={{
+      fontSize: 8,
+      fontWeight: 700,
+      background: '#FEF3C7',
+      color: '#92400E',
+      padding: '2px 6px',
+      borderRadius: 4,
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      border: '1px solid #FCD34D',
+    }}>
+      {label}
+    </span>
   )
 }
 
@@ -364,7 +383,23 @@ export function ParliamentarianProfile({ parlamentar:p, onBack, onSaveToggle, sh
   const seed  = parseInt(p.id.replace(/\D/g,''))||1
   const votes = useMemo(()=>mockVotes(seed),[seed])
   const bens  = useMemo(()=>mockBens(seed),[seed])
-  const fin   = useMemo(()=>mockFinanciamento(seed),[seed])
+  // Use real financiamento data if available, otherwise mock
+  const fin   = useMemo(()=>{
+    if (p.financiamento) {
+      return {
+        total: p.financiamento.receita_total,
+        pf: p.financiamento.receitas_pessoas,
+        pj: p.financiamento.receitas_juridicas,
+        partido: p.financiamento.receitas_partidos,
+        proprio: p.financiamento.recursos_proprios,
+        isReal: true,
+        receitas_outros: 0,
+        rendimentos: 0,
+        doadores: p.financiamento.doadores,
+      }
+    }
+    return mockFinanciamento(seed)
+  }, [p.financiamento, seed])
   // Shuffled patterns unique to this parliamentarian
   const shuffledPats = useMemo(()=>shufflePatterns(p.idNumerico),[p.idNumerico])
 
@@ -461,12 +496,13 @@ export function ParliamentarianProfile({ parlamentar:p, onBack, onSaveToggle, sh
           <div style={{ maxWidth:520, margin:'0 auto', width:'100%' }}>
           {currentIdx===0&&<C0 p={p} votes={votes} palette={palette} pats={shuffledPats}/>}
           {currentIdx===1&&<C1 p={p}/>}
-          {currentIdx===2&&<C8 p={p}/>}
-          {currentIdx===3&&<C3 p={p} votes={votes} pats={shuffledPats}/>}
-          {currentIdx===4&&<C4 bens={bens} pats={shuffledPats}/>}
-          {currentIdx===5&&<C5 fin={fin} pats={shuffledPats}/>}
-          {currentIdx===6&&<C7 p={p}/>}
-          {currentIdx===7&&<C9 p={p}/>}
+          {currentIdx===2&&<C2 p={p} votes={votes} pats={shuffledPats}/>}
+          {currentIdx===3&&<C8 p={p}/>}
+          {currentIdx===4&&<C3 p={p} votes={votes} pats={shuffledPats}/>}
+          {currentIdx===5&&<C4 bens={bens} pats={shuffledPats}/>}
+          {currentIdx===6&&<C5 fin={fin} pats={shuffledPats}/>}
+          {currentIdx===7&&<C7 p={p}/>}
+          {currentIdx===8&&<C9 p={p}/>}
           </div>
         </div>
 
@@ -707,7 +743,10 @@ function C1({p}:{p:Parlamentar}) {
       )}
 
       {/* Projetos desenvolvidos */}
-      <Lbl c="Projetos de lei" style={{ marginBottom:8 }}/>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+        <Lbl c="Projetos de lei" />
+        <DisclaimerBadge label="Estimado" />
+      </div>
       <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,marginBottom:16 }}>
         <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
           <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
@@ -812,7 +851,10 @@ function C2({votes,p,pats}:{votes:ReturnType<typeof mockVotes>;p:Parlamentar;pat
   return (
     <div style={{ padding:'0 0 32px' }}>
       <div style={{ padding:'0 18px' }}>
-        <Lbl c="Votações registradas" style={{ marginBottom:6 }}/>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+          <Lbl c="Votações registradas" />
+          <DisclaimerBadge label="Simulado" />
+        </div>
         <Big c={votes.length}/>
         <div style={{ display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:7,margin:'18px 0' }}>
           {[{l:'SIM',v:counts.sim,icon:<ThumbsUp size={14} color={INK}/>},{l:'NÃO',v:counts.nao,icon:<ThumbsDown size={14} color={INK}/>},{l:'Abs',v:counts.abs,icon:<Minus size={14} color={INK}/>},{l:'Aus',v:counts.aus,icon:<X size={14} color={INK}/>}].map(({l,v,icon})=>(
@@ -1084,7 +1126,10 @@ function C4({bens,pats}:{bens:ReturnType<typeof mockBens>;pats:PatternConfig[]})
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
-      <Lbl c={`Patrimônio declarado — ${ultimo.ano}`} style={{ marginBottom:5 }}/>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+        <Lbl c={`Patrimônio declarado — ${ultimo.ano}`} />
+        <DisclaimerBadge label="Estimado" />
+      </div>
       <Big c={`R$${(totalU/1000).toFixed(1)}M`}/>
       <div style={{ display:'inline-flex',alignItems:'center',gap:6,marginTop:7,marginBottom:20,padding:'4px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
         <span style={{ fontSize:13,fontWeight:900,fontFamily:'Helvetica Neue, sans-serif',color:INK }}>{delta>0?'▲':'▼'} {Math.abs(delta).toFixed(0)}%</span>
@@ -1176,21 +1221,51 @@ function C4({bens,pats}:{bens:ReturnType<typeof mockBens>;pats:PatternConfig[]})
 }
 
 // ─────────────────────────────────────────────────────────────
-// C5 — CAMPANHA (pie)
+// C5 — CAMPANHA (pie com detalhes e doadores)
 // ─────────────────────────────────────────────────────────────
-function C5({fin,pats}:{fin:ReturnType<typeof mockFinanciamento>;pats:PatternConfig[]}) {
-  const [active,setActive]=useState<number|null>(null)
+interface FinData {
+  total: number
+  pf: number
+  pj?: number
+  partido: number
+  proprio: number
+  isReal?: boolean
+  receitas_outros?: number
+  rendimentos?: number
+  doadores?: { nome: string; cpf_cnpj: string; tipo: string; valor: number }[]
+}
+
+interface DoadorInfo {
+  nome: string
+  cpf_cnpj: string
+  tipo: string
+  valor: number
+}
+
+function C5({fin,pats}:{fin:FinData;pats:PatternConfig[]}) {
+  const [expanded,setExpanded]=useState<number|null>(null)
+  const [showDoadores,setShowDoadores]=useState(false)
+  
   const slices=[
-    {label:'Fundo Partidário',val:fin.partido,pat:pats[0]},
-    {label:'Pessoas Físicas',val:fin.pf,pat:pats[1]},
-    {label:'Recursos Próprios',val:fin.proprio,pat:pats[2]},
-  ]
-  const total=slices.reduce((a,s)=>a+s.val,0)
+    {label:'Fundo Partidário',val:fin.partido,desc:'Recursos do FEFC e fundo partidário',pat:pats[0],tipo:'partido'},
+    {label:'Pessoas Físicas',val:fin.pf,desc:'Doações de pessoas físicas',pat:pats[1],tipo:'PF'},
+    {label:'Recursos Próprios',val:fin.proprio,desc:'Recursos do próprio candidato',pat:pats[2],tipo:'proprio'},
+    {label:'Outros',val:fin.receitas_outros||0,desc:'Doações de outros candidatos',pat:pats[3],tipo:'outros'},
+    {label:'Rendimentos',val:fin.rendimentos||0,desc:'Rendimentos de aplicações',pat:pats[4],tipo:'rendimentos'},
+  ].filter(s=>s.val>0)
+  
+  // Get the expanded slice data
+  const activeSliceData = expanded !== null ? slices[expanded] : null
+  
+  // Show all top donors when a slice is expanded
+  const doadoresMostrar = fin.doadores?.slice(0, 10) || []
+  
+  const total=slices.reduce((a,s)=>a+s.val,0)||1
   const R=95,cx=130,cy=130,SZ=260,INNER=52
   let cumAngle=-Math.PI/2
   const arcs=slices.map((s,i)=>{
     const pct=s.val/total; const start=cumAngle; const end=cumAngle+pct*2*Math.PI; cumAngle=end
-    const radius=active===i?R+8:R; const large=pct>0.5?1:0
+    const radius=expanded===i?R+12:R; const large=pct>0.5?1:0
     const x1=cx+radius*Math.cos(start),y1=cy+radius*Math.sin(start)
     const x2=cx+radius*Math.cos(end),y2=cy+radius*Math.sin(end)
     const xi1=cx+INNER*Math.cos(start),yi1=cy+INNER*Math.sin(start)
@@ -1198,36 +1273,81 @@ function C5({fin,pats}:{fin:ReturnType<typeof mockFinanciamento>;pats:PatternCon
     const d=[`M ${xi1} ${yi1}`,`L ${x1} ${y1}`,`A ${radius} ${radius} 0 ${large} 1 ${x2} ${y2}`,`L ${xi2} ${yi2}`,`A ${INNER} ${INNER} 0 ${large} 0 ${xi1} ${yi1}`,'Z'].join(' ')
     return {...s,d,pct,i}
   })
-  const activeSlice=active!==null?arcs[active]:null
+  const activeSlice=expanded!==null?arcs[expanded]:null
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
-      <Lbl c="Financiamento eleitoral · 2022" style={{ marginBottom:5 }}/>
-      <Big c={`R$${fin.total.toLocaleString('pt-BR')}`}/>
-      <p style={{ fontSize:12,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,marginBottom:18 }}>mil reais arrecadados</p>
+      <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:5 }}>
+        <Lbl c="Financiamento eleitoral · 2022"/>
+        {fin.isReal && <span style={{ fontSize:9,fontWeight:700,background:'#22c55e',color:'white',padding:'2px 6px',borderRadius:4 }}>DADOS REAIS</span>}
+      </div>
+      <Big c={`R$ ${(fin.total/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})} mil`}/>
+      <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,marginBottom:12,opacity:0.7 }}>arrecadados em 2022 · clique nas fatias para detalhes</p>
+      
       <div style={{ display:'flex',justifyContent:'center',marginBottom:14 }}>
         <svg width={SZ} height={SZ} style={{ overflow:'visible',maxWidth:'100%' }}>
           <PatternDefs/>
           {arcs.map(arc=>{const ap=lp(arc.pat);return(
             <g key={arc.label}>
-              <path d={arc.d} fill={`url(#${ap.id})`} style={{ ...patStyle(ap),cursor:'pointer' }} opacity={active!==null&&active!==arc.i?0.35:1} onClick={()=>setActive(active===arc.i?null:arc.i)} onMouseEnter={()=>setActive(arc.i)} onMouseLeave={()=>setActive(null)}/>
+              <path d={arc.d} fill={`url(#${ap.id})`} style={{ ...patStyle(ap),cursor:'pointer' }} opacity={expanded!==null&&expanded!==arc.i?0.35:1} onClick={()=>setExpanded(expanded===arc.i?null:arc.i)} onMouseEnter={()=>expanded===null&&setExpanded(arc.i)} onMouseLeave={()=>setExpanded(null)}/>
             </g>
           )})}
-          <text x={cx} y={cy-7} textAnchor="middle" fontSize={13} fontFamily="sans-serif" fontWeight={700} fill={INK}>{activeSlice?`${Math.round(activeSlice.pct*100)}%`:'100%'}</text>
-          <text x={cx} y={cy+10} textAnchor="middle" fontSize={10} fontFamily="sans-serif" fill={INK}>{activeSlice?activeSlice.label.split(' ')[0]:'total'}</text>
+          <text x={cx} y={cy-8} textAnchor="middle" fontSize={14} fontFamily="sans-serif" fontWeight={700} fill={INK}>
+            {activeSlice?`${Math.round(activeSlice.pct*100)}%`:`${Math.round(fin.total/1000)}k`}
+          </text>
+          <text x={cx} y={cy+8} textAnchor="middle" fontSize={9} fontFamily="sans-serif" fill={INK} opacity={0.7}>
+            {activeSlice?activeSlice.label.split(' ')[0]:'total'}
+          </text>
+          <text x={cx} y={cy+22} textAnchor="middle" fontSize={10} fontFamily="sans-serif" fontWeight={600} fill={INK}>
+            {activeSlice?`R$ ${(activeSlice.val/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})}k`:''}
+          </text>
         </svg>
       </div>
+      
       <div style={{ display:'flex',flexDirection:'column',gap:0 }}>
-        {arcs.map(arc=>{const ap=lp(arc.pat);return(
-          <div key={arc.label} style={{ display:'flex',alignItems:'center',gap:11,padding:'11px 0',borderBottom:'1px solid rgba(0,0,0,0.12)',cursor:'pointer' }} onClick={()=>setActive(active===arc.i?null:arc.i)}>
-            <svg width={28} height={28} style={{ borderRadius:4,overflow:'hidden',flexShrink:0 }}><PatternDefs/><rect width={28} height={28} fill={`url(#${ap.id})`} style={patStyle(ap)}/></svg>
-            <span style={{ flex:1,fontSize:13,fontWeight:600,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>{arc.label}</span>
-            <span style={{ fontSize:15,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>{Math.round(arc.pct*100)}%</span>
+        {arcs.map(arc=>{const ap=lp(arc.pat);const isActive=expanded===arc.i
+          return(
+          <div key={arc.label}>
+            <div style={{ display:'flex',alignItems:'center',gap:11,padding:'11px 0',borderBottom:'1px solid rgba(0,0,0,0.12)',cursor:'pointer',opacity:expanded!==null&&!isActive?0.5:1 }} onClick={()=>setExpanded(isActive?null:arc.i)}>
+              <svg width={28} height={28} style={{ borderRadius:4,overflow:'hidden',flexShrink:0 }}><PatternDefs/><rect width={28} height={28} fill={`url(#${ap.id})`} style={patStyle(ap)}/></svg>
+              <span style={{ flex:1,fontSize:13,fontWeight:600,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>{arc.label}</span>
+              <span style={{ fontSize:15,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>{Math.round(arc.pct*100)}%</span>
+            </div>
+            {isActive&&(
+              <div style={{ padding:'0 0 12px 39px',marginTop:-1,background:'rgba(0,0,0,0.03)' }}>
+                <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,lineHeight:1.5,margin:0 }}>
+                  <strong>R$ {(arc.val/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})} mil</strong> ({Math.round(arc.pct*100)}% do total)
+                </p>
+                <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,lineHeight:1.5,margin:'4px 0 0',opacity:0.7 }}>
+                  {arc.desc}
+                </p>
+                {fin.isReal && fin.doadores && fin.doadores.length > 0 && activeSliceData && (
+                  <div style={{ marginTop:8 }}>
+                    <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,fontWeight:600,margin:'0 0 4px' }}>
+                      Top Doadores {activeSliceData.label}:
+                    </p>
+                    {doadoresMostrar.map((d, idx) => (
+                      <div key={idx} style={{ display:'flex',justifyContent:'space-between',fontSize:10,color:INK,lineHeight:1.4 }}>
+                        <span style={{ maxWidth:'60%',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap' }}>
+                          {d.nome}
+                        </span>
+                        <span style={{ fontWeight:600,marginLeft:8 }}>
+                          R$ {(d.valor/1000).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})}k
+                        </span>
+                      </div>
+                    ))}
+                    {doadoresMostrar.length === 0 && (
+                      <p style={{ fontSize:9,color:INK,opacity:0.6,margin:0 }}>Sem doadores registrados</p>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )})}
       </div>
       <div style={{ marginTop:14,padding:'11px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
-        <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,lineHeight:1.5 }}>ADI 4.650/2015 · Doações de PJ a candidatos proibidas desde 2016.</p>
+        <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,lineHeight:1.5 }}>ADI 4.650/2015 · Doações de empresas a candidatos <strong>proibidas</strong> desde 2017.</p>
       </div>
     </div>
   )
@@ -1345,11 +1465,18 @@ const TIPOS_CRIME=[
 function C7({p}:{p:Parlamentar}) {
   const seed=parseInt(p.id.replace(/\D/g,''))||1
   const hasProc=seed%3===0; const count=hasProc?(seed%5)+1:0
+  
+  // Check if real process data exists
+  const temProcessosReais = p.processosReais && p.processosReais.count > 0
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
-      <Lbl c="Situação jurídica" style={{ marginBottom:5 }}/>
-      <p style={{ fontSize:'clamp(20px,7vw,42px)',fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,lineHeight:1,margin:'5px 0 3px',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap' }}>{hasProc?`${count} processo${count>1?'s':''}`:'Sem processos'}</p>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+        <Lbl c="Situação jurídica" />
+        {!temProcessosReais && <DisclaimerBadge label="Estimado" />}
+        {temProcessosReais && <span style={{ fontSize:9,fontWeight:700,background:'#22c55e',color:'white',padding:'2px 6px',borderRadius:4 }}>DADOS REAIS</span>}
+      </div>
+      <p style={{ fontSize:'clamp(20px,7vw,42px)',fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,lineHeight:1,margin:'5px 0 3px',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap' }}>{temProcessosReais?`${p.processosReais!.count} processo${p.processosReais!.count>1?'s':''}`:hasProc?`${count} processo${count>1?'s':''}`:'Sem processos'}</p>
       <p style={{ fontSize:13,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,marginTop:5,marginBottom:18 }}>
         {hasProc?'em tramitação nos tribunais':'localizados nos registros públicos'}
       </p>
@@ -1437,7 +1564,10 @@ function C8({p}:{p:Parlamentar}) {
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
-      <Lbl c="Associações e vínculos" style={{ marginBottom:5 }}/>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+        <Lbl c="Associações e vínculos" />
+        <DisclaimerBadge label="Estimado" />
+      </div>
       <Big c={`${totalVinculos} vínculos`}/>
       <p style={{ fontSize:12,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,marginBottom:16 }}>identificados no Congresso</p>
       

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Menu, X, Search, Users, Info, Accessibility, Github, ExternalLink } from 'lucide-react'
+import { Menu, X, Search, Users, Info, Accessibility, Github, ExternalLink, Shield } from 'lucide-react'
 
 interface AppHeaderProps {
   onOpenSearch?: () => void
@@ -144,6 +144,10 @@ export function AppFooter() {
           </div>
 
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
+            <a href="/privacidade" className="hover:text-white flex items-center gap-1">
+              <Shield size={14} />
+              Privacidade
+            </a>
             <a href="#" className="hover:text-white flex items-center gap-1">
               <Github size={14} />
               Código Aberto
@@ -163,6 +167,12 @@ export function AppFooter() {
           </p>
           <p className="mt-1">
             Stack: Next.js · TypeScript · D3.js · Recharts · Tailwind CSS
+          </p>
+          <p className="mt-2 text-green-500/70">
+            Conforme à LGPD (Lei 13.709/2018) · Sem rastreamento ·{' '}
+            <a href="/privacidade" className="underline hover:text-green-500">
+              Política de Privacidade
+            </a>
           </p>
         </div>
       </div>

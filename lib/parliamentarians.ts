@@ -39,6 +39,7 @@ export interface Parlamentar {
   color:            string
   votoBandidagem:   VotoBandidagem
   projetosAprovados: number
+  projetosEmTramitacao?: number  // Real data from Câmara API
   cotas:            number     // Number of expense records
   // Real expense data
   salario?:          number     // Monthly salary
@@ -58,6 +59,7 @@ export interface Parlamentar {
     receitas_partidos: number
     receitas_pessoas: number
     receitas_juridicas: number
+    doadores?: { nome: string; cpf_cnpj: string; tipo: string; valor: number }[]
   }
   processosReais?: { count: number; motivos: string[] }  // Real process data from TSE
   cassado?:         string       // Reason if cassado/renunciado
@@ -300,6 +302,7 @@ interface TseDado {
   raca:       string   // '' = não encontrado → usar seed
   genero:     string   // Homem | Mulher | Trans | NaoBinarie
   patrimonio: number   // R$ mil, 0 = não encontrado → usar seed
+  cpf?:       string   // CPF do candidato (opcional)
 }
 let _tseCache: Record<string, TseDado> | null = null
 let _proposicoesCache: Record<number, number> = {}
@@ -384,6 +387,28 @@ let _mandatosCache: Record<number, number> | null = null
 // Real process/cassacao data
 let _processosCache: Record<string, { count: number; motivos: string[] }> | null = null
 
+// Real tramitação data
+let _tramitacaoCache: Record<number, { total: number; tramitando: number }> | null = null
+
+async function loadProcessosCache(): Promise<Record<string, { count: number; motivos: string[] }>> {
+  if (_processosCache) return _processosCache
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const cacheBust = `?t=${Date.now()}`
+    const res = await fetch(`${base}/data/processos-real.json${cacheBust}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      console.debug('[Processos] Loaded', Object.keys(data).length, 'entries')
+      _processosCache = data
+      return data
+    }
+  } catch (e) {
+    console.error('[Processos Error]', e)
+  }
+  return {}
+}
+
 async function loadMandatosCache(): Promise<Record<number, number>> {
   if (_mandatosCache) return _mandatosCache
   
@@ -403,21 +428,21 @@ async function loadMandatosCache(): Promise<Record<number, number>> {
   return {}
 }
 
-async function loadProcessosCache(): Promise<Record<string, { count: number; motivos: string[] }>> {
-  if (_processosCache) return _processosCache
+async function loadTramitacaoCache(): Promise<Record<number, { total: number; tramitando: number }>> {
+  if (_tramitacaoCache) return _tramitacaoCache
   
   try {
     const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
-    const res = await fetch(`${base}/data/processos-real.json${cacheBust}`, { cache: 'no-store' })
+    const res = await fetch(`${base}/data/tramitacao-real.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
       const data = await res.json()
-      console.debug('[Processos] Loaded', Object.keys(data).length, 'entries')
-      _processosCache = data
+      console.debug('[Tramitação] Loaded', Object.keys(data).length, 'entries')
+      _tramitacaoCache = data
       return data
     }
   } catch (e) {
-    console.error('[Processos Error]', e)
+    console.error('[Tramitação Error]', e)
   }
   return {}
 }
@@ -473,6 +498,129 @@ async function loadPixDataCache(): Promise<PixData> {
     }
   } catch (e) {
     console.error('[Pix Data Error]', e)
+  }
+  return {}
+}
+
+// Cache para CPF dos deputados (mapeia nome normalizado → CPF)
+let _cpfCache: Record<string, string> | null = null
+
+async function loadCpfCache(): Promise<Record<string, string>> {
+  if (_cpfCache) return _cpfCache
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const cacheBust = `?t=${Date.now()}`
+    const res = await fetch(`${base}/data/tse-deputados-cpf-2022.json${cacheBust}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      // Index by multiple name variations for better matching
+      _cpfCache = {}
+      for (const [cpf, info] of Object.entries(data)) {
+        const dado = info as { nome?: string }
+        if (dado.nome) {
+          const upper = dado.nome.toUpperCase()
+          // Store exact name
+          _cpfCache[upper] = cpf
+          // Store without accents
+          const noAccents = upper.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+          if (noAccents !== upper) _cpfCache[noAccents] = cpf
+          // Store first name + last name
+          const parts = upper.split(' ')
+          if (parts.length >= 2) {
+            const firstLast = parts[0] + ' ' + parts[parts.length - 1]
+            _cpfCache[firstLast] = cpf
+          }
+        }
+      }
+      console.debug('[CPF] Loaded', Object.keys(_cpfCache!).length, 'entries')
+      return _cpfCache!
+    }
+  } catch (e) {
+    console.error('[CPF Error]', e)
+  }
+  return {}
+}
+
+interface FinanciamentoData {
+  [cpf: string]: {
+    nome_urna: string
+    nome_upper: string
+    receita_total: number
+    receitas_pf: number
+    receitas_partidos: number
+    receitas_proprias: number
+    receitas_outros: number
+    rendimentos: number
+  }
+}
+
+let _financiamentoCache: FinanciamentoData | null = null
+
+async function loadFinanciamentoCache(): Promise<FinanciamentoData> {
+  if (_financiamentoCache) return _financiamentoCache
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const cacheBust = `?t=${Date.now()}`
+    const res = await fetch(`${base}/data/financiamento-real.json${cacheBust}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      // Index by CPF and store nome for matching
+      for (const dep of data.deputados ?? []) {
+        if (dep.cpf) {
+          _financiamentoCache![dep.cpf] = {
+            nome_urna: dep.nome || dep.nome_urna || '',
+            nome_upper: (dep.nome || dep.nome_urna || '').toUpperCase(),
+            receita_total: dep.receita_total,
+            receitas_pf: dep.receitas_pf,
+            receitas_partidos: dep.receitas_partidos,
+            receitas_proprias: dep.receitas_proprias,
+            receitas_outros: dep.receitas_outros,
+            rendimentos: dep.rendimentos,
+          }
+        }
+      }
+      console.debug('[Financiamento] Loaded', Object.keys(_financiamentoCache!).length, 'deputies')
+      return _financiamentoCache!
+    }
+  } catch (e) {
+    console.error('[Financiamento Error]', e)
+  }
+  return {}
+}
+
+interface Doador {
+  nome: string
+  cpf_cnpj: string
+  tipo: 'PF' | 'PJ' | 'Partido' | 'Candidato' | 'Outros'
+  valor: number
+}
+
+interface DoadoresData {
+  [sq_prestador: string]: Doador[]
+}
+
+let _doadoresCache: DoadoresData | null = null
+
+async function loadDoadoresCache(): Promise<DoadoresData> {
+  if (_doadoresCache) return _doadoresCache
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const cacheBust = `?t=${Date.now()}`
+    const res = await fetch(`${base}/data/doadores-reais.json${cacheBust}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      // Index by sq_prestador
+      for (const cand of data.candidatos ?? []) {
+        _doadoresCache![cand.sq_prestador] = cand.doadores || []
+      }
+      console.debug('[Doadores] Loaded', Object.keys(_doadoresCache!).length, 'candidates with donors')
+      return _doadoresCache!
+    }
+  } catch (e) {
+    console.error('[Doadores Error]', e)
   }
   return {}
 }
@@ -862,7 +1010,7 @@ interface RawDeputado {
   escolaridade?:    string
 }
 
-function normalizeDeputado(raw: RawDeputado, tse?: TseDado, projetosAprovadosProp?: number, bancadasProp?: string[], cotasProp?: number, realExpenses?: RealExpenseData, pixData?: { pix: number, count: number } | null, temasReais?: number[] | null, presencaReal?: { presencas: number; sessoes: number; taxa: number } | null, mandatosReais?: number | null, processosReais?: { count: number; motivos: string[] } | null): Parlamentar {
+function normalizeDeputado(raw: RawDeputado, tse?: TseDado, projetosAprovadosProp?: number, bancadasProp?: string[], cotasProp?: number, realExpenses?: RealExpenseData, pixData?: { pix: number, count: number } | null, temasReais?: number[] | null, presencaReal?: { presencas: number; sessoes: number; taxa: number } | null, mandatosReais?: number | null, processosReais?: { count: number; motivos: string[] } | null, tramitacao?: { total: number; tramitando: number } | null, financiamentoData?: { receita_total: number; receitas_pf: number; receitas_partidos: number; receitas_proprias: number; receitas_outros: number; rendimentos: number } | null, doadoresData?: { nome: string; cpf_cnpj: string; tipo: string; valor: number }[] | null): Parlamentar {
   const id = raw.id
   
   // Handle both old API (with ultimoStatus) and new API (direct fields)
@@ -914,6 +1062,7 @@ function normalizeDeputado(raw: RawDeputado, tse?: TseDado, projetosAprovadosPro
     color: partyColor(partido),
     votoBandidagem: pickVotoBandidagem(id, partido),
     projetosAprovados: projetosAprovadosProp !== undefined ? projetosAprovadosProp : 0,
+    projetosEmTramitacao: tramitacao?.tramitando,
     cotas: cotasProp ?? 0,
     salario: realExpenses?.salario,
     cotasTotal: realExpenses?.cotasTotal,
@@ -925,6 +1074,16 @@ function normalizeDeputado(raw: RawDeputado, tse?: TseDado, projetosAprovadosPro
     ctxCotas: contextualizaCotas(cotasProp ?? 0),
     ctxFrequencia: presencaReal?.taxa ? contextualizaFrequencia(presencaReal.taxa) : undefined,
     processosReais: processosReais ?? undefined,
+    // Financiamento real (dados TSE)
+    financiamento: financiamentoData ? {
+      receita_total: financiamentoData.receita_total,
+      despesas_total: 0,
+      recursos_proprios: financiamentoData.receitas_proprias,
+      receitas_partidos: financiamentoData.receitas_partidos,
+      receitas_pessoas: financiamentoData.receitas_pf,
+      receitas_juridicas: financiamentoData.receitas_outros,
+      doadores: doadoresData ?? undefined,
+    } : undefined,
     cassado,
   }
 }
@@ -1131,9 +1290,28 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
   const processosMap = await loadProcessosCache()
   console.log('[Processos] Loaded', Object.keys(processosMap).length, 'entries with process data')
   
+  // ── Carregar dados reais de tramitação ──
+  const tramitacaoMap = await loadTramitacaoCache()
+  console.log('[Tramitação] Loaded', Object.keys(tramitacaoMap).length, 'entries with tramitação data')
+  
   // ── Carregar dados reais de Pix (transferências especiais) ──
   const pixDataMap = await loadPixDataCache()
   console.log('[Pix Data] Loaded', Object.keys(pixDataMap).length, 'deputies with Pix data')
+  
+  // ── Carregar dados reais de financiamento de campanha (TSE) ──
+  const financiamentoMap = await loadFinanciamentoCache()
+  console.log('[Financiamento] Loaded', Object.keys(financiamentoMap).length, 'deputies with financiamento data')
+  
+  // ── Carregar maiores doadores (TSE) ──
+  const doadoresMap = await loadDoadoresCache()
+  console.log('[Doadores] Loaded', Object.keys(doadoresMap).length, 'candidates with donor data')
+  
+  // ── Carregar CPF dos deputados (para match com financiamento) ──
+  const cpfMap = await loadCpfCache()
+  console.log('[CPF] Loaded', Object.keys(cpfMap).length, 'CPF entries')
+  
+  // Count financiamento matches for debugging
+  let financiamentoMatched = 0
   
   // Helper to find Pix data by deputy name
   function findPixByName(nomeUrna: string): { pix: number, count: number } | null {
@@ -1184,6 +1362,146 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
     for (const [procName, data] of Object.entries(processosMap)) {
       if (normalized.includes(procName) || procName.includes(normalized)) {
         return data
+      }
+    }
+    
+    return null
+  }
+  
+  // Build direct name -> financiamento lookup (faster than scanning all)
+  const financiamentoByName: Record<string, typeof financiamentoMap[string]> = {}
+  if (financiamentoMap) {
+    for (const [cpf, data] of Object.entries(financiamentoMap)) {
+      if (data.nome_upper) {
+        financiamentoByName[data.nome_upper] = data
+        // Also store without accents
+        const noAccents = data.nome_upper.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        if (noAccents !== data.nome_upper) {
+          financiamentoByName[noAccents] = data
+        }
+        // Store first+last name
+        const parts = data.nome_upper.split(' ')
+        if (parts.length >= 2) {
+          financiamentoByName[parts[0] + ' ' + parts[parts.length - 1]] = data
+        }
+      }
+    }
+  }
+  
+  // Build direct name -> doadores lookup
+  const doadoresByName: Record<string, typeof doadoresMap[string]> = {}
+  if (doadoresMap) {
+    // Note: doadores are keyed by sq_prestador, not CPF
+    // We need to match via financing names
+    for (const [cpf, data] of Object.entries(financiamentoMap)) {
+      if (data.nome_upper && doadoresMap[cpf]) {
+        const noAccents = data.nome_upper.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        doadoresByName[data.nome_upper] = doadoresMap[cpf]
+        doadoresByName[noAccents] = doadoresMap[cpf]
+        const parts = data.nome_upper.split(' ')
+        if (parts.length >= 2) {
+          doadoresByName[parts[0] + ' ' + parts[parts.length - 1]] = doadoresMap[cpf]
+        }
+      }
+    }
+  }
+  
+  // Helper to find financiamento data using CPF or direct name matching
+  function findFinanciamentoByName(nomeUrna: string): { receita_total: number; receitas_pf: number; receitas_partidos: number; receitas_proprias: number; receitas_outros: number; rendimentos: number } | null {
+    if (!nomeUrna) return null
+    
+    const upperName = nomeUrna.toUpperCase()
+    
+    // Clean titles from the name
+    const cleanedName = cleanTitle(nomeUrna).toUpperCase()
+    const cleanedNoAccents = cleanedName.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    const cleanedParts = cleanedName.split(' ')
+    const cleanedFirstLast = cleanedParts.length >= 2 ? cleanedParts[0] + ' ' + cleanedParts[cleanedParts.length - 1] : ''
+    
+    // Try direct name lookup first (faster)
+    const directLookups = [
+      upperName,
+      upperName.normalize('NFD').replace(/[\u0300-\u036f]/g, ''),
+      cleanedName,
+      cleanedNoAccents,
+      cleanedFirstLast,
+      cleanTitle(upperName),
+      cleanTitle(upperName).normalize('NFD').replace(/[\u0300-\u036f]/g, ''),
+    ]
+    
+    for (const lookup of directLookups) {
+      if (lookup && financiamentoByName[lookup]) {
+        const data = financiamentoByName[lookup]
+        return {
+          receita_total: data.receita_total,
+          receitas_pf: data.receitas_pf,
+          receitas_partidos: data.receitas_partidos,
+          receitas_proprias: data.receitas_proprias,
+          receitas_outros: data.receitas_outros,
+          rendimentos: data.rendimentos,
+        }
+      }
+    }
+    
+    // Fallback: Try CPF lookup
+    if (cpfMap) {
+      let cpf = cpfMap[upperName]
+      if (!cpf) cpf = cpfMap[upperName.normalize('NFD').replace(/[\u0300-\u036f]/g, '')]
+      if (!cpf && cleanedFirstLast) cpf = cpfMap[cleanedFirstLast]
+      
+      if (cpf && financiamentoMap?.[cpf]) {
+        const data = financiamentoMap[cpf]
+        return {
+          receita_total: data.receita_total,
+          receitas_pf: data.receitas_pf,
+          receitas_partidos: data.receitas_partidos,
+          receitas_proprias: data.receitas_proprias,
+          receitas_outros: data.receitas_outros,
+          rendimentos: data.rendimentos,
+        }
+      }
+    }
+    
+    return null
+  }
+  
+  // Helper to find donors using CPF or direct name matching
+  function findDoadoresByName(nomeUrna: string): { nome: string; cpf_cnpj: string; tipo: string; valor: number }[] | null {
+    if (!nomeUrna) return null
+    
+    const upperName = nomeUrna.toUpperCase()
+    
+    // Clean titles from the name
+    const cleanedName = cleanTitle(nomeUrna).toUpperCase()
+    const cleanedNoAccents = cleanedName.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    const cleanedParts = cleanedName.split(' ')
+    const cleanedFirstLast = cleanedParts.length >= 2 ? cleanedParts[0] + ' ' + cleanedParts[cleanedParts.length - 1] : ''
+    
+    // Try direct name lookup first
+    const directLookups = [
+      upperName,
+      upperName.normalize('NFD').replace(/[\u0300-\u036f]/g, ''),
+      cleanedName,
+      cleanedNoAccents,
+      cleanedFirstLast,
+      cleanTitle(upperName),
+      cleanTitle(upperName).normalize('NFD').replace(/[\u0300-\u036f]/g, ''),
+    ]
+    
+    for (const lookup of directLookups) {
+      if (lookup && doadoresByName[lookup]) {
+        return doadoresByName[lookup]
+      }
+    }
+    
+    // Fallback: Try CPF lookup
+    if (cpfMap) {
+      let cpf = cpfMap[upperName]
+      if (!cpf) cpf = cpfMap[upperName.normalize('NFD').replace(/[\u0300-\u036f]/g, '')]
+      if (!cpf && cleanedFirstLast) cpf = cpfMap[cleanedFirstLast]
+      
+      if (cpf && doadoresMap?.[cpf]) {
+        return doadoresMap[cpf]
       }
     }
     
@@ -1325,7 +1643,10 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
       const pixData = findPixByName(urna)
       const temasReais = temasReaisMap[raw.id]
       const presenca = presencaMap[raw.id]
-      return normalizeDeputado(raw, lookupTse(urna), projetos, bancadas, cotas, realExpenses, pixData, temasReais, presenca, mandatosMap[raw.id], findProcessosByName(urna))
+      const financiamento = findFinanciamentoByName(urna)
+      const doadores = findDoadoresByName(urna)
+      if (financiamento) financiamentoMatched++
+      return normalizeDeputado(raw, lookupTse(urna), projetos, bancadas, cotas, realExpenses, pixData, temasReais, presenca, mandatosMap[raw.id], findProcessosByName(urna), tramitacaoMap[raw.id], financiamento, doadores)
     }),
     ...senRaw.map(raw => {
       const ip = raw.IdentificacaoParlamentar ?? {}
@@ -1333,6 +1654,8 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
       return normalizeSenador(raw, lookupTse(urna))
     }),
   ]
+  
+  console.log('[Financiamento] Matched', financiamentoMatched, 'of', depRaw.length, 'deputies (', Math.round(financiamentoMatched/depRaw.length*100) + '% )')
   
   // Debug: Find likely women by name
   const femaleNames = ['MARIA', 'ANA', 'JANDIRA', 'LÍDICE', 'ALICE', 'BENEDITA', 'ELCIONE', 'LUIZA', 'SORAIA', 'CLAUDIA', 'ROSÂNGELA', 'MÁRCIA', 'ALINE', 'ADRIANA', 'CRISTINA', 'TATIANA', 'VANESSA', 'PATRÍCIA', 'RAQUEL', 'DANIELA', 'MÔNICA', 'FLÁVIA', 'GILMA', 'IRACEMA', 'JUREMA', 'LÚCIA', 'NEUSA', 'REGINA', 'SANDRA', 'TEREZA', 'VÂNIA', 'ZILDA', 'APARECIDA', 'BERNADETE', 'CLEIDE', 'DELMA', 'EUNICE', 'HELENA', 'IVONE', 'JOANA', 'LENA', 'MARLENE', 'NILVA', 'ODETE', 'QUITÉRIA', 'ROSIMERE', 'TELMA', 'YOLANDA', 'ZULEICA', 'ALCIDES', 'ALMERINDA', 'AURORA', 'BERTA', 'CELESTE', 'DEBORA', 'ELENA', 'FÁTIMA', 'GERALDA', 'HELOÍSA', 'ISABEL', 'JOELINE', 'KÁTIA', 'LÚDERS', 'MAGDA', 'NADIR', 'OLÍMPIA', 'PAMELA', 'QUERUBINA', 'RUTE', 'SILENE', 'TALITA', 'URSULA', 'VIVIANE', 'WILMA', 'ZENI', 'ANGELA', 'BEATRIZ', 'CARLA', 'DORA', 'ESTER', 'FERNANDA', 'GLÓRIA', 'HILDA', 'ISABELA', 'JÚLIA', 'KARINA', 'LAURA', 'MARIANA', 'NATÁLIA', 'PATRÍCIA', 'RENATA', 'SARAH', 'TÂNIA', 'VERA', 'WANDA']
@@ -1455,6 +1778,9 @@ export function mockFinanciamento(seed: number) {
     pj:      Math.round(total * (0.3 + rng() * 0.4)),
     partido: Math.round(total * (0.15 + rng() * 0.2)),
     proprio: Math.round(total * 0.05),
+    isReal: false,
+    receitas_outros: 0,
+    rendimentos: 0,
   }
 }
 
