@@ -12,6 +12,152 @@ import {
 import {
   type Parlamentar, mockVotes, TEMAS, realVotesToChartData,
 } from '@/lib/parliamentarians'
+
+// ── REAL LIDERANCAS DATA ──────────────────────────────────────
+type LiderancaData = {
+  tipo: 'Mesa' | 'Partido' | 'Comissão' | 'Bloco'
+  cargo: string
+  orgao?: string
+  siglaOrgao?: string
+  dataInicio?: string
+}
+
+let _liderancasCache: Record<number, LiderancaData[]> | null = null
+
+async function loadLiderancasData(): Promise<Record<number, LiderancaData[]>> {
+  if (_liderancasCache) return _liderancasCache
+  _liderancasCache = {}
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : ''
+    const res = await fetch(`${base}/data/liderancas-real.json?t=${Date.now()}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      _liderancasCache = data.liderancasByDeputy || {}
+    }
+  } catch (e) {
+    console.error('[Lideranças Error]', e)
+  }
+  return _liderancasCache || {}
+}
+
+// ── REAL COMISSÕES DATA ──────────────────────────────────────
+type ComissaoData = {
+  id: number
+  sigla: string
+  nome: string
+  cargo: string
+}
+
+let _comissoesCache: Record<number, ComissaoData[]> | null = null
+
+async function loadComissoesData(): Promise<Record<number, ComissaoData[]>> {
+  if (_comissoesCache) return _comissoesCache
+  _comissoesCache = {}
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : ''
+    const res = await fetch(`${base}/data/comissoes-real.json?t=${Date.now()}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      _comissoesCache = data.comissoesByDeputy || {}
+    }
+  } catch (e) {
+    console.error('[Comissões Error]', e)
+  }
+  return _comissoesCache || {}
+}
+
+// ── REAL PROJETOS DATA ──────────────────────────────────────
+type ProjetoData = {
+  total: number
+  PL: number
+  PEC: number
+  PLP: number
+  MPV: number
+  REQ: number
+  outros: number
+}
+
+let _projetosCache: Record<number, ProjetoData> | null = null
+
+async function loadProjetosData(): Promise<Record<number, ProjetoData>> {
+  if (_projetosCache) return _projetosCache
+  _projetosCache = {}
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : ''
+    const res = await fetch(`${base}/data/projetos-real.json?t=${Date.now()}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      _projetosCache = data.projetosByDeputy || {}
+    }
+  } catch (e) {
+    console.error('[Projetos Error]', e)
+  }
+  return _projetosCache || {}
+}
+
+// ── SENADOR VOTING DATA ──────────────────────────────────────
+type SenatorVoto = {
+  data: string
+  sigla: string
+  numero: number
+  ano: number
+  codigo: number
+  ementa: string
+  descricao: string
+  voto: string
+  resultado: string
+}
+
+type SenatorVotosData = {
+  codigo: number
+  nome: string
+  votou: number
+  naoVotou: number
+  primeiroVoto: string
+  ultimoVoto: string
+  votos: SenatorVoto[]
+}
+
+let _senadorVotosCache: Record<number, SenatorVotosData> | null = null
+
+// Proposition type legend
+const TIPO_PROPOSICAO = {
+  PL: 'Projeto de Lei',
+  PEC: 'Proposta de Emenda à Constituição',
+  PLP: 'Projeto de Lei Complementar',
+  MPV: 'Medida Provisória',
+  REQ: 'Requerimento',
+  MSF: 'Mensagem',
+  OFS: 'Ofício',
+  PDL: 'Projeto de Decreto Legislativo',
+  PRC: 'Proposta de Resolução',
+} as const
+
+// Vote type legend
+const TIPO_VOTO = {
+  Votou: 'Votou (presente)',
+  'Não Votou': 'Ausente',
+  'P-NRV': 'Presente - Não registrou voto',
+} as const
+
+async function loadSenadorVotosData(): Promise<Record<number, SenatorVotosData>> {
+  if (_senadorVotosCache) return _senadorVotosCache
+  _senadorVotosCache = {}
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : ''
+    const res = await fetch(`${base}/data/senadores-votacoes-detail.json?t=${Date.now()}`, { cache: 'no-store' })
+    if (res.ok) {
+      _senadorVotosCache = await res.json()
+    }
+  } catch (e) {
+    console.error('[Senador Votos Error]', e)
+  }
+  return _senadorVotosCache || {}
+}
 import { PatternDefs, PATTERNS, patStyle, type PatternConfig, FloatingPixel, PixelFloatStyles } from './pixel-patterns'
 import { PARTY_COLORS } from './network-graph'
 
@@ -362,7 +508,34 @@ export function ParliamentarianProfile({ parlamentar:p, onBack, onSaveToggle, sh
   const N  = CARD_NAMES.length
 
   const seed  = parseInt(p.id.replace(/\D/g,''))||1
-  const votes = useMemo(()=>realVotesToChartData(p.votacoesReais ?? undefined, seed),[p.votacoesReais, seed])
+  const [votes, setVotes] = useState<ReturnType<typeof mockVotes>>([])
+  const [votesLoaded, setVotesLoaded] = useState(false)
+  const [liderancas, setLiderancas] = useState<{ tipo: string; nome: string }[]>([])
+  
+  useEffect(() => {
+    let mounted = true
+    const loadVotes = async () => {
+      const data = await realVotesToChartData(p.votacoesReais ?? undefined, seed)
+      if (mounted) {
+        setVotes(data)
+        setVotesLoaded(true)
+      }
+    }
+    loadVotes()
+    return () => { mounted = false }
+  }, [p.votacoesReais, seed])
+  
+  useEffect(() => {
+    let mounted = true
+    const loadLiderancas = async () => {
+      const data = await calcLiderancasAsync(p)
+      if (mounted) {
+        setLiderancas(data)
+      }
+    }
+    loadLiderancas()
+    return () => { mounted = false }
+  }, [p.id])
   const bens  = useMemo(()=>{
     if (p.patrimonio > 0) {
       return [
@@ -484,10 +657,10 @@ export function ParliamentarianProfile({ parlamentar:p, onBack, onSaveToggle, sh
           }}>
           {/* Inner centering wrapper — cards max 520px, items left-aligned inside */}
           <div style={{ maxWidth:520, margin:'0 auto', width:'100%' }}>
-          {currentIdx===0&&<C0 p={p} votes={votes} palette={palette} pats={shuffledPats}/>}
-          {currentIdx===1&&<C1 p={p}/>}
+          {currentIdx===0&&<C0 p={p} votes={votes} liderancas={liderancas} palette={palette} pats={shuffledPats}/>}
+          {currentIdx===1&&<C1 p={p} liderancas={liderancas}/>}
           {currentIdx===2&&<C2 p={p} votes={votes} pats={shuffledPats}/>}
-          {currentIdx===3&&<C8 p={p}/>}
+          {currentIdx===3&&<C8 p={p} liderancas={liderancas}/>}
           {currentIdx===4&&<C3 p={p} votes={votes} pats={shuffledPats}/>}
           {currentIdx===5&&<C4 bens={bens} pats={shuffledPats}/>}
           {currentIdx===6&&<C5 fin={fin} pats={shuffledPats}/>}
@@ -515,69 +688,64 @@ export function ParliamentarianProfile({ parlamentar:p, onBack, onSaveToggle, sh
   )
 }
 
-// ── HELPER: calcula lideranças e projetos mock ────────────────
-function calcLiderancas(p: Parlamentar) {
-  const seed = parseInt(p.id.replace(/\D/g,''))||1
-  const rng = (n: number) => ((seed*n*7193)%1000)/1000
+// ── HELPER: calcula lideranças com dados reais ──────────────
+async function calcLiderancasAsync(p: Parlamentar): Promise<{ tipo: string; nome: string }[]> {
+  const idNumerico = parseInt(p.id.replace(/\D/g,'')) || 0
   
-  const liderancas: { tipo: string; nome: string }[] = []
+  const liderancasReais = await loadLiderancasData()
+  const realLids = liderancasReais[idNumerico]
   
-  // Liderança de partido (5% chance)
-  if (rng(1) < 0.05) liderancas.push({ tipo: 'Líder do Partido', nome: p.partido })
-  // Vice-líder de partido (10% chance)
-  else if (rng(2) < 0.10) liderancas.push({ tipo: 'Vice-líder', nome: p.partido })
-  
-  // Líder de bancada (3% chance se tiver bancada)
-  if (p.bancada !== 'Nenhuma' && rng(3) < 0.03) liderancas.push({ tipo: 'Líder de Bancada', nome: `Bancada ${p.bancada}` })
-  
-  // Presidente de comissão (3% chance)
-  if (rng(4) < 0.03) {
-    const comissoes = ['Constituição e Justiça', 'Finanças', 'Educação', 'Saúde', 'Meio Ambiente']
-    liderancas.push({ tipo: 'Presidente', nome: `Comissão de ${comissoes[Math.floor(rng(5)*comissoes.length)]}` })
+  if (realLids && realLids.length > 0) {
+    return realLids.map(l => ({
+      tipo: l.cargo,
+      nome: l.siglaOrgao || l.orgao || ''
+    }))
   }
   
-  // Presidente da casa (0.3% - apenas 1 por casa)
-  if (rng(6) < 0.003) {
-    liderancas.push({ tipo: p.tipo === 'SENADOR' ? 'Presidente do Senado' : 'Presidente da Câmara', nome: 'Congresso Nacional' })
-  }
-  
-  // 1° ou 2° secretário da Mesa (1% chance)
-  if (rng(7) < 0.01) {
-    liderancas.push({ tipo: `${Math.floor(rng(8)*2)+1}º Secretário`, nome: 'Mesa Diretora' })
-  }
-  
-  return liderancas
+  return []
 }
 
-function calcProjetos(p: Parlamentar) {
-  const seed = parseInt(p.id.replace(/\D/g,''))||1
-  const rng = (n: number) => ((seed*n*6571)%1000)/1000
+async function calcProjetosAsync(p: Parlamentar): Promise<{ total: number; PL: number; PEC: number; PLP: number; outros: number }> {
+  const idNumerico = parseInt(p.id.replace(/\D/g,'')) || 0
   
-  const desenvolvidos = Math.floor(5 + rng(1) * 45)
-  const aprovados = Math.floor(rng(2) * desenvolvidos * 0.35)
-  const emTramitacao = Math.floor(rng(3) * (desenvolvidos - aprovados) * 0.5)
-  const arquivados = desenvolvidos - aprovados - emTramitacao
+  // For senators, use projetosAprovados from the Parlamentar object
+  if (p.tipo === 'SENADOR') {
+    const total = p.projetosAprovados || 0
+    // Senators don't have breakdown by type, so just show total
+    return { total, PL: total, PEC: 0, PLP: 0, outros: 0 }
+  }
   
-  return { desenvolvidos, aprovados, emTramitacao, arquivados }
+  const projetosReais = await loadProjetosData()
+  const realProjetos = projetosReais[idNumerico]
+  
+  if (realProjetos) {
+    return {
+      total: realProjetos.total,
+      PL: realProjetos.PL,
+      PEC: realProjetos.PEC,
+      PLP: realProjetos.PLP,
+      outros: realProjetos.outros
+    }
+  }
+  
+  return { total: 0, PL: 0, PEC: 0, PLP: 0, outros: 0 }
 }
 
 // ─────────────────────────────────────────────────────────────
 // C0 — QUEM É
 // ─────────────────────────────────────────────────────────────
-function C0({p,votes,palette,pats}:{p:Parlamentar;votes:ReturnType<typeof mockVotes>;palette:string[];pats:PatternConfig[]}) {
+function C0({p,votes,liderancas,palette,pats}:{p:Parlamentar;votes:ReturnType<typeof mockVotes>;liderancas:{tipo:string;nome:string}[];palette:string[];pats:PatternConfig[]}) {
   const sim  = votes.filter(v=>v.pos==='sim').length
-  // frequencia is already stored as percentage (0-100), not decimal
-  const freq = p.frequencia > 1 ? p.frequencia : Math.round(p.frequencia * 100)
-  const liderancas = calcLiderancas(p)
+  // Frequencia: cap at 100% max, default to 0 if missing
+  const freq = p.frequencia > 0 ? Math.min(100, Math.round(p.frequencia)) : 0
   
-  // Mock data for salary and expenses (based on seed)
-  const seed = parseInt(p.id.replace(/\D/g,''))||1
-  const rng = (n: number) => ((seed*n*7193)%1000)/1000
-  // Use real data if available, otherwise use estimates
-  const salarioBruto = p.salario ?? Math.round(33300 + rng(1) * 2000)
-  const cotasGastas = p.cotasTotal ?? Math.round(10000 + rng(2) * 25000)
-  const emendas = p.emendas ?? Math.round(500000 + rng(3) * 2000000)
-  const emendasPix = p.emendasPix ?? Math.round(100000 + rng(4) * 400000)
+  // Always show salary (current deputy salary is R$ 46,340)
+  const salario = p.salario ?? 46340
+  // Show cotas (0 if not available)
+  const cotas = p.cotasTotal ?? 0
+  // Show emendas Pix (0 if not available)
+  const emendasPix = p.emendasPix ?? 0
+  const emendas = p.emendas ?? 0
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
@@ -663,36 +831,44 @@ function C0({p,votes,palette,pats}:{p:Parlamentar;votes:ReturnType<typeof mockVo
 
       {/* 4 key stats — fluid grid that never overflows */}
       <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:12 }}>
-        {[
-          {l:'Mandatos',    v:`${p.mandatos}×`,                          sub:'eleito(a)'},
-          {l:'Salário',     v:`R$${salarioBruto.toLocaleString('pt-BR')}`,  sub:'bruto mensal'},
-          {l:'Cotas',       v:`R$${cotasGastas.toLocaleString('pt-BR')}`,  sub:'gastas em 2024'},
-          {l:'Presença',    v:`${freq}%`,                                 sub:'no plenário'},
-        ].map(({l,v,sub})=>(
-          <div key={l} style={{ padding:'14px 0',borderBottom:'1px solid rgba(0,0,0,0.12)',minWidth:0,overflow:'hidden' }}>
-            <Lbl c={l}/>
-            <Big c={v} style={{ margin:'5px 0 3px',fontSize:'clamp(17px,5.5vw,34px)' }}/>
-            <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{sub}</p>
-          </div>
-        ))}
+        <div style={{ padding:'14px 0',borderBottom:'1px solid rgba(0,0,0,0.12)',minWidth:0,overflow:'hidden' }}>
+          <Lbl c="Mandatos"/>
+          <Big c={`${p.mandatos}×`} style={{ margin:'5px 0 3px',fontSize:'clamp(17px,5.5vw,34px)' }}/>
+          <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>eleito(a)</p>
+        </div>
+        <div style={{ padding:'14px 0',borderBottom:'1px solid rgba(0,0,0,0.12)',minWidth:0,overflow:'hidden' }}>
+          <Lbl c="Salário"/>
+          <Big c={`R$${salario.toLocaleString('pt-BR')}`} style={{ margin:'5px 0 3px',fontSize:'clamp(17px,5.5vw,34px)' }}/>
+          <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>bruto mensal</p>
+        </div>
+        <div style={{ padding:'14px 0',borderBottom:'1px solid rgba(0,0,0,0.12)',minWidth:0,overflow:'hidden' }}>
+          <Lbl c="Cotas"/>
+          <Big c={`R$${cotas.toLocaleString('pt-BR')}`} style={{ margin:'5px 0 3px',fontSize:'clamp(17px,5.5vw,34px)' }}/>
+          <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>gastas em 2024</p>
+        </div>
+        <div style={{ padding:'14px 0',borderBottom:'1px solid rgba(0,0,0,0.12)',minWidth:0,overflow:'hidden' }}>
+          <Lbl c="Presença"/>
+          <Big c={`${freq}%`} style={{ margin:'5px 0 3px',fontSize:'clamp(17px,5.5vw,34px)' }}/>
+          <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>no plenário</p>
+        </div>
       </div>
 
-      {/* Emendas parliamentares */}
+      {/* Emendas parlamentares */}
       <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)',marginBottom:12 }}>
         <div style={{ display:'flex',alignItems:'center',gap:12,marginBottom:12 }}>
           <CheckCircle2 size={22} color={INK} style={{ flexShrink:0 }}/>
           <p style={{ fontSize:9,fontWeight:700,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.08em',margin:0 }}>Emendas apresentadas</p>
         </div>
         <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:16 }}>
-          <div>
-            <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0,marginBottom:2 }}>Emendas parlamentares</p>
-            <p style={{ fontSize:24,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0,lineHeight:1.1 }}>R${(emendas/1000).toFixed(0)}K</p>
-          </div>
-          <div>
-            <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0,marginBottom:2 }}>Transferência especial (Pix)</p>
-            <p style={{ fontSize:24,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0,lineHeight:1.1 }}>R${(emendasPix/1000).toFixed(0)}K</p>
-            {(p as any).ctxEmendas && <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:'#64748B',margin:0 }}>{(p as any).ctxEmendas.label} (z={(p as any).ctxEmendas.zScore})</p>}
-          </div>
+            <div>
+              <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0,marginBottom:2 }}>Emendas parlamentares</p>
+              <p style={{ fontSize:24,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0,lineHeight:1.1 }}>R${(emendas/1000).toFixed(0)}K</p>
+            </div>
+            <div>
+              <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0,marginBottom:2 }}>Transferência especial (Pix)</p>
+              <p style={{ fontSize:24,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0,lineHeight:1.1 }}>R${(emendasPix/1000).toFixed(0)}K</p>
+              {(p as any).ctxEmendas && <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{(p as any).ctxEmendas.label} (z={(p as any).ctxEmendas.zScore})</p>}
+            </div>
         </div>
       </div>
 
@@ -714,7 +890,7 @@ function C0({p,votes,palette,pats}:{p:Parlamentar;votes:ReturnType<typeof mockVo
 // ─────────────────────────────────────────────────────────────
 // C1 — MANDATO (antes era Trajetória)
 // ─────────────────────────────────────────────────────────────
-function C1({p}:{p:Parlamentar}) {
+function C1({p,liderancas}:{p:Parlamentar;liderancas:{tipo:string;nome:string}[]}) {
   const seed   = parseInt(p.id.replace(/\D/g,''))||1
   const cargos = ['Dep. Federal','Dep. Estadual','Vereador(a)']
   const mandatos = Array.from({length:p.mandatos},(_,i)=>({
@@ -724,8 +900,19 @@ function C1({p}:{p:Parlamentar}) {
     votos:Math.round(15000+((seed*(i+1)*7193)%90000)),
   }))
   const total = mandatos.reduce((a,m)=>a+m.votos,0)
-  const liderancas = calcLiderancas(p)
-  const projetos = calcProjetos(p)
+  
+  // Load real projetos data (async, but use sync fallback for SSR)
+  const [projetos, setProjetos] = useState({ total: 0, PL: 0, PEC: 0, PLP: 0, outros: 0 })
+  
+  useEffect(() => {
+    let mounted = true
+    const load = async () => {
+      const data = await calcProjetosAsync(p)
+      if (mounted) setProjetos(data)
+    }
+    load()
+    return () => { mounted = false }
+  }, [p.id])
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
@@ -754,37 +941,52 @@ function C1({p}:{p:Parlamentar}) {
       )}
 
       {/* Projetos desenvolvidos */}
-      <Lbl c="Projetos de lei" style={{ marginBottom:8 }}/>
-      <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,marginBottom:16 }}>
-        <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
-          <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
-            <CheckCircle2 size={16} color={INK} />
-            <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.05em',margin:0 }}>Aprovados</p>
+      {p.tipo === 'SENADOR' ? (
+        <>
+          <Lbl c="Matérias de autoria" style={{ marginBottom:8 }}/>
+          <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)',marginBottom:16 }}>
+            <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
+              <FileText size={16} color={INK} />
+              <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.05em',margin:0 }}>Total de matérias apresentadas</p>
+            </div>
+            <p style={{ fontSize:22,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{projetos.total}</p>
           </div>
-          <p style={{ fontSize:22,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{projetos.aprovados}</p>
-        </div>
-        <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
-          <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
-            <Clock size={16} color={INK} />
-            <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.05em',margin:0 }}>Em tramitação</p>
+        </>
+      ) : (
+        <>
+          <Lbl c="Projetos apresentados" style={{ marginBottom:8 }}/>
+          <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,marginBottom:16 }}>
+            <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
+              <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
+                <FileText size={16} color={INK} />
+                <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.05em',margin:0 }}>Projetos de Lei</p>
+              </div>
+              <p style={{ fontSize:22,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{projetos.PL}</p>
+            </div>
+            <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
+              <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
+                <Clock size={16} color={INK} />
+                <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.05em',margin:0 }}>PEC</p>
+              </div>
+              <p style={{ fontSize:22,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{projetos.PEC}</p>
+            </div>
+            <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
+              <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
+                <CheckCircle2 size={16} color={INK} />
+                <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.05em',margin:0 }}>PLP</p>
+              </div>
+              <p style={{ fontSize:22,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{projetos.PLP}</p>
+            </div>
+            <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
+              <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
+                <Archive size={16} color={INK} />
+                <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.05em',margin:0 }}>Outros</p>
+              </div>
+              <p style={{ fontSize:22,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{projetos.outros}</p>
+            </div>
           </div>
-          <p style={{ fontSize:22,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{projetos.emTramitacao}</p>
-        </div>
-        <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
-          <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
-            <FileText size={16} color={INK} />
-            <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.05em',margin:0 }}>Total propostos</p>
-          </div>
-          <p style={{ fontSize:22,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{projetos.desenvolvidos}</p>
-        </div>
-        <div style={{ padding:'12px 0',borderBottom:'1px solid rgba(0,0,0,0.12)' }}>
-          <div style={{ display:'flex',alignItems:'center',gap:6,marginBottom:4 }}>
-            <Archive size={16} color={INK} />
-            <p style={{ fontSize:10,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,textTransform:'uppercase',letterSpacing:'0.05em',margin:0 }}>Arquivados</p>
-          </div>
-          <p style={{ fontSize:22,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,margin:0 }}>{projetos.arquivados}</p>
-        </div>
-      </div>
+        </>
+      )}
 
       <Hr/>
       <div style={{ paddingTop:16 }}>
@@ -844,7 +1046,195 @@ function pickVotoHL(idNum:number, offsets:readonly number[], vb?:string, isBandi
   if(s<0.55)return 'SIM'; if(s<0.78)return 'NÃO'; if(s<0.90)return 'ABSTENÇÃO'; return 'AUSENTE'
 }
 
+// Senator voting component
+function C2Senador({p, pats}:{p:Parlamentar; pats: PatternConfig[]}) {
+  const [senadorVotos, setSenadorVotos] = useState<SenatorVotosData | null>(null)
+  const [hov, setHov] = useState<number | null>(null)
+  const [clicked, setClicked] = useState<number | null>(null)
+  
+  // For senators, create temaIdx based on proposition type for pattern matching
+  const getTemaIdx = (sigla: string): number => {
+    if (sigla === 'PL') return 0
+    if (sigla === 'PEC') return 1
+    if (sigla === 'PLP') return 2
+    if (sigla === 'MPV') return 3
+    if (sigla === 'REQ') return 4
+    return 5
+  }
+  
+  useEffect(() => {
+    let mounted = true
+    const load = async () => {
+      const data = await loadSenadorVotosData()
+      const idNum = parseInt(p.id.replace(/\D/g, '') || '0')
+      if (mounted && data[idNum]) {
+        setSenadorVotos(data[idNum])
+      }
+    }
+    load()
+    return () => { mounted = false }
+  }, [p.id])
+  
+  if (!senadorVotos) {
+    return (
+      <div style={{ padding: '0 0 32px' }}>
+        <div style={{ padding: '0 18px' }}>
+          <Lbl c="Votações no Senado" style={{ marginBottom: 6 }} />
+          <Big c="..." />
+          <p style={{ fontSize: 11, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, marginTop: 8 }}>
+            Carregando...
+          </p>
+        </div>
+      </div>
+    )
+  }
+  
+  const totalSessoes = senadorVotos.votos.length
+  const votouCount = senadorVotos.votos.filter((v: SenatorVoto) => v.voto === 'Votou').length
+  const naoVotou = totalSessoes - votouCount
+  const taxaPresenca = totalSessoes > 0 ? Math.round((votouCount / totalSessoes) * 100) : 0
+  const last = senadorVotos.votos.slice(0, 32)
+  
+  return (
+    <div style={{ padding: '0 0 32px' }}>
+      <div style={{ padding: '0 18px' }}>
+        <Lbl c="Presença em votações" style={{ marginBottom: 6 }} />
+        <Big c={`${taxaPresenca}%`} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 7, margin: '18px 0' }}>
+          <div style={{ padding: '11px 0', borderBottom: '1px solid rgba(0,0,0,0.12)' }}>
+            <p style={{ fontSize: 'clamp(15px,4vw,22px)', fontWeight: 900, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, lineHeight: 1, margin: 0 }}>{votouCount}</p>
+            <p style={{ fontSize: 9, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 700, color: INK, textTransform: 'uppercase', margin: 0 }}>Presente</p>
+          </div>
+          <div style={{ padding: '11px 0', borderBottom: '1px solid rgba(0,0,0,0.12)' }}>
+            <p style={{ fontSize: 'clamp(15px,4vw,22px)', fontWeight: 900, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, lineHeight: 1, margin: 0 }}>{naoVotou}</p>
+            <p style={{ fontSize: 9, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 700, color: INK, textTransform: 'uppercase', margin: 0 }}>Ausente</p>
+          </div>
+        </div>
+        <p style={{ fontSize: 11, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, marginBottom: 8 }}>
+          {totalSessoes} votações na atual legislação
+        </p>
+        <div style={{ minHeight: 32, marginBottom: 7 }}>
+          {clicked !== null ? (
+            <div style={{ borderBottom: '1px solid rgba(0,0,0,0.12)', padding: '5px 0', display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+              {last[clicked]?.codigo ? (
+                <a 
+                  href={`https://www25.senado.leg.br/web/senadores/materia/-/materia/${last[clicked]?.codigo}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontSize: 12, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 700, color: INK, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}
+                >
+                  {last[clicked]?.sigla} {last[clicked]?.numero}/{last[clicked]?.ano} <ExternalLink size={10} color={INK} style={{ opacity: 0.5 }}/>
+                </a>
+              ) : (
+                <span style={{ fontSize: 12, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 700, color: INK }}>
+                  {last[clicked]?.sigla} {last[clicked]?.numero}/{last[clicked]?.ano}
+                </span>
+              )}
+              <span style={{ fontSize: 11, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, opacity: 0.6 }}>
+                {last[clicked]?.data}
+              </span>
+              <span style={{ fontSize: 11, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 700, color: INK }}>
+                {last[clicked]?.voto}
+              </span>
+              <button 
+                onClick={() => setClicked(null)}
+                style={{ marginLeft: 'auto', background: 'none', border: 'none', cursor: 'pointer', color: INK, fontSize: 11, opacity: 0.6 }}
+              >
+                ✕
+              </button>
+            </div>
+          ) : hov !== null ? (
+            <div style={{ borderBottom: '1px solid rgba(0,0,0,0.12)', padding: '5px 0', display: 'inline-block' }}>
+              <span style={{ fontSize: 12, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 700, color: INK }}>
+                {last[hov]?.sigla} {last[hov]?.numero}/{last[hov]?.ano} · {last[hov]?.voto}
+              </span>
+            </div>
+          ) : (
+            <p style={{ fontSize: 11, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK }}>
+              Toque/Clique numa barra para ver detalhes
+            </p>
+          )}
+        </div>
+      </div>
+      {/* Voting chart with patterns */}
+      <div style={{ width: '100%', overflowX: 'auto' }}>
+        <svg width={Math.max(last.length * 14 + 48, 320)} height={150} style={{ display: 'block', width: '100%', minWidth: Math.max(last.length * 14 + 48, 320) }} onMouseLeave={() => setHov(null)}>
+          <PatternDefs/>
+          <line x1={0} y1={75} x2={Math.max(last.length * 14 + 48, 320)} y2={75} stroke="rgba(0,0,0,0.15)" strokeWidth={2} strokeDasharray="5 4"/>
+          {last.map((v: SenatorVoto, i: number) => {
+            const x = 24 + i * 14
+            const pat = lp(pats[getTemaIdx(v.sigla) % pats.length])
+            const isH = hov === i
+            const isC = clicked === i
+            const isVotou = v.voto === 'Votou'
+            const H = 150
+            const bh = isVotou ? 50 : 40
+            const y = isVotou ? 30 : 50
+            const barOpacity = hov !== null && !isH && !isC ? 0.3 : (isVotou ? 1 : 0.25)
+            return (
+              <g key={i}>
+                <rect x={x} y={y} width={10} height={bh} rx={3} fill={`url(#${pat.id})`} style={patStyle(pat)} opacity={barOpacity}/>
+                {(isH || isC) && <rect x={x - 2} y={y - 2} width={14} height={bh + 4} rx={3} fill="none" stroke={INK} strokeWidth={2}/>}
+                <rect x={x} y={0} width={10} height={H} fill="transparent" style={{ cursor: 'pointer' }} onMouseEnter={() => setHov(i)} onClick={() => setClicked(i)} onMouseLeave={() => setHov(null)}/>
+              </g>
+            )
+          })}
+        </svg>
+      </div>
+      {/* Votações em destaque */}
+      <div style={{ padding: '0 18px' }}>
+        <Hr />
+        <div style={{ paddingTop: 18 }}>
+          <Lbl c="Matérias em destaque" style={{ marginBottom: 10 }} />
+          {last.slice(0, 8).map((v: SenatorVoto, i: number) => (
+            <div key={i} style={{ padding: '12px 0', borderBottom: '1px solid rgba(0,0,0,0.12)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  {v.codigo ? (
+                    <a 
+                      href={`https://www25.senado.leg.br/web/senadores/materia/-/materia/${v.codigo}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: 13, fontWeight: 700, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}
+                    >
+                      {v.sigla} {v.numero}/{v.ano} <ExternalLink size={11} color={INK} style={{ opacity: 0.5 }}/>
+                    </a>
+                  ) : (
+                    <span style={{ fontSize: 13, fontWeight: 700, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK }}>
+                      {v.sigla} {v.numero}/{v.ano}
+                    </span>
+                  )}
+                  <span style={{ fontSize: 9, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, opacity: 0.5, backgroundColor: 'rgba(0,0,0,0.06)', padding: '2px 6px', borderRadius: 3 }}>
+                    {TIPO_PROPOSICAO[v.sigla as keyof typeof TIPO_PROPOSICAO] || v.sigla}
+                  </span>
+                </div>
+                <span style={{ fontSize: 10, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, opacity: 0.6 }}>
+                  {v.data}
+                </span>
+              </div>
+              <p style={{ fontSize: 11, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, margin: '0 0 6px 0', lineHeight: 1.4 }}>
+                {v.descricao}
+              </p>
+              {v.ementa && (
+                <p style={{ fontSize: 10, fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", color: INK, margin: 0, opacity: 0.7, lineHeight: 1.4 }}>
+                  {v.ementa.substring(0, 150)}...
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+        <InfoBox/>
+      </div>
+    </div>
+  )
+}
+
 function C2({votes,p,pats}:{votes:ReturnType<typeof mockVotes>;p:Parlamentar;pats:PatternConfig[]}) {
+  // Show senator voting data if this is a senator
+  if (p.tipo === 'SENADOR') {
+    return <C2Senador p={p} pats={pats} />
+  }
+  
   const [hov,setHov]=useState<number|null>(null)
   const [clicked,setClicked]=useState<number|null>(null)
   const counts={sim:votes.filter(v=>v.pos==='sim').length,nao:votes.filter(v=>v.pos==='nao').length,abs:votes.filter(v=>v.pos==='abs').length,aus:votes.filter(v=>v.pos==='aus').length}
@@ -874,12 +1264,20 @@ function C2({votes,p,pats}:{votes:ReturnType<typeof mockVotes>;p:Parlamentar;pat
         </div>
         <div style={{ minHeight:32,marginBottom:7 }}>
           {cl?(
-            <div style={{ borderBottom:'1px solid rgba(0,0,0,0.12)',padding:'5px 0',display:'inline-block' }}>
-              <span style={{ fontSize:12,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",fontWeight:700,color:INK }}>{cl.data} · {cl.nome}</span>
-              <span style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,marginLeft:8,opacity:0.7 }}>· {cl.pos.toUpperCase()}</span>
+            <div style={{ borderBottom:'1px solid rgba(0,0,0,0.12)',padding:'5px 0',display:'flex',alignItems:'center',gap:8 }}>
+              <a href={cl.url} target="_blank" rel="noopener noreferrer" style={{ fontSize:12,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",fontWeight:700,color:INK,textDecoration:'none',display:'flex',alignItems:'center',gap:4 }}>
+                {cl.nome} <ExternalLink size={10} color={INK} style={{opacity:0.5}}/>
+              </a>
+              <span style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,opacity:0.6 }}>{cl.pos.toUpperCase()}</span>
+              <button 
+                onClick={() => setClicked(null)}
+                style={{ marginLeft:'auto', background:'none', border:'none', cursor:'pointer', color:INK, fontSize:11, opacity:0.6 }}
+              >
+                ✕
+              </button>
             </div>
           ):hv?(
-            <div style={{ borderBottom:'1px solid rgba(0,0,0,0.12)',padding:'5px 0',display:'inline-block' }}><span style={{ fontSize:12,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",fontWeight:700,color:INK }}>{String(hv.tema)} · {hv.pos.toUpperCase()}</span></div>
+            <div style={{ borderBottom:'1px solid rgba(0,0,0,0.12)',padding:'5px 0',display:'inline-block' }}><span style={{ fontSize:12,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",fontWeight:700,color:INK }}>{hv.nome} · {hv.pos.toUpperCase()}</span></div>
           ):(
             <p style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>Toque/Clique numa barra · ↑ SIM  ↓ NÃO</p>
           )}
@@ -893,9 +1291,9 @@ function C2({votes,p,pats}:{votes:ReturnType<typeof mockVotes>;p:Parlamentar;pat
           {last.map((v,i)=>{
             const x=24+i*(BW+GAP); const pat=lp(pats[v.temaIdx%pats.length]); const isH=hov===i; const isC=clicked===i
             if(v.pos==='aus') return null
-            if(v.pos==='abs') return (<g key={i}><rect x={x} y={H/2-9} width={BW} height={18} rx={3} fill="rgba(0,0,0,0.14)" opacity={hov!==null&&!isH?0.3:1}/><rect x={x} y={0} width={BW} height={H} fill="transparent" style={{ cursor:'pointer' }} onMouseEnter={()=>setHov(i)} onClick={()=>setClicked(i)}/></g>)
+            if(v.pos==='abs') return (<g key={i}><rect x={x} y={H/2-9} width={BW} height={18} rx={3} fill="rgba(0,0,0,0.14)" opacity={hov!==null&&!isH&&!isC?0.3:1}/><rect x={x} y={0} width={BW} height={H} fill="transparent" style={{ cursor:'pointer' }} onMouseEnter={()=>setHov(i)} onClick={()=>setClicked(i)} onMouseLeave={()=>setHov(null)}/></g>)
             const bh=Math.max(7,v.h*0.45); const y=v.pos==='nao'?H/2:H/2-bh
-            return (<g key={i}><rect x={x} y={y} width={BW} height={bh} rx={3} fill={`url(#${pat.id})`} style={patStyle(pat)} opacity={hov!==null&&!isH?0.3:1}/>{(isH||isC)&&<rect x={x-2} y={y-2} width={BW+4} height={bh+4} rx={3} fill="none" stroke={INK} strokeWidth={2}/>}<rect x={x} y={0} width={BW} height={H} fill="transparent" style={{ cursor:'pointer' }} onMouseEnter={()=>setHov(i)} onClick={()=>setClicked(i)} onMouseLeave={()=>{setHov(null);setClicked(null)}}/></g>)
+            return (<g key={i}><rect x={x} y={y} width={BW} height={bh} rx={3} fill={`url(#${pat.id})`} style={patStyle(pat)} opacity={hov!==null&&!isH&&!isC?0.3:1}/>{(isH||isC)&&<rect x={x-2} y={y-2} width={BW+4} height={bh+4} rx={3} fill="none" stroke={INK} strokeWidth={2}/>}<rect x={x} y={0} width={BW} height={H} fill="transparent" style={{ cursor:'pointer' }} onMouseEnter={()=>setHov(i)} onClick={()=>setClicked(i)} onMouseLeave={()=>setHov(null)}/></g>)
           })}
         </svg>
       </div>
@@ -918,6 +1316,7 @@ function C2({votes,p,pats}:{votes:ReturnType<typeof mockVotes>;p:Parlamentar;pat
             </a>
           ))}
         </div>
+        <InfoBox/>
       </div>
     </div>
   )
@@ -1534,141 +1933,135 @@ function C7({p}:{p:Parlamentar}) {
 }
 
 // ─────────────────────────────────────────────────────────────
-// C8 — ASSOCIAÇÕES (agora é o 3º card, depois de Mandato)
-// ──────────────���────────���─────────────────────────────────────
-function C8({p}:{p:Parlamentar}) {
-  const seed=parseInt(p.id.replace(/\D/g,''))||1
-  const rng = (n: number) => ((seed*n*7193)%1000)/1000
+// C8 — ASSOCIAÇÕES
+// ─────────────────────────────────────────────────────────────
+function C8({p,liderancas}:{p:Parlamentar;liderancas:{tipo:string;nome:string}[]}) {
+  // Frentes parlamentares - use real data if available
+  type VinculoItem = { tipo: string; nome: string; detalhe?: string }
   
-  // Frentes parlamentares - mais variadas e baseadas na bancada
-  const allFrentes = [
-    { nome: 'Frente Parlamentar Evangélica', bancada: 'Evangelica' },
-    { nome: 'Frente Parlamentar da Agropecuária', bancada: 'Ruralista' },
-    { nome: 'Frente da Segurança Pública', bancada: 'Bala' },
-    { nome: 'Frente Parlamentar Ambientalista', bancada: 'Ambientalista' },
-    { nome: 'Frente Parlamentar da Saúde', bancada: 'Nenhuma' },
-    { nome: 'Frente Parlamentar do Turismo', bancada: 'Nenhuma' },
-    { nome: 'Frente Parlamentar Mista da Educação', bancada: 'Nenhuma' },
-    { nome: 'Frente Parlamentar em Defesa das Mulheres', bancada: 'Feminina' },
-    { nome: 'Frente Parlamentar em Defesa da Cultura', bancada: 'Nenhuma' },
-    { nome: 'Frente do Empreendedorismo', bancada: 'Empresarial' },
-  ]
+  const frentesReais: VinculoItem[] = p.frentes && p.frentes.length > 0 
+    ? p.frentes.map(f => ({ tipo: 'Frente', nome: f.titulo }))
+    : []
   
-  // Seleciona frentes baseado na bancada e seed
-  const frentes = allFrentes.filter((f, i) => 
-    f.bancada === p.bancada || (rng(i + 1) < 0.25)
-  ).slice(0, 4)
+  // Map bancada to frentes for fallback
+  const bancadaToFrentes: Record<string, string[]> = {
+    'Evangelica': ['Frente Parlamentar Evangélica do Brasil'],
+    'Ruralista': ['Frente Parlamentar da Agropecuária'],
+    'Bala': ['Frente Parlamentar da Segurança Pública'],
+    'Ambientalista': ['Frente Parlamentar Ambientalista'],
+    'Feminina': ['Frente Parlamentar em Defesa das Mulheres'],
+    'Negra': ['Frente Parlamentar Negra'],
+    'Empresarial': ['Frente Parlamentar do Empreendedorismo'],
+    'Sindical': ['Frente Parlamentar em Defesa dos Trabalhadores'],
+  }
   
-  // Comissões permanentes
-  const allComissoes = [
-    'Constituição e Justiça e de Cidadania',
-    'Finanças e Tributação',
-    'Educação',
-    'Saúde',
-    'Meio Ambiente e Desenvolvimento Sustentável',
-    'Segurança Pública',
-    'Agricultura e Abastecimento',
-    'Relações Exteriores',
-    'Defesa do Consumidor',
-    'Trabalho, Administração e Serviço Público',
-  ]
-  const comissoes = allComissoes.filter((_,i) => rng(i + 10) < 0.3).slice(0, 3)
+  const frentesFallback: VinculoItem[] = (bancadaToFrentes[p.bancada] || [])
+    .map(nome => ({ tipo: 'Frente', nome }))
   
-  // Lideranças
-  const liderancas = calcLiderancas(p)
+  const frentes: VinculoItem[] = frentesReais.length > 0 ? frentesReais : frentesFallback
   
-  // Histórico partidário
-  const historico = [
-    { partido: p.partido, de: 2019, ate: 'atual' },
-    ...(rng(100) < 0.6 ? [{ partido: ['MDB', 'PSDB', 'DEM', 'PP', 'PTB'][Math.floor(rng(101) * 5)], de: 2015, ate: '2019' }] : []),
-    ...(rng(102) < 0.3 ? [{ partido: ['PMDB', 'PFL', 'PSB', 'PDT'][Math.floor(rng(103) * 4)], de: 2010, ate: '2015' }] : []),
-  ]
+  // Comissões - load real data asynchronously
+  const [comissoes, setComissoes] = useState<VinculoItem[]>([])
+  const [showAll, setShowAll] = useState(false)
   
-  const totalVinculos = frentes.length + comissoes.length + liderancas.length
+  useEffect(() => {
+    let mounted = true
+    const load = async () => {
+      const idNumerico = parseInt(p.id.replace(/\D/g,'') || '0')
+      const data = await loadComissoesData()
+      const coms = (data[idNumerico] || []).map((c: any) => ({ 
+        tipo: 'Comissão', 
+        nome: c.sigla || c.nome, 
+        detalhe: c.cargo 
+      }))
+      if (mounted) setComissoes(coms)
+    }
+    load()
+    return () => { mounted = false }
+  }, [p.id])
+  
+  // Combine all vínculos
+  const liderancasItems: VinculoItem[] = liderancas.map(l => ({ 
+    tipo: 'Cargo', 
+    nome: l.nome, 
+    detalhe: l.tipo 
+  }))
+  
+  // Party affiliation always first
+  const partidoItem: VinculoItem = { 
+    tipo: 'Partido', 
+    nome: p.partido,
+    detalhe: p.uf 
+  }
+  
+  // Combine and limit to 5 by default (party always shown)
+  const allVinculos = [partidoItem, ...liderancasItems, ...frentes, ...comissoes]
+  const displayedVinculos = showAll ? allVinculos : allVinculos.slice(0, 5)
 
   return (
     <div style={{ padding:'0 18px 32px' }}>
       <Lbl c="Associações e vínculos" style={{ marginBottom:5 }}/>
-      <Big c={`${totalVinculos} vínculos`}/>
+      <Big c={`${allVinculos.length} vínculos`}/>
       <p style={{ fontSize:12,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,marginBottom:16 }}>identificados no Congresso</p>
       
-      {/* Cargos e lideranças */}
-      {liderancas.length > 0 && (
-        <>
-          <Lbl c="Cargos e lideranças" style={{ marginBottom:8 }}/>
-          <div style={{ display:'flex',flexDirection:'column',gap:0,marginBottom:16 }}>
-            {liderancas.map((l,i) => (
-              <div key={i} style={{ 
-                padding:'10px 0',
-                borderBottom:'1px solid rgba(0,0,0,0.12)',
-                display:'flex',
-                alignItems:'center',
-                gap:8,
-              }}>
-                <CheckCircle2 size={14} color={INK} />
-                <span style={{ fontSize:13,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",fontWeight:700,color:INK }}>{l.tipo}</span>
-                <span style={{ fontSize:11,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>· {l.nome}</span>
-              </div>
-            ))}
-          </div>
-          <Hr/>
-        </>
-      )}
-
-      {/* Frentes parlamentares */}
-      <div style={{ paddingTop:liderancas.length > 0 ? 16 : 0, marginBottom:16 }}>
-        <Lbl c="Frentes parlamentares" style={{ marginBottom:10 }}/>
-        <div style={{ display:'flex',flexDirection:'column',gap:0 }}>
-          {frentes.length ? frentes.map((f,i) => (
-            <div key={i} style={{ 
-              padding:'10px 0',
-              borderBottom:'1px solid rgba(0,0,0,0.12)',
-              display:'flex',
-              alignItems:'center',
-              gap:8,
+      {/* Lista de vínculos */}
+      <div style={{ display:'flex',flexDirection:'column',gap:0 }}>
+        {displayedVinculos.map((v, i) => (
+          <div key={i} style={{ 
+            padding:'12px 0',
+            borderBottom: i < displayedVinculos.length - 1 ? '1px solid rgba(0,0,0,0.15)' : 'none',
+          }}>
+            <span style={{ 
+              fontSize:10,
+              fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",
+              color:INK,
+              textTransform:'uppercase',
+              letterSpacing:'0.05em',
             }}>
-              {f.bancada === p.bancada ? (
-                <CheckCircle2 size={14} color={INK} />
-              ) : (
-                <Clock size={14} color={INK} />
-              )}
-              <span style={{ fontSize:13,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",fontWeight:600,color:INK }}>{f.nome}</span>
-            </div>
-          )) : (
-            <span style={{ fontSize:13,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>Nenhuma frente identificada</span>
-          )}
-        </div>
-      </div>
-      <Hr/>
-      
-      {/* Comissões */}
-      <div style={{ paddingTop:16,marginBottom:16 }}>
-        <Lbl c="Comissões permanentes" style={{ marginBottom:9 }}/>
-        {comissoes.length ? comissoes.map((c,i)=>(
-          <div key={i} style={{ padding:'10px 0',borderBottom:'1px solid rgba(0,0,0,0.08)',fontSize:13,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK,fontWeight:600 }}>
-            {c}
-          </div>
-        )) : (
-          <span style={{ fontSize:13,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>Nenhuma comissão identificada</span>
-        )}
-      </div>
-      <Hr/>
-      
-      {/* Histórico partidário */}
-      <div style={{ paddingTop:16 }}>
-        <Lbl c="Histórico partidário" style={{ marginBottom:9 }}/>
-        {historico.map((item,i,arr)=>(
-          <div key={i} style={{ display:'flex',justifyContent:'space-between',alignItems:'center',padding:'10px 0',borderBottom:i<arr.length-1?'1px solid rgba(0,0,0,0.09)':'none' }}>
-            <span style={{ fontSize:16,fontWeight:900,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>{item.partido}</span>
-            <span style={{ fontSize:12,fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",color:INK }}>{item.de} – {item.ate}</span>
+              {v.tipo}
+            </span>
+            <span style={{ 
+              fontSize:14,
+              fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",
+              fontWeight:700,
+              color:INK,
+              display:'block'
+            }}>{v.nome}</span>
+            {v.detalhe && (
+              <span style={{ 
+                fontSize:11,
+                fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",
+                color:INK
+              }}>{v.detalhe}</span>
+            )}
           </div>
         ))}
       </div>
+      
+      {/* Expand/Collapse button */}
+      {allVinculos.length > 5 && (
+        <button 
+          onClick={() => setShowAll(!showAll)}
+          style={{ 
+            marginTop:12, 
+            background:'none', 
+            border:'1px solid rgba(0,0,0,0.2)', 
+            borderRadius:8, 
+            padding:'8px 16px',
+            color:INK, 
+            cursor:'pointer',
+            fontSize:12,
+            fontFamily:"'Helvetica Neue', Helvetica, Arial, sans-serif",
+          }}
+        >
+          {showAll ? 'Ver menos' : `Ver todos (${allVinculos.length})`}
+        </button>
+      )}
     </div>
   )
 }
 
-// ─────��───────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────
 // C9 — NOTÍCIAS (com fontes RSS)
 // ─────────────────────────────────────────────────────────────
 // Lista de fontes RSS de grande mídia e mídia alternativa
@@ -1799,6 +2192,89 @@ function C9({p}:{p:Parlamentar}) {
         <ExternalLink size={13}/>Ver todas as notícias no Google News
       </a>
       <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
+    </div>
+  )
+}
+
+// ─────────────────────────────────────────────────────────────
+// Info Box — Tipos de Proposições
+// ─────────────────────────────────────────────────────────────
+function InfoBox({ tipo }: { tipo?: string }) {
+  return (
+    <div style={{ 
+      padding: '0 18px 32px',
+      borderTop: '1px solid rgba(0,0,0,0.12)',
+      marginTop: 16
+    }}>
+      <div style={{ 
+        border: '1px solid #0A0A0A', 
+        padding: '16px',
+        backgroundColor: 'transparent'
+      }}>
+        <p style={{ 
+          fontSize: 11, 
+          fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", 
+          fontWeight: 700, 
+          color: INK, 
+          marginBottom: 12,
+          textTransform: 'uppercase'
+        }}>
+          Tipos de Proposições
+        </p>
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(2, 1fr)', 
+          gap: '8px 24px'
+        }}>
+          {Object.entries(TIPO_PROPOSICAO).map(([sigla, desc]) => (
+            <div key={sigla} style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
+              <span style={{ 
+                fontSize: 10, 
+                fontWeight: 700, 
+                color: INK, 
+                minWidth: 35,
+                backgroundColor: 'rgba(0,0,0,0.06)',
+                padding: '2px 4px',
+                borderRadius: 2
+              }}>{sigla}</span>
+              <span style={{ 
+                fontSize: 10, 
+                fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", 
+                color: INK,
+                lineHeight: 1.4
+              }}>{desc}</span>
+            </div>
+          ))}
+        </div>
+        <div style={{ marginTop: 12, paddingTop: 12, borderTop: '1px solid rgba(0,0,0,0.12)' }}>
+          <p style={{ 
+            fontSize: 10, 
+            fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", 
+            fontWeight: 700, 
+            color: INK, 
+            marginBottom: 8,
+            textTransform: 'uppercase'
+          }}>
+            Tipos de Voto
+          </p>
+          {Object.entries(TIPO_VOTO).map(([voto, desc]) => (
+            <div key={voto} style={{ display: 'flex', gap: 8, marginBottom: 4 }}>
+              <span style={{ 
+                fontSize: 10, 
+                fontWeight: 700, 
+                color: INK, 
+                minWidth: 80
+              }}>{voto}</span>
+              <span style={{ 
+                fontSize: 10, 
+                fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", 
+                color: INK,
+                opacity: 0.7
+              }}>{desc}</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

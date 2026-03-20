@@ -1,0 +1,2571 @@
+{
+  "updatedAt": "2026-03-20T13:07:22.036Z",
+  "totalDeputies": 513,
+  "partyInfo": {
+    "62881": {
+      "partido": "UNIÃO",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "66385": {
+      "partido": "PP",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "66828": {
+      "partido": "PP",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "69871": {
+      "partido": "PV",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "72442": {
+      "partido": "PSB",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "73433": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "73441": {
+      "partido": "REPUBLICANOS",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "73486": {
+      "partido": "PDT",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "73531": {
+      "partido": "PSOL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "73579": {
+      "partido": "PL",
+      "uf": "DF",
+      "situacao": "N/A"
+    },
+    "73604": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "73692": {
+      "partido": "PL",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "73701": {
+      "partido": "PT",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "73768": {
+      "partido": "PP",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "73778": {
+      "partido": "PODE",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "73788": {
+      "partido": "PP",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "73801": {
+      "partido": "PCdoB",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "73808": {
+      "partido": "PSD",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "74041": {
+      "partido": "PT",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "74043": {
+      "partido": "PL",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "74044": {
+      "partido": "REPUBLICANOS",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "74057": {
+      "partido": "PCdoB",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "74060": {
+      "partido": "PCdoB",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "74065": {
+      "partido": "REPUBLICANOS",
+      "uf": "AP",
+      "situacao": "N/A"
+    },
+    "74075": {
+      "partido": "MDB",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "74079": {
+      "partido": "MDB",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "74084": {
+      "partido": "PSD",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "74090": {
+      "partido": "PSD",
+      "uf": "AM",
+      "situacao": "N/A"
+    },
+    "74156": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "74158": {
+      "partido": "PDT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "74159": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "74160": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "74161": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "74171": {
+      "partido": "PSOL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "74253": {
+      "partido": "PP",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "74262": {
+      "partido": "PSD",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "74270": {
+      "partido": "PSD",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "74273": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "74283": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "74299": {
+      "partido": "PDT",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "74317": {
+      "partido": "PSD",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "74356": {
+      "partido": "REPUBLICANOS",
+      "uf": "AM",
+      "situacao": "N/A"
+    },
+    "74371": {
+      "partido": "PT",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "74374": {
+      "partido": "PSDB",
+      "uf": "MS",
+      "situacao": "N/A"
+    },
+    "74376": {
+      "partido": "PT",
+      "uf": "MS",
+      "situacao": "N/A"
+    },
+    "74383": {
+      "partido": "PL",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "74398": {
+      "partido": "PT",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "74400": {
+      "partido": "PT",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "74428": {
+      "partido": "UNIÃO",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "74454": {
+      "partido": "MDB",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "74467": {
+      "partido": "UNIÃO",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "74478": {
+      "partido": "UNIÃO",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "74537": {
+      "partido": "PP",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "74550": {
+      "partido": "PP",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "74554": {
+      "partido": "UNIÃO",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "74574": {
+      "partido": "PSD",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "74585": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "74646": {
+      "partido": "PSDB",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "74784": {
+      "partido": "PSOL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "74848": {
+      "partido": "PCdoB",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "74856": {
+      "partido": "PSD",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "74858": {
+      "partido": "PT",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "80815": {
+      "partido": "PDT",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "81055": {
+      "partido": "PCdoB",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "88256": {
+      "partido": "PV",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "91228": {
+      "partido": "AVANTE",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "92102": {
+      "partido": "UNIÃO",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "92699": {
+      "partido": "PSD",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "92776": {
+      "partido": "PSD",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "98057": {
+      "partido": "REPUBLICANOS",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "98148": {
+      "partido": "MDB",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "98615": {
+      "partido": "PSD",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "104552": {
+      "partido": "PP",
+      "uf": "AC",
+      "situacao": "N/A"
+    },
+    "107970": {
+      "partido": "PP",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "109429": {
+      "partido": "UNIÃO",
+      "uf": "RN",
+      "situacao": "N/A"
+    },
+    "121948": {
+      "partido": "PP",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "122158": {
+      "partido": "PSD",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "122974": {
+      "partido": "UNIÃO",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "123086": {
+      "partido": "PP",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "123756": {
+      "partido": "REPUBLICANOS",
+      "uf": "AC",
+      "situacao": "N/A"
+    },
+    "128760": {
+      "partido": "PL",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "129618": {
+      "partido": "MDB",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "133439": {
+      "partido": "PDT",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "133810": {
+      "partido": "PL",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "136811": {
+      "partido": "PP",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "137070": {
+      "partido": "PSDB",
+      "uf": "TO",
+      "situacao": "N/A"
+    },
+    "138286": {
+      "partido": "PSD",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "139285": {
+      "partido": "PSB",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "141391": {
+      "partido": "CIDADANIA",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "141398": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "141408": {
+      "partido": "MDB",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "141411": {
+      "partido": "PSDB",
+      "uf": "MS",
+      "situacao": "N/A"
+    },
+    "141421": {
+      "partido": "PP",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "141431": {
+      "partido": "UNIÃO",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "141450": {
+      "partido": "PSD",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "141456": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "141458": {
+      "partido": "PL",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "141459": {
+      "partido": "PP",
+      "uf": "RN",
+      "situacao": "N/A"
+    },
+    "141464": {
+      "partido": "PT",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "141470": {
+      "partido": "PT",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "141485": {
+      "partido": "UNIÃO",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "141487": {
+      "partido": "PSD",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "141516": {
+      "partido": "PSDB",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "141518": {
+      "partido": "SOLIDARIEDADE",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "141531": {
+      "partido": "UNIÃO",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "141533": {
+      "partido": "PSB",
+      "uf": "DF",
+      "situacao": "N/A"
+    },
+    "141555": {
+      "partido": "REPUBLICANOS",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "143084": {
+      "partido": "PODE",
+      "uf": "TO",
+      "situacao": "N/A"
+    },
+    "143632": {
+      "partido": "PSD",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "143942": {
+      "partido": "PSD",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "150418": {
+      "partido": "REPUBLICANOS",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "153423": {
+      "partido": "MDB",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "156190": {
+      "partido": "NOVO",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "157130": {
+      "partido": "REDE",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "160161": {
+      "partido": "PSDB",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "160510": {
+      "partido": "AVANTE",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "160512": {
+      "partido": "SOLIDARIEDADE",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "160517": {
+      "partido": "PSB",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "160518": {
+      "partido": "SOLIDARIEDADE",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "160527": {
+      "partido": "PP",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "160535": {
+      "partido": "PT",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "160538": {
+      "partido": "PT",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "160541": {
+      "partido": "PP",
+      "uf": "AL",
+      "situacao": "N/A"
+    },
+    "160545": {
+      "partido": "UNIÃO",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "160548": {
+      "partido": "PSB",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "160552": {
+      "partido": "PSD",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "160553": {
+      "partido": "PSD",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "160556": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "160558": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "160559": {
+      "partido": "MDB",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "160561": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "160569": {
+      "partido": "PT",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "160575": {
+      "partido": "PT",
+      "uf": "DF",
+      "situacao": "N/A"
+    },
+    "160588": {
+      "partido": "PSD",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "160591": {
+      "partido": "PL",
+      "uf": "AP",
+      "situacao": "N/A"
+    },
+    "160592": {
+      "partido": "PT",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "160598": {
+      "partido": "PDT",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "160599": {
+      "partido": "PP",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "160600": {
+      "partido": "UNIÃO",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "160601": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "160604": {
+      "partido": "PT",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "160610": {
+      "partido": "PT",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "160629": {
+      "partido": "PODE",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "160632": {
+      "partido": "SOLIDARIEDADE",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "160635": {
+      "partido": "PODE",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "160640": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "160641": {
+      "partido": "PCdoB",
+      "uf": "AP",
+      "situacao": "N/A"
+    },
+    "160642": {
+      "partido": "PL",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "160665": {
+      "partido": "REPUBLICANOS",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "160666": {
+      "partido": "PDT",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "160673": {
+      "partido": "PL",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "160674": {
+      "partido": "REPUBLICANOS",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "160758": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "160976": {
+      "partido": "PSD",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "161440": {
+      "partido": "MDB",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "161550": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "162067": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "162332": {
+      "partido": "PSD",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "165470": {
+      "partido": "UNIÃO",
+      "uf": "SE",
+      "situacao": "N/A"
+    },
+    "166402": {
+      "partido": "PL",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "171617": {
+      "partido": "PT",
+      "uf": "AL",
+      "situacao": "N/A"
+    },
+    "171623": {
+      "partido": "PSD",
+      "uf": "SE",
+      "situacao": "N/A"
+    },
+    "171786": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "175765": {
+      "partido": "PSD",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178829": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178831": {
+      "partido": "PP",
+      "uf": "AP",
+      "situacao": "N/A"
+    },
+    "178835": {
+      "partido": "PDT",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "178843": {
+      "partido": "PP",
+      "uf": "AL",
+      "situacao": "N/A"
+    },
+    "178854": {
+      "partido": "UNIÃO",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "178857": {
+      "partido": "PT",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "178858": {
+      "partido": "PP",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "178860": {
+      "partido": "UNIÃO",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "178866": {
+      "partido": "PT",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "178871": {
+      "partido": "PP",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "178873": {
+      "partido": "PT",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "178876": {
+      "partido": "MDB",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "178881": {
+      "partido": "REPUBLICANOS",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "178884": {
+      "partido": "MDB",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "178886": {
+      "partido": "UNIÃO",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "178887": {
+      "partido": "PT",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "178895": {
+      "partido": "PSD",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "178896": {
+      "partido": "MDB",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "178908": {
+      "partido": "PL",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "178910": {
+      "partido": "PL",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "178927": {
+      "partido": "PV",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "178929": {
+      "partido": "REPUBLICANOS",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "178931": {
+      "partido": "PSB",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "178933": {
+      "partido": "MDB",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "178934": {
+      "partido": "PP",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "178937": {
+      "partido": "PL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "178943": {
+      "partido": "UNIÃO",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "178946": {
+      "partido": "PL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "178947": {
+      "partido": "PL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "178954": {
+      "partido": "MDB",
+      "uf": "RO",
+      "situacao": "N/A"
+    },
+    "178962": {
+      "partido": "REPUBLICANOS",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "178963": {
+      "partido": "PP",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "178964": {
+      "partido": "PSB",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "178966": {
+      "partido": "PSDB",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "178970": {
+      "partido": "PT",
+      "uf": "SE",
+      "situacao": "N/A"
+    },
+    "178972": {
+      "partido": "CIDADANIA",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178975": {
+      "partido": "MDB",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178983": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178985": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178986": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178987": {
+      "partido": "PCdoB",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178989": {
+      "partido": "PODE",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178992": {
+      "partido": "PSD",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "178993": {
+      "partido": "UNIÃO",
+      "uf": "TO",
+      "situacao": "N/A"
+    },
+    "178997": {
+      "partido": "UNIÃO",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "179000": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "179001": {
+      "partido": "MDB",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "180214": {
+      "partido": "UNIÃO",
+      "uf": "RR",
+      "situacao": "N/A"
+    },
+    "188097": {
+      "partido": "PT",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "191923": {
+      "partido": "PT",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "198197": {
+      "partido": "AVANTE",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "198783": {
+      "partido": "MDB",
+      "uf": "MT",
+      "situacao": "N/A"
+    },
+    "204351": {
+      "partido": "PP",
+      "uf": "MS",
+      "situacao": "N/A"
+    },
+    "204355": {
+      "partido": "PP",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "204356": {
+      "partido": "REPUBLICANOS",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "204358": {
+      "partido": "PSDB",
+      "uf": "MS",
+      "situacao": "N/A"
+    },
+    "204360": {
+      "partido": "PP",
+      "uf": "RO",
+      "situacao": "N/A"
+    },
+    "204361": {
+      "partido": "MDB",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "204362": {
+      "partido": "PL",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "204364": {
+      "partido": "PL",
+      "uf": "TO",
+      "situacao": "N/A"
+    },
+    "204365": {
+      "partido": "NOVO",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "204367": {
+      "partido": "PL",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "204368": {
+      "partido": "UNIÃO",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "204369": {
+      "partido": "PL",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "204372": {
+      "partido": "REPUBLICANOS",
+      "uf": "DF",
+      "situacao": "N/A"
+    },
+    "204374": {
+      "partido": "PL",
+      "uf": "DF",
+      "situacao": "N/A"
+    },
+    "204378": {
+      "partido": "PL",
+      "uf": "RO",
+      "situacao": "N/A"
+    },
+    "204379": {
+      "partido": "MDB",
+      "uf": "AP",
+      "situacao": "N/A"
+    },
+    "204387": {
+      "partido": "PL",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "204388": {
+      "partido": "PL",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "204390": {
+      "partido": "PL",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "204391": {
+      "partido": "UNIÃO",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "204394": {
+      "partido": "PSB",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "204395": {
+      "partido": "REPUBLICANOS",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "204396": {
+      "partido": "PP",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "204398": {
+      "partido": "UNIÃO",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "204404": {
+      "partido": "PSDB",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "204406": {
+      "partido": "PP",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "204407": {
+      "partido": "PSOL",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "204408": {
+      "partido": "REPUBLICANOS",
+      "uf": "SE",
+      "situacao": "N/A"
+    },
+    "204409": {
+      "partido": "PSDB",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "204410": {
+      "partido": "PSD",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "204411": {
+      "partido": "PL",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "204412": {
+      "partido": "UNIÃO",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "204416": {
+      "partido": "PL",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "204419": {
+      "partido": "PODE",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "204422": {
+      "partido": "REPUBLICANOS",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "204423": {
+      "partido": "PL",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "204426": {
+      "partido": "PT",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "204427": {
+      "partido": "PL",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "204431": {
+      "partido": "PSD",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "204436": {
+      "partido": "MDB",
+      "uf": "AL",
+      "situacao": "N/A"
+    },
+    "204441": {
+      "partido": "MDB",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204444": {
+      "partido": "PL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204445": {
+      "partido": "PT",
+      "uf": "RN",
+      "situacao": "N/A"
+    },
+    "204449": {
+      "partido": "PL",
+      "uf": "MT",
+      "situacao": "N/A"
+    },
+    "204450": {
+      "partido": "PP",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204453": {
+      "partido": "PT",
+      "uf": "RN",
+      "situacao": "N/A"
+    },
+    "204455": {
+      "partido": "NOVO",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204456": {
+      "partido": "MDB",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204457": {
+      "partido": "UNIÃO",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204459": {
+      "partido": "UNIÃO",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204460": {
+      "partido": "PL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204462": {
+      "partido": "PL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204464": {
+      "partido": "PSOL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "204472": {
+      "partido": "PL",
+      "uf": "MT",
+      "situacao": "N/A"
+    },
+    "204473": {
+      "partido": "PL",
+      "uf": "RN",
+      "situacao": "N/A"
+    },
+    "204474": {
+      "partido": "MDB",
+      "uf": "MT",
+      "situacao": "N/A"
+    },
+    "204479": {
+      "partido": "PL",
+      "uf": "RR",
+      "situacao": "N/A"
+    },
+    "204480": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204481": {
+      "partido": "PL",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "204482": {
+      "partido": "REPUBLICANOS",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204485": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204486": {
+      "partido": "PDT",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "204488": {
+      "partido": "PSD",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "204489": {
+      "partido": "PDT",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "204491": {
+      "partido": "REPUBLICANOS",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204492": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204494": {
+      "partido": "PRD",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204495": {
+      "partido": "PT",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "204496": {
+      "partido": "UNIÃO",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "204497": {
+      "partido": "PSD",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "204498": {
+      "partido": "MDB",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "204501": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204504": {
+      "partido": "PSD",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204506": {
+      "partido": "REPUBLICANOS",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204508": {
+      "partido": "PSD",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204511": {
+      "partido": "UNIÃO",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204512": {
+      "partido": "UNIÃO",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204515": {
+      "partido": "AVANTE",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204517": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204518": {
+      "partido": "PRD",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204520": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204524": {
+      "partido": "PP",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204525": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204526": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204528": {
+      "partido": "NOVO",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204531": {
+      "partido": "PP",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204534": {
+      "partido": "PSB",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204535": {
+      "partido": "PSOL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204536": {
+      "partido": "MISSÃO",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204539": {
+      "partido": "MDB",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "204540": {
+      "partido": "REPUBLICANOS",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "204549": {
+      "partido": "PP",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "204550": {
+      "partido": "PSB",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "204553": {
+      "partido": "AVANTE",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "204557": {
+      "partido": "PSD",
+      "uf": "AM",
+      "situacao": "N/A"
+    },
+    "204559": {
+      "partido": "PT",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "204560": {
+      "partido": "PSDB",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "204567": {
+      "partido": "PODE",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "204570": {
+      "partido": "PL",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "204571": {
+      "partido": "REPUBLICANOS",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "204572": {
+      "partido": "PL",
+      "uf": "AM",
+      "situacao": "N/A"
+    },
+    "204574": {
+      "partido": "PL",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "205476": {
+      "partido": "PSD",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "205550": {
+      "partido": "REPUBLICANOS",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "205865": {
+      "partido": "PSD",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "206018": {
+      "partido": "PSOL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "209189": {
+      "partido": "PT",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "209787": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "210989": {
+      "partido": "AVANTE",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "213762": {
+      "partido": "UNIÃO",
+      "uf": "RN",
+      "situacao": "N/A"
+    },
+    "214694": {
+      "partido": "REPUBLICANOS",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "215043": {
+      "partido": "PSD",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "218086": {
+      "partido": "REPUBLICANOS",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220526": {
+      "partido": "PL",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "220527": {
+      "partido": "PT",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "220528": {
+      "partido": "PODE",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "220529": {
+      "partido": "PODE",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "220530": {
+      "partido": "REPUBLICANOS",
+      "uf": "ES",
+      "situacao": "N/A"
+    },
+    "220532": {
+      "partido": "MDB",
+      "uf": "DF",
+      "situacao": "N/A"
+    },
+    "220533": {
+      "partido": "PV",
+      "uf": "DF",
+      "situacao": "N/A"
+    },
+    "220534": {
+      "partido": "REPUBLICANOS",
+      "uf": "DF",
+      "situacao": "N/A"
+    },
+    "220536": {
+      "partido": "PSD",
+      "uf": "RR",
+      "situacao": "N/A"
+    },
+    "220537": {
+      "partido": "MDB",
+      "uf": "RR",
+      "situacao": "N/A"
+    },
+    "220538": {
+      "partido": "REPUBLICANOS",
+      "uf": "RR",
+      "situacao": "N/A"
+    },
+    "220539": {
+      "partido": "REPUBLICANOS",
+      "uf": "RR",
+      "situacao": "N/A"
+    },
+    "220540": {
+      "partido": "MDB",
+      "uf": "RR",
+      "situacao": "N/A"
+    },
+    "220542": {
+      "partido": "MDB",
+      "uf": "TO",
+      "situacao": "N/A"
+    },
+    "220543": {
+      "partido": "REPUBLICANOS",
+      "uf": "TO",
+      "situacao": "N/A"
+    },
+    "220544": {
+      "partido": "REPUBLICANOS",
+      "uf": "TO",
+      "situacao": "N/A"
+    },
+    "220545": {
+      "partido": "PL",
+      "uf": "TO",
+      "situacao": "N/A"
+    },
+    "220546": {
+      "partido": "PL",
+      "uf": "MS",
+      "situacao": "N/A"
+    },
+    "220547": {
+      "partido": "PL",
+      "uf": "MS",
+      "situacao": "N/A"
+    },
+    "220548": {
+      "partido": "PT",
+      "uf": "MS",
+      "situacao": "N/A"
+    },
+    "220549": {
+      "partido": "CIDADANIA",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "220550": {
+      "partido": "PL",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "220551": {
+      "partido": "REPUBLICANOS",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "220552": {
+      "partido": "PL",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "220553": {
+      "partido": "PT",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "220554": {
+      "partido": "PT",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "220555": {
+      "partido": "PCdoB",
+      "uf": "RS",
+      "situacao": "N/A"
+    },
+    "220556": {
+      "partido": "PT",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "220557": {
+      "partido": "PL",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "220558": {
+      "partido": "PL",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "220559": {
+      "partido": "PL",
+      "uf": "SC",
+      "situacao": "N/A"
+    },
+    "220560": {
+      "partido": "PP",
+      "uf": "SE",
+      "situacao": "N/A"
+    },
+    "220561": {
+      "partido": "PSD",
+      "uf": "SE",
+      "situacao": "N/A"
+    },
+    "220563": {
+      "partido": "PL",
+      "uf": "SE",
+      "situacao": "N/A"
+    },
+    "220564": {
+      "partido": "UNIÃO",
+      "uf": "SE",
+      "situacao": "N/A"
+    },
+    "220565": {
+      "partido": "PT",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "220566": {
+      "partido": "PSDB",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "220567": {
+      "partido": "REPUBLICANOS",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "220568": {
+      "partido": "PL",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "220569": {
+      "partido": "UNIÃO",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "220570": {
+      "partido": "PSD",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "220571": {
+      "partido": "PL",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "220572": {
+      "partido": "MDB",
+      "uf": "GO",
+      "situacao": "N/A"
+    },
+    "220573": {
+      "partido": "PDT",
+      "uf": "AP",
+      "situacao": "N/A"
+    },
+    "220574": {
+      "partido": "PL",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "220576": {
+      "partido": "UNIÃO",
+      "uf": "AL",
+      "situacao": "N/A"
+    },
+    "220578": {
+      "partido": "PDT",
+      "uf": "AP",
+      "situacao": "N/A"
+    },
+    "220581": {
+      "partido": "PSD",
+      "uf": "AL",
+      "situacao": "N/A"
+    },
+    "220582": {
+      "partido": "PP",
+      "uf": "AL",
+      "situacao": "N/A"
+    },
+    "220583": {
+      "partido": "PP",
+      "uf": "AL",
+      "situacao": "N/A"
+    },
+    "220584": {
+      "partido": "REPUBLICANOS",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "220585": {
+      "partido": "PP",
+      "uf": "PB",
+      "situacao": "N/A"
+    },
+    "220586": {
+      "partido": "MDB",
+      "uf": "AL",
+      "situacao": "N/A"
+    },
+    "220588": {
+      "partido": "REPUBLICANOS",
+      "uf": "AC",
+      "situacao": "N/A"
+    },
+    "220589": {
+      "partido": "UNIÃO",
+      "uf": "AC",
+      "situacao": "N/A"
+    },
+    "220590": {
+      "partido": "UNIÃO",
+      "uf": "AC",
+      "situacao": "N/A"
+    },
+    "220591": {
+      "partido": "UNIÃO",
+      "uf": "AC",
+      "situacao": "N/A"
+    },
+    "220592": {
+      "partido": "PP",
+      "uf": "AC",
+      "situacao": "N/A"
+    },
+    "220594": {
+      "partido": "UNIÃO",
+      "uf": "MT",
+      "situacao": "N/A"
+    },
+    "220595": {
+      "partido": "PL",
+      "uf": "MT",
+      "situacao": "N/A"
+    },
+    "220597": {
+      "partido": "REPUBLICANOS",
+      "uf": "RO",
+      "situacao": "N/A"
+    },
+    "220598": {
+      "partido": "PSOL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220599": {
+      "partido": "REPUBLICANOS",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220602": {
+      "partido": "PT",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220603": {
+      "partido": "UNIÃO",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220604": {
+      "partido": "PDT",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220605": {
+      "partido": "PSB",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220606": {
+      "partido": "PT",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220607": {
+      "partido": "PDT",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220608": {
+      "partido": "UNIÃO",
+      "uf": "RO",
+      "situacao": "N/A"
+    },
+    "220609": {
+      "partido": "UNIÃO",
+      "uf": "RO",
+      "situacao": "N/A"
+    },
+    "220610": {
+      "partido": "UNIÃO",
+      "uf": "RO",
+      "situacao": "N/A"
+    },
+    "220611": {
+      "partido": "PL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220612": {
+      "partido": "PP",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220613": {
+      "partido": "PL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220615": {
+      "partido": "PSOL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220616": {
+      "partido": "PSDB",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220617": {
+      "partido": "UNIÃO",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220618": {
+      "partido": "PODE",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "220620": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220621": {
+      "partido": "PL",
+      "uf": "RN",
+      "situacao": "N/A"
+    },
+    "220622": {
+      "partido": "PODE",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220623": {
+      "partido": "PDT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220624": {
+      "partido": "PP",
+      "uf": "RN",
+      "situacao": "N/A"
+    },
+    "220625": {
+      "partido": "AVANTE",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220626": {
+      "partido": "UNIÃO",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220628": {
+      "partido": "PL",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220629": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220630": {
+      "partido": "PRD",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220631": {
+      "partido": "REPUBLICANOS",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220632": {
+      "partido": "PT",
+      "uf": "MG",
+      "situacao": "N/A"
+    },
+    "220633": {
+      "partido": "NOVO",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220635": {
+      "partido": "PODE",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220638": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220640": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220641": {
+      "partido": "PODE",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220642": {
+      "partido": "PP",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220644": {
+      "partido": "UNIÃO",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220645": {
+      "partido": "PSOL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220646": {
+      "partido": "UNIÃO",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220647": {
+      "partido": "PP",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220648": {
+      "partido": "UNIÃO",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220649": {
+      "partido": "PP",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220650": {
+      "partido": "PSDB",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220651": {
+      "partido": "MDB",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220652": {
+      "partido": "MDB",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220653": {
+      "partido": "MDB",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220654": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220655": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "220657": {
+      "partido": "PL",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "220658": {
+      "partido": "PSD",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "220661": {
+      "partido": "PL",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "220662": {
+      "partido": "PSB",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "220663": {
+      "partido": "PSB",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "220664": {
+      "partido": "PSB",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "220665": {
+      "partido": "PP",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "220666": {
+      "partido": "PL",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "220667": {
+      "partido": "PSB",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "220668": {
+      "partido": "SOLIDARIEDADE",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "220669": {
+      "partido": "PP",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "220670": {
+      "partido": "MDB",
+      "uf": "PE",
+      "situacao": "N/A"
+    },
+    "220671": {
+      "partido": "PT",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "220672": {
+      "partido": "MDB",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "220673": {
+      "partido": "PL",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "220674": {
+      "partido": "MDB",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "220675": {
+      "partido": "MDB",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "220676": {
+      "partido": "MDB",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "220677": {
+      "partido": "MDB",
+      "uf": "PA",
+      "situacao": "N/A"
+    },
+    "220681": {
+      "partido": "PODE",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "220682": {
+      "partido": "PT",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "220683": {
+      "partido": "PSDB",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "220684": {
+      "partido": "PP",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "220685": {
+      "partido": "PSD",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "220686": {
+      "partido": "PSB",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "220687": {
+      "partido": "PDT",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "220688": {
+      "partido": "PT",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "220690": {
+      "partido": "PL",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "220691": {
+      "partido": "PSD",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "220692": {
+      "partido": "UNIÃO",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "220693": {
+      "partido": "PL",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "220694": {
+      "partido": "MDB",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "220695": {
+      "partido": "REPUBLICANOS",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "220696": {
+      "partido": "PT",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "220697": {
+      "partido": "REPUBLICANOS",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "220699": {
+      "partido": "PSD",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "220700": {
+      "partido": "PT",
+      "uf": "PI",
+      "situacao": "N/A"
+    },
+    "220701": {
+      "partido": "UNIÃO",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "220702": {
+      "partido": "UNIÃO",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "220703": {
+      "partido": "AVANTE",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "220704": {
+      "partido": "PT",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "220706": {
+      "partido": "UNIÃO",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "220707": {
+      "partido": "PP",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "220708": {
+      "partido": "PSD",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "220712": {
+      "partido": "UNIÃO",
+      "uf": "AM",
+      "situacao": "N/A"
+    },
+    "220713": {
+      "partido": "MDB",
+      "uf": "AM",
+      "situacao": "N/A"
+    },
+    "220714": {
+      "partido": "REPUBLICANOS",
+      "uf": "AM",
+      "situacao": "N/A"
+    },
+    "220715": {
+      "partido": "CIDADANIA",
+      "uf": "AM",
+      "situacao": "N/A"
+    },
+    "221148": {
+      "partido": "PT",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "221328": {
+      "partido": "PL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "221329": {
+      "partido": "UNIÃO",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "221338": {
+      "partido": "PSOL",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "222429": {
+      "partido": "REPUBLICANOS",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "222565": {
+      "partido": "UNIÃO",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "223128": {
+      "partido": "PSD",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "224117": {
+      "partido": "REPUBLICANOS",
+      "uf": "RR",
+      "situacao": "N/A"
+    },
+    "224333": {
+      "partido": "PT",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "225730": {
+      "partido": "PODE",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "226179": {
+      "partido": "UNIÃO",
+      "uf": "MT",
+      "situacao": "N/A"
+    },
+    "226708": {
+      "partido": "PP",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "226837": {
+      "partido": "PSD",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "227310": {
+      "partido": "PL",
+      "uf": "MA",
+      "situacao": "N/A"
+    },
+    "227991": {
+      "partido": "PL",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "229585": {
+      "partido": "PT",
+      "uf": "BA",
+      "situacao": "N/A"
+    },
+    "230765": {
+      "partido": "PCdoB",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "230767": {
+      "partido": "PL",
+      "uf": "MT",
+      "situacao": "N/A"
+    },
+    "230768": {
+      "partido": "PP",
+      "uf": "AC",
+      "situacao": "N/A"
+    },
+    "230957": {
+      "partido": "MDB",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "231911": {
+      "partido": "PT",
+      "uf": "PR",
+      "situacao": "N/A"
+    },
+    "233594": {
+      "partido": "PODE",
+      "uf": "RO",
+      "situacao": "N/A"
+    },
+    "234253": {
+      "partido": "REDE",
+      "uf": "AP",
+      "situacao": "N/A"
+    },
+    "234310": {
+      "partido": "REDE",
+      "uf": "SP",
+      "situacao": "N/A"
+    },
+    "234673": {
+      "partido": "REPUBLICANOS",
+      "uf": "CE",
+      "situacao": "N/A"
+    },
+    "234788": {
+      "partido": "REDE",
+      "uf": "RJ",
+      "situacao": "N/A"
+    },
+    "235088": {
+      "partido": "PRD",
+      "uf": "MA",
+      "situacao": "N/A"
+    }
+  }
+}

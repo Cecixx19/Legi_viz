@@ -34,6 +34,7 @@ export interface Parlamentar {
   raca:             Raca
   bancada:          string     // Primary bancada (for backward compatibility)
   bancadas:         string[]   // All bancadas the deputy belongs to
+  frentes?:         { id: number; titulo: string }[]   // Real frentes parlamentares
   temaScores:       number[]
   macroTema:        string
   color:            string
@@ -319,9 +320,6 @@ let _proposicoesCache: Record<number, number> = {}
 let _bancadasCache: Record<number, string[]> = {}
 let _cotasCache: Record<number, number> = {}
 
-// Real theme data from propositions
-let _temasReaisCache: Record<number, number[]> | null = null
-
 async function loadCotasCache(): Promise<Record<number, number>> {
   if (Object.keys(_cotasCache).length > 0) return _cotasCache
   
@@ -339,32 +337,6 @@ async function loadCotasCache(): Promise<Record<number, number>> {
     }
   } catch (e) {
     console.error('[Cotas Error]', e)
-  }
-  return {}
-}
-
-async function loadTemasReaisCache(): Promise<Record<number, number[]>> {
-  if (_temasReaisCache) return _temasReaisCache
-  
-  try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
-    const cacheBust = `?t=${Date.now()}`
-    const res = await fetch(`${base}/data/temas-reais.json${cacheBust}`, { cache: 'no-store' })
-    if (res.ok) {
-      const data = await res.json()
-      const temasMap: Record<number, number[]> = {}
-      for (const key of Object.keys(data)) {
-        const id = parseInt(key, 10)
-        if (data[key].scores) {
-          temasMap[id] = data[key].scores
-        }
-      }
-      console.debug('[Temas Reais] Loaded', Object.keys(temasMap).length, 'entries')
-      _temasReaisCache = temasMap
-      return temasMap
-    }
-  } catch (e) {
-    console.error('[Temas Reais Error]', e)
   }
   return {}
 }
@@ -648,14 +620,41 @@ async function loadBancadasCache(): Promise<Record<number, string[]>> {
   try {
     const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
-    const res = await fetch(`${base}/data/bancadas.json${cacheBust}`, { cache: 'no-store' })
+    // Try real data first, fallback to generated
+    let res = await fetch(`${base}/data/bancadas-real.json${cacheBust}`, { cache: 'no-store' })
+    if (!res.ok) {
+      res = await fetch(`${base}/data/bancadas.json${cacheBust}`, { cache: 'no-store' })
+    }
     if (res.ok) {
-      _bancadasCache = await res.json()
+      const data = await res.json()
+      // Handle both formats: direct object or wrapped with bancadasByDeputy
+      _bancadasCache = data.bancadasByDeputy || data
       console.debug('[Bancadas] Loaded', Object.keys(_bancadasCache).length, 'entries')
       return _bancadasCache
     }
   } catch (e) {
     console.error('[Bancadas Error]', e)
+  }
+  return {}
+}
+
+// Real frentes data
+let _frentesCache: Record<number, { id: number; titulo: string }[]> = {}
+
+async function loadFrentesCache(): Promise<Record<number, { id: number; titulo: string }[]>> {
+  if (Object.keys(_frentesCache).length > 0) return _frentesCache
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const cacheBust = `?t=${Date.now()}`
+    const res = await fetch(`${base}/data/frentes-real.json${cacheBust}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      _frentesCache = data.frentesByDeputy || {}
+      console.debug('[Frentes] Loaded', Object.keys(_frentesCache).length, 'entries')
+      return _frentesCache
+    }
+  } catch (e) {
+    console.error('[Frentes Error]', e)
   }
   return {}
 }
@@ -703,6 +702,30 @@ async function loadVotacoesCache(): Promise<VotacoesRaw | null> {
     console.error('[Votações Error]', e)
   }
   return null
+}
+
+// Real themes data
+let _temasCache: Record<number, { temas: number[]; mainTheme: number }> | null = null
+
+async function loadTemasCache(): Promise<Record<number, { temas: number[]; mainTheme: number }>> {
+  if (_temasCache) return _temasCache
+  const cache: Record<number, { temas: number[]; mainTheme: number }> = {}
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const cacheBust = `?t=${Date.now()}`
+    const res = await fetch(`${base}/data/temas-real.json${cacheBust}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      const loaded = data.temasByDeputy || {}
+      _temasCache = loaded
+      console.debug('[Temas] Loaded', Object.keys(loaded).length, 'entries')
+      return loaded
+    }
+  } catch (e) {
+    console.error('[Temas Error]', e)
+  }
+  return cache
 }
 
 async function loadProjetosAprovadosCache(): Promise<Record<number, number>> {
@@ -994,7 +1017,7 @@ interface RawDeputado {
   escolaridade?:    string
 }
 
-function normalizeDeputado(raw: RawDeputado, tse?: TseDado, projetosAprovadosProp?: number, bancadasProp?: string[], cotasProp?: number, realExpenses?: RealExpenseData, pixData?: { pix: number, count: number } | null, temasReais?: number[] | null, presencaReal?: { presencas: number; sessoes: number; taxa: number } | null, mandatosReais?: number | null, processosReais?: { count: number; motivos: string[] } | null, tramitacao?: { total: number; tramitando: number } | null, financiamentoData?: { receita_total: number; receitas_pf: number; receitas_partidos: number; receitas_proprias: number; receitas_outros: number; rendimentos: number } | null, doadoresData?: { nome: string; cpf_cnpj: string; tipo: string; valor: number }[] | null, votacoesReais?: VotacaoData | null): Parlamentar {
+function normalizeDeputado(raw: RawDeputado, tse?: TseDado, projetosAprovadosProp?: number, bancadasProp?: string[], frentesProp?: { id: number; titulo: string }[], cotasProp?: number, realExpenses?: RealExpenseData, pixData?: { pix: number, count: number } | null, temasReais?: number[] | null, presencaReal?: { presencas: number; sessoes: number; taxa: number } | null, mandatosReais?: number | null, processosReais?: { count: number; motivos: string[] } | null, tramitacao?: { total: number; tramitando: number } | null, financiamentoData?: { receita_total: number; receitas_pf: number; receitas_partidos: number; receitas_proprias: number; receitas_outros: number; rendimentos: number } | null, doadoresData?: { nome: string; cpf_cnpj: string; tipo: string; valor: number }[] | null, votacoesReais?: VotacaoData | null): Parlamentar {
   const id = raw.id
   
   // Handle both old API (with ultimoStatus) and new API (direct fields)
@@ -1041,6 +1064,7 @@ function normalizeDeputado(raw: RawDeputado, tse?: TseDado, projetosAprovadosPro
     genero, raca, 
     bancada: bancadasProp && bancadasProp.length > 0 ? bancadasProp[0] : bancada,
     bancadas: bancadasProp ?? [bancada],
+    frentes: frentesProp ?? [],
     temaScores: temas, macroTema: TEMAS[maxIdx] as string,
     color: partyColor(partido),
     votoBandidagem: undefined, // Removed mock data
@@ -1204,7 +1228,61 @@ interface RawSenador {
   }
 }
 
-function normalizeSenador(raw: RawSenador, tse?: TseDado): Parlamentar {
+// Real senator data from Senate API
+interface SenatorRealData {
+  codigo: number
+  nome: string
+  partido: string
+  uf: string
+  mandatos: number
+  leadership: string[]
+  cargos: string[]
+  autoriaCount: number
+  votou?: number
+  totalSessoes?: number
+  taxaPresenca?: number
+}
+
+let _senadoresRealCache: Record<number, SenatorRealData> | null = null
+let _senadoresVotacoesCache: Record<number, { votou: number; totalSessoes: number; taxaPresenca: number }> | null = null
+
+async function loadSenadoresRealCache(): Promise<Record<number, SenatorRealData>> {
+  if (_senadoresRealCache) return _senadoresRealCache
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const cacheBust = `?t=${Date.now()}`
+    const res = await fetch(`${base}/data/senadores-real.json${cacheBust}`, { cache: 'no-store' })
+    if (res.ok) {
+      _senadoresRealCache = await res.json()
+      console.debug('[Senadores Real] Loaded', Object.keys(_senadoresRealCache!).length, 'entries')
+      return _senadoresRealCache!
+    }
+  } catch (e) {
+    console.error('[Senadores Real Error]', e)
+  }
+  return {}
+}
+
+async function loadSenadoresVotacoesCache(): Promise<Record<number, { votou: number; totalSessoes: number; taxaPresenca: number }>> {
+  if (_senadoresVotacoesCache) return _senadoresVotacoesCache
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const cacheBust = `?t=${Date.now()}`
+    const res = await fetch(`${base}/data/senadores-votacoes.json${cacheBust}`, { cache: 'no-store' })
+    if (res.ok) {
+      _senadoresVotacoesCache = await res.json()
+      console.debug('[Senadores Votações] Loaded', Object.keys(_senadoresVotacoesCache!).length, 'entries')
+      return _senadoresVotacoesCache!
+    }
+  } catch (e) {
+    console.error('[Senadores Votações Error]', e)
+  }
+  return {}
+}
+
+function normalizeSenador(raw: RawSenador, tse?: TseDado, senatorReal?: SenatorRealData): Parlamentar {
   const ip      = raw.IdentificacaoParlamentar ?? {}
   const idNum   = parseInt(ip.CodigoParlamentar ?? '0') || 0
   const partido = normalizePartido(ip.SiglaPartidoParlamentar ?? '')
@@ -1213,20 +1291,23 @@ function normalizeSenador(raw: RawSenador, tse?: TseDado): Parlamentar {
   const urna    = ip.NomeParlamentar ?? nome
   const urlFoto = ip.UrlFotoParlamentar ?? ''
   const genero  = parseGenero(ip.SexoParlamentar ?? 'M', urna, tse?.genero)
-  const mandatos = 1
+  const mandatos = senatorReal?.mandatos ?? 1
   const raca: Raca = (tse?.raca && tse.raca !== '') ? tse.raca as Raca : 'Branco'
   const bancada = 'Nenhuma'
   const temas   = Array(8).fill(0.5)
   const maxIdx  = 0
   const patrimonio = tse?.patrimonio ?? 0
   const senatorAlinhamento = calcAlinhamento(partido)
+  
+  // Senator salary is R$ 44,008 (2025)
+  const SENADOR_SALARY = 44008
 
   return {
     id: `SEN-${idNum}`, idNumerico: idNum, nome, nomeUrna: urna,
     tipo: 'SENADOR', partido, uf,
     urlFoto, email: ip.EmailParlamentar ?? '',
     alinhamento: senatorAlinhamento,
-    frequencia:   0,
+    frequencia: senatorReal?.taxaPresenca ?? 0,
     mandatos,
     processos:    0,
     patrimonio,
@@ -1239,8 +1320,9 @@ function normalizeSenador(raw: RawSenador, tse?: TseDado): Parlamentar {
     temaScores: temas, macroTema: TEMAS[maxIdx] as string,
     color: partyColor(partido),
     votoBandidagem: undefined,
-    projetosAprovados: 0,
-    cotas: 0,
+    projetosAprovados: senatorReal?.autoriaCount ?? 0,
+    cotas: 0, // Senate expenses not available in same format
+    salario: SENADOR_SALARY,
   }
 }
 
@@ -1327,6 +1409,10 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
   const bancadasMap = await loadBancadasCache()
   console.log('[Bancadas] Loaded', Object.keys(bancadasMap).length, 'deputies with bancadas')
   
+  // ── Carregar frentes do cache ──
+  const frentesMap = await loadFrentesCache()
+  console.log('[Frentes] Loaded', Object.keys(frentesMap).length, 'deputies with frentes')
+  
   // ── Carregar cotas (despesas) do cache ──
   const cotasMap = await loadCotasCache()
   console.log('[Cotas] Loaded', Object.keys(cotasMap).length, 'deputies with expense data')
@@ -1336,7 +1422,7 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
   console.log('[Real Expenses] Loaded', Object.keys(realExpensesMap).length, 'deputies with real expense data')
   
   // ── Carregar dados reais de temas ──
-  const temasReaisMap = await loadTemasReaisCache()
+  const temasReaisMap = await loadTemasCache()
   console.log('[Temas Reais] Loaded', Object.keys(temasReaisMap).length, 'deputies with real theme data')
   
   // ── Carregar dados reais de presença ──
@@ -1374,6 +1460,25 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
   // ── Carregar dados reais de votações ──
   const votacoesData = await loadVotacoesCache()
   console.log('[Votações] Loaded', votacoesData?.totalDeputies ?? 0, 'deputies with voting data')
+  
+  // ── Carregar dados reais de senadores (mandatos, autoria, votações) ──
+  const senatorRealMap = await loadSenadoresRealCache()
+  console.log('[Senadores Real] Loaded', Object.keys(senatorRealMap).length, 'senators with real data')
+  
+  // ── Carregar dados de votações dos senadores (frequência) ──
+  const senatorVotacoesMap = await loadSenadoresVotacoesCache()
+  console.log('[Senadores Votações] Loaded', Object.keys(senatorVotacoesMap).length, 'senators with voting data')
+  
+  // Merge voting data into senatorRealMap
+  for (const [codigo, votData] of Object.entries(senatorVotacoesMap)) {
+    const num = parseInt(codigo)
+    if (senatorRealMap[num]) {
+      senatorRealMap[num] = {
+        ...senatorRealMap[num],
+        ...votData
+      }
+    }
+  }
   
   // Count financiamento matches for debugging
   let financiamentoMatched = 0
@@ -1730,6 +1835,7 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
       const uf = raw.ultimoStatus?.siglaUf ?? raw.siglaUf ?? ''
       const projetos = projetosMap[raw.id]
       const bancadas = bancadasMap[raw.id]
+      const frentes = frentesMap[raw.id]
       const cotas = cotasMap[raw.id]
       const realExpenses = realExpensesMap[raw.id]
       const pixData = findPixByName(urna)
@@ -1740,13 +1846,17 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
       const financiamento = findFinanciamentoByName(urna)
       const doadores = findDoadoresByName(urna)
       const votacoes = votacoesData?.stats?.[raw.id] ?? null
+      const temasData = temasReaisMap[raw.id]
+      const temasArray = temasData?.temas || null
       if (financiamento) financiamentoMatched++
-      return normalizeDeputado(raw, lookupTse(urna), projetos, bancadas, cotas, realExpenses, pixData, temasReais, presenca, mandatosMap[raw.id], findProcessosByName(urna), tramitacaoMap[raw.id], financiamento, doadores, votacoes)
+      return normalizeDeputado(raw, lookupTse(urna), projetos, bancadas, frentes, cotas, realExpenses, pixData, temasArray, presenca, mandatosMap[raw.id], findProcessosByName(urna), tramitacaoMap[raw.id], financiamento, doadores, votacoes)
     }),
     ...senRaw.map(raw => {
       const ip = raw.IdentificacaoParlamentar ?? {}
       const urna = ip.NomeParlamentar ?? ip.NomeCompletoParlamentar ?? ''
-      return normalizeSenador(raw, lookupTse(urna))
+      const idNum = parseInt(ip.CodigoParlamentar ?? '0') || 0
+      const senatorReal = senatorRealMap[idNum]
+      return normalizeSenador(raw, lookupTse(urna), senatorReal)
     }),
   ]
   
@@ -1815,26 +1925,14 @@ function mulberry32(seed: number) {
 }
 
 const PROJETOS_NOMES = [
-  { nome: 'PL 1234/2024 - Reforma Administrativa', desc: 'Reorganiza a estrutura administrativa do Executivo federal', url: 'https://www.camara.leg.br/propostas-legislativas/2416729' },
-  { nome: 'PEC 45/2023 - Sistema Tributário', desc: 'Reforma do sistema tributário brasileiro com unificação de impostos', url: 'https://www.camara.leg.br/propostas-legislativas/2359769' },
-  { nome: 'PL 2890/2024 - Marco Legal IA', desc: 'Estabelece princípios e regras para uso de inteligência artificial', url: 'https://www.camara.leg.br/propostas-legislativas/2372794' },
-  { nome: 'PL 5678/2024 - Energia Renovável', desc: 'Incentivos para fontes renováveis de energia', url: 'https://www.camara.leg.br/propostas-legislativas/2387258' },
-  { nome: 'PL 9012/2024 - Medicamentos Genéricos', desc: 'Amplia acesso a medicamentos genéricos', url: 'https://www.camara.leg.br/propostas-legislativas/2397251' },
-  { nome: 'PEC 12/2024 - Reforma Previdência', desc: 'Altera regras de aposentadoria e pensões', url: 'https://www.camara.leg.br/propostas-legislativas/2401158' },
-  { nome: 'PL 3456/2024 - Segurança Pública', desc: 'Novas medidas para combate ao crime organizado', url: 'https://www.camara.leg.br/propostas-legislativas/2379756' },
-  { nome: 'PL 7890/2024 - Educação Básica', desc: 'Programa de financiamento da educação básica', url: 'https://www.camara.leg.br/propostas-legislativas/2390056' },
-  { nome: 'PL 1357/2024 - Infraestrutura Digital', desc: 'Expansão da conectividade e infraestrutura de dados', url: 'https://www.camara.leg.br/propostas-legislativas/2354256' },
-  { nome: 'PEC 89/2024 - Orçamento Impositivo', desc: 'Torna obrigatória a execução de emendas parlamentares', url: 'https://www.camara.leg.br/propostas-legislativas/2339406' },
-  { nome: 'PL 2468/2024 - Agrotóxicos', desc: 'Regulamentação do uso de pesticidas na agricultura', url: 'https://www.camara.leg.br/propostas-legislativas/2368964' },
-  { nome: 'PL 3579/2024 - Direitos Trabalhistas', desc: 'Alterações na CLT e direitos dos trabalhadores', url: 'https://www.camara.leg.br/propostas-legislativas/2374421' },
-  { nome: 'PL 4680/2024 - Saúde Mental', desc: 'Política nacional de saúde mental e atenção psicossocial', url: 'https://www.camara.leg.br/propostas-legislativas/2381645' },
-  { nome: 'PL 5791/2024 - Combate à Fome', desc: 'Programa de segurança alimentar e nutricional', url: 'https://www.camara.leg.br/propostas-legislativas/2388323' },
-  { nome: 'PL 6802/2024 - Mudanças Climáticas', desc: 'Política nacional sobre mudança do clima', url: 'https://www.camara.leg.br/propostas-legislativas/2393428' },
-  { nome: 'PEC 34/2024 - Autonomia BC', desc: 'Concede autonomia técnica e administrativa ao Banco Central', url: 'https://www.camara.leg.br/propostas-legislativas/2395656' },
-  { nome: 'PL 7913/2024 - Proteção Dados', desc: 'Lei Geral de Proteção de Dados Pessoais', url: 'https://www.camara.leg.br/propostas-legislativas/2398189' },
-  { nome: 'PL 8024/2024 - Reforma Agrária', desc: 'Programa de reforma agrária e distribuição de terras', url: 'https://www.camara.leg.br/propostas-legislativas/2400478' },
-  { nome: 'PL 9135/2024 - Saneamento Básico', desc: 'Marco regulatório do saneamento básico', url: 'https://www.camara.leg.br/propostas-legislativas/2403456' },
-  { nome: 'PL 1046/2024 - Telecomunicações', desc: 'Regulamentação do setor de telecomunicações', url: 'https://www.camara.leg.br/propostas-legislativas/2345678' },
+  { nome: 'PL 1904/2024', desc: 'Tipifica o crime de aborto após 22 semanas em caso de estupro', temaIdx: 7, url: 'https://www.camara.leg.br/propostas-legislativas/2401892' },
+  { nome: 'PL 473/2025 - Escala 6x1', desc: 'Proposta de acabar com a escala 6x1 de trabalho', temaIdx: 4, url: 'https://www.camara.leg.br/propostas-legislativas/2544732' },
+  { nome: 'PL 1087/2025 - Nº Deputados', desc: 'Aumenta o número de deputados federais de 513 para 543+', temaIdx: 4, url: 'https://www.camara.leg.br/propostas-legislativas/2541087' },
+  { nome: 'PLO 29/2025 - LOA 2026', desc: 'Lei Orçamentária Anual com emendas parlamentares', temaIdx: 4, url: 'https://www.camara.leg.br/propostas-legislativas/2529029' },
+  { nome: 'PL 2337/2023 - Reforma Tributária', desc: 'Reforma do sistema tributário com IBS e CBS', temaIdx: 4, url: 'https://www.camara.leg.br/propostas-legislativas/2359769' },
+  { nome: 'PLP 93/2023 - Arcabouço Fiscal', desc: 'Novo regime fiscal para替换 do teto de gastos', temaIdx: 4, url: 'https://www.camara.leg.br/propostas-legislativas/2363223' },
+  { nome: 'PL 2542/2020 - Anistia Partidária', desc: 'Anistia a partidos por irregularidades na prestação de contas', temaIdx: 5, url: 'https://www.camara.leg.br/propostas-legislativas/2292328' },
+  { nome: 'PEC 18/2022 - Blindagem', desc: 'Proposta que dificulta cassação de partidos e mandatos', temaIdx: 5, url: 'https://www.camara.leg.br/propostas-legislativas/2210452' },
 ]
 
 export interface VoteEntry {
@@ -1847,53 +1945,190 @@ export interface VoteEntry {
   desc: string
   url: string
   data: string
+  votingId?: string
 }
 
-export function realVotesToChartData(votacoesReais: Parlamentar['votacoesReais'], deputyId: number): VoteEntry[] {
+type ProposicaoCache = {
+  [votingId: string]: {
+    votingId: string
+    data: string
+    descricao: string
+    ementa: string
+    proposicao: {
+      id: number
+      siglaTipo: string
+      numero: number
+      ano: number
+      ementa: string
+      url: string
+    } | null
+    siglaNumero: string
+  }
+}
+
+type VotacoesDetalhes = {
+  votesByDeputy: {
+    [deputyId: string]: {
+      deputyId: number
+      nome: string
+      partido: string
+      uf: string
+      votes: {
+        votingId: string
+        data: string
+        voto: string
+        proposicao: null
+      }[]
+    }
+  }
+}
+
+let _votacoesDetalhesCache: VotacoesDetalhes | null = null
+let _proposicoesFullCache: ProposicaoCache | null = null
+
+async function loadVotacoesDetalhesCache(): Promise<VotacoesDetalhes | null> {
+  if (_votacoesDetalhesCache) return _votacoesDetalhesCache
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const res = await fetch(`${base}/data/votacoes-detalhes.json?t=${Date.now()}`, { cache: 'no-store' })
+    if (res.ok) {
+      _votacoesDetalhesCache = await res.json()
+      return _votacoesDetalhesCache
+    }
+  } catch (e) {
+    console.error('[Votações Detalhes Error]', e)
+  }
+  return null
+}
+
+async function loadProposicoesFullCache(): Promise<ProposicaoCache | null> {
+  if (_proposicoesFullCache) return _proposicoesFullCache
+  
+  try {
+    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const res = await fetch(`${base}/data/votacoes-proposicoes.json?t=${Date.now()}`, { cache: 'no-store' })
+    if (res.ok) {
+      const data = await res.json()
+      _proposicoesFullCache = data.propositions
+      return _proposicoesFullCache
+    }
+  } catch (e) {
+    console.error('[Proposições Error]', e)
+  }
+  return null
+}
+
+function inferThemeFromEmenta(ementa: string): number {
+  const e = ementa.toLowerCase()
+  if (/tribut| impost| receita| orçament| financeiro| fiscal/.test(e)) return 4 // Economia
+  if (/saúde| médico| hospital| sus| vacc| epidemi/.test(e)) return 0 // Saúde
+  if (/educaç| escola| univers| ensino| professor/.test(e)) return 2 // Educação
+  if (/ambiental| meio ambiente| clima| preservaç| desmatamento| amazônia/.test(e)) return 5 // Ambiental
+  if (/segurança| crime| armament| pistol| droga| violentaç/.test(e)) return 1 // Segurança
+  if (/agro| rural| agríc| pecu| fundiár| reforma agrár/.test(e)) return 3 // Agropecuária
+  if (/direito| constituiç| lei| judiciári| ministerío público|civil|código/.test(e)) return 7 // Direitos
+  if (/trabalh| emprego| lavor| contrat| previdenc/.test(e)) return 6 // Trabalho
+  return 4 // Default to economia
+}
+
+export async function realVotesToChartData(votacoesReais: Parlamentar['votacoesReais'], deputyId: number): Promise<VoteEntry[]> {
+  const votacoesDetalhesData = await loadVotacoesDetalhesCache()
+  if (!votacoesDetalhesData) {
+    return mockVotes(deputyId) as VoteEntry[]
+  }
+  
+  const proposicoesCacheData = await loadProposicoesFullCache()
+  
+  const deputyData = votacoesDetalhesData.votesByDeputy[deputyId]
+  
+  if (deputyData && deputyData.votes && deputyData.votes.length > 0) {
+    const votes: VoteEntry[] = []
+    
+    const sortedVotes = [...deputyData.votes].sort((a, b) => 
+      a.data.localeCompare(b.data)
+    )
+    
+    for (let i = 0; i < sortedVotes.length; i++) {
+      const vote = sortedVotes[i]
+      const prop = proposicoesCacheData?.[vote.votingId]
+      
+      const propNome = prop?.siglaNumero || prop?.descricao?.substring(0, 40) || `Votação ${vote.votingId}`
+      const propEmenta = prop?.ementa || prop?.descricao || ''
+      const propUrl = prop?.proposicao?.url || `https://www.camara.leg.br/propostas-legislativas/${vote.votingId}`
+      const propData = prop?.data || vote.data
+      
+      const temaIdx = inferThemeFromEmenta(propEmenta)
+      
+      const votoLower = vote.voto.toLowerCase()
+      let pos: 'sim' | 'nao' | 'abs' | 'aus' = 'aus'
+      if (votoLower === 'sim') pos = 'sim'
+      else if (votoLower === 'não' || votoLower === 'nao') pos = 'nao'
+      else if (votoLower === 'abstenção' || votoLower === 'abstencao') pos = 'abs'
+      else if (votoLower === 'obstrução' || votoLower === 'obstrucao') pos = 'abs'
+      
+      const dataFormatada = propData ? propData.split('-').reverse().join('/') : ''
+      
+      votes.push({
+        i,
+        pos,
+        h: 60 + Math.floor(Math.abs(i % 10 - 5) * 10),
+        temaIdx,
+        tema: TEMAS[temaIdx],
+        nome: propNome,
+        desc: propEmenta.substring(0, 100),
+        url: propUrl,
+        data: dataFormatada,
+        votingId: vote.votingId
+      })
+    }
+    
+    return votes
+  }
+  
   if (!votacoesReais || votacoesReais.totalVotacoes === 0) {
     return mockVotes(deputyId) as VoteEntry[]
   }
   
   const { sim, nao, abstencao, obstrucao, presente, ausente } = votacoesReais
-  const total = votacoesReais.totalVotacoes
   const rng = mulberry32(deputyId)
   
   const votes: VoteEntry[] = []
   let i = 0
   
   for (let s = 0; s < sim; s++) {
-    const temaIdx = Math.floor(rng() * 8)
     const proj = PROJETOS_NOMES[Math.floor(rng() * PROJETOS_NOMES.length)]
+    const temaIdx = proj.temaIdx
     const data = `2025-${String(Math.floor(rng() * 3) + 1).padStart(2,'0')}-${String(Math.floor(1 + rng() * 28)).padStart(2,'0')}`
     votes.push({ i: i++, pos: 'sim', h: Math.floor(40 + rng() * 100), temaIdx, tema: TEMAS[temaIdx], nome: proj.nome, desc: proj.desc, url: proj.url, data })
   }
   for (let n = 0; n < nao; n++) {
-    const temaIdx = Math.floor(rng() * 8)
     const proj = PROJETOS_NOMES[Math.floor(rng() * PROJETOS_NOMES.length)]
+    const temaIdx = proj.temaIdx
     const data = `2025-${String(Math.floor(rng() * 3) + 1).padStart(2,'0')}-${String(Math.floor(1 + rng() * 28)).padStart(2,'0')}`
     votes.push({ i: i++, pos: 'nao', h: Math.floor(40 + rng() * 100), temaIdx, tema: TEMAS[temaIdx], nome: proj.nome, desc: proj.desc, url: proj.url, data })
   }
   for (let a = 0; a < abstencao; a++) {
-    const temaIdx = Math.floor(rng() * 8)
     const proj = PROJETOS_NOMES[Math.floor(rng() * PROJETOS_NOMES.length)]
+    const temaIdx = proj.temaIdx
     const data = `2025-${String(Math.floor(rng() * 3) + 1).padStart(2,'0')}-${String(Math.floor(1 + rng() * 28)).padStart(2,'0')}`
     votes.push({ i: i++, pos: 'abs', h: Math.floor(40 + rng() * 100), temaIdx, tema: TEMAS[temaIdx], nome: proj.nome, desc: proj.desc, url: proj.url, data })
   }
   for (let o = 0; o < obstrucao; o++) {
-    const temaIdx = Math.floor(rng() * 8)
     const proj = PROJETOS_NOMES[Math.floor(rng() * PROJETOS_NOMES.length)]
+    const temaIdx = proj.temaIdx
     const data = `2025-${String(Math.floor(rng() * 3) + 1).padStart(2,'0')}-${String(Math.floor(1 + rng() * 28)).padStart(2,'0')}`
     votes.push({ i: i++, pos: 'aus', h: Math.floor(40 + rng() * 100), temaIdx, tema: TEMAS[temaIdx], nome: proj.nome, desc: proj.desc, url: proj.url, data })
   }
   for (let pr = 0; pr < presente; pr++) {
-    const temaIdx = Math.floor(rng() * 8)
     const proj = PROJETOS_NOMES[Math.floor(rng() * PROJETOS_NOMES.length)]
+    const temaIdx = proj.temaIdx
     const data = `2025-${String(Math.floor(rng() * 3) + 1).padStart(2,'0')}-${String(Math.floor(1 + rng() * 28)).padStart(2,'0')}`
     votes.push({ i: i++, pos: 'sim', h: Math.floor(40 + rng() * 100), temaIdx, tema: TEMAS[temaIdx], nome: proj.nome, desc: proj.desc, url: proj.url, data })
   }
   for (let au = 0; au < ausente; au++) {
-    const temaIdx = Math.floor(rng() * 8)
     const proj = PROJETOS_NOMES[Math.floor(rng() * PROJETOS_NOMES.length)]
+    const temaIdx = proj.temaIdx
     const data = `2025-${String(Math.floor(rng() * 3) + 1).padStart(2,'0')}-${String(Math.floor(1 + rng() * 28)).padStart(2,'0')}`
     votes.push({ i: i++, pos: 'aus', h: Math.floor(40 + rng() * 100), temaIdx, tema: TEMAS[temaIdx], nome: proj.nome, desc: proj.desc, url: proj.url, data })
   }
@@ -1904,10 +2139,10 @@ export function realVotesToChartData(votacoesReais: Parlamentar['votacoesReais']
 export function mockVotes(seed: number) {
   const rng = mulberry32(seed)
   return Array.from({ length: 60 }, (_, i) => {
-    const temaIdx = Math.floor(rng() * 8)
     const r = rng()
     const pos = r < 0.55 ? 'sim' : r < 0.8 ? 'nao' : r < 0.95 ? 'abs' : 'aus'
     const proj = PROJETOS_NOMES[Math.floor(rng() * PROJETOS_NOMES.length)]
+    const temaIdx = proj.temaIdx
     const dia = Math.floor(1 + rng() * 28)
     const mes = Math.floor(1 + rng() * 12)
     const ano = 2023 + Math.floor(rng() * 2)

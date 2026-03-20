@@ -6,6 +6,8 @@ import { existsSync, mkdirSync, writeFileSync } from 'fs'
 import { join } from 'path'
 import { execSync } from 'child_process'
 
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+
 const OUTPUT_DIR = join(process.cwd(), 'public/data')
 if (!existsSync(OUTPUT_DIR)) mkdirSync(OUTPUT_DIR, { recursive: true })
 
@@ -17,14 +19,14 @@ function fetchJson(url: string, retries = 3): any {
       const output = execSync('curl -s "' + url + '"', { encoding: 'utf8', maxBuffer: 50 * 1024 * 1024 })
       if (output.startsWith('upstream')) {
         console.log('  Rate limited, waiting...')
-        require('child_process').execSync('sleep 5')
+        execSync('sleep 5')
         continue
       }
       return JSON.parse(output)
     } catch (e) {
       if (i === retries - 1) throw e
       console.log('  Retrying...')
-      require('child_process').execSync('sleep 3')
+      execSync('sleep 3')
     }
   }
   throw new Error('Failed after retries')
@@ -120,7 +122,12 @@ async function main() {
             deputyData[id].votes.push({
               votingId: voting.id,
               data: voting.data,
-              voto: vote.tipoVoto || ''
+              voto: vote.tipoVoto || '',
+              proposicao: voting.proposicaoVotacao ? {
+                id: voting.proposicaoVotacao.id,
+                sigla: voting.proposicaoVotacao.sigla,
+                ementa: voting.proposicaoVotacao.ementa || '',
+              } : null
             })
           }
         }
@@ -133,13 +140,13 @@ async function main() {
       if (page > 20) break
       
       // Rate limiting - longer delay between pages
-      await new Promise(r => setTimeout(r, 100))
+      await sleep(100)
     }
     
     console.log('  Found ' + qVotings + ' votings, ' + Object.keys(deputyData).length + ' total deputies')
     
     // Rate limiting - longer delay between quarters
-    await new Promise(r => setTimeout(r, 2000))
+    await sleep(2000)
   }
   
   // Calculate stats
@@ -179,7 +186,7 @@ async function main() {
     stats[deputyId] = statsData
   }
   
-  // Save
+  // Save aggregated stats
   const outputPath = join(OUTPUT_DIR, 'votacoes-real.json')
   writeFileSync(outputPath, JSON.stringify({
     updatedAt: new Date().toISOString(),
@@ -188,6 +195,14 @@ async function main() {
     totalVotingsProcessed: totalVotings,
     totalDeputies: Object.keys(stats).length,
     stats
+  }, null, 2))
+
+  // Save individual votes with proposition details (for detailed view)
+  const votesPath = join(OUTPUT_DIR, 'votacoes-detalhes.json')
+  writeFileSync(votesPath, JSON.stringify({
+    updatedAt: new Date().toISOString(),
+    source: 'Câmara dos Deputados - Dados Abertos API',
+    votesByDeputy: deputyData
   }, null, 2))
   
   console.log('\n=== Results ===')

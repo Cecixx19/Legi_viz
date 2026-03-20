@@ -1,0 +1,1371 @@
+{
+  "updatedAt": "2026-03-20T00:03:44.903Z",
+  "source": "Câmara dos Deputados - Dados Abertos API",
+  "propositions": {
+    "2462730-34": {
+      "votingId": "2462730-34",
+      "data": "2024-12-03",
+      "descricao": "Aprovado o Projeto de Decreto Legislativo nº 361, de 2024. Sim: 296; Não: 108; Total: 404.",
+      "ementa": "Aprova o texto do Protocolo Complementar sobre o Desenvolvimento Conjunto do CBERS-6 entre o Governo da República Federativa do Brasil e o Governo da República Popular da China ao “Acordo-Quadro sobre",
+      "proposicao": {
+        "id": 2462730,
+        "siglaTipo": "PDL",
+        "numero": 361,
+        "ano": 2024,
+        "ementa": "Aprova o texto do Protocolo Complementar sobre o Desenvolvimento Conjunto do CBERS-6 entre o Governo da República Federativa do Brasil e o Governo da República Popular da China ao “Acordo-Quadro sobre Cooperação em Aplicações Pacíficas de Ciência e Tecnologia do Espaço Exterior entre o Governo da República Federativa do Brasil e o Governo da República Popular da China”, assinado em Pequim, em 14 de abril de 2023.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2462730"
+      },
+      "siglaNumero": "PDL 361/2024"
+    },
+    "2462730-28": {
+      "votingId": "2462730-28",
+      "data": "2024-12-03",
+      "descricao": "Rejeitado o Requerimento. Sim: 38; Não: 357; Total: 395.",
+      "ementa": "Aprova o texto do Protocolo Complementar sobre o Desenvolvimento Conjunto do CBERS-6 entre o Governo da República Federativa do Brasil e o Governo da República Popular da China ao “Acordo-Quadro sobre",
+      "proposicao": {
+        "id": 2462730,
+        "siglaTipo": "PDL",
+        "numero": 361,
+        "ano": 2024,
+        "ementa": "Aprova o texto do Protocolo Complementar sobre o Desenvolvimento Conjunto do CBERS-6 entre o Governo da República Federativa do Brasil e o Governo da República Popular da China ao “Acordo-Quadro sobre Cooperação em Aplicações Pacíficas de Ciência e Tecnologia do Espaço Exterior entre o Governo da República Federativa do Brasil e o Governo da República Popular da China”, assinado em Pequim, em 14 de abril de 2023.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2462730"
+      },
+      "siglaNumero": "PDL 361/2024"
+    },
+    "2475016-8": {
+      "votingId": "2475016-8",
+      "data": "2024-12-04",
+      "descricao": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 267; Não: 156; Total: 423.",
+      "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 8.742, de 7 de dezembro de 1993, a Lei nº 10.633, de 27 de dezembro de 2002, e a Lei nº 14.601, de 19 de junho de 2023, estabelece disposições",
+      "proposicao": {
+        "id": 2473375,
+        "siglaTipo": "PL",
+        "numero": 4614,
+        "ano": 2024,
+        "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 8.742, de 7 de dezembro de 1993, a Lei nº 10.633, de 27 de dezembro de 2002, e a Lei nº 14.601, de 19 de junho de 2023, estabelece disposições para políticas públicas, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473375"
+      },
+      "siglaNumero": "PL 4614/2024"
+    },
+    "2475018-8": {
+      "votingId": "2475018-8",
+      "data": "2024-12-04",
+      "descricao": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 260; Não: 98; Abstenção: 2; Total: 360.",
+      "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento soci",
+      "proposicao": {
+        "id": 2473389,
+        "siglaTipo": "PLP",
+        "numero": 210,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473389"
+      },
+      "siglaNumero": "PLP 210/2024"
+    },
+    "1197773-140": {
+      "votingId": "1197773-140",
+      "data": "2024-12-04",
+      "descricao": "Rejeitadas as Emendas do Senado Federal ao Projeto de Lei nº 996, de 2015, ressalvados os destaques. Sim: 23; Não: 404; Abstenção: 1; Total: 428.",
+      "ementa": "Altera o art. 121 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940- Código Penal -  para prever como homicídio qualificado aquele praticado contra membros do Ministério Público e Magistratura, no exe",
+      "proposicao": {
+        "id": 1197773,
+        "siglaTipo": "PL",
+        "numero": 4015,
+        "ano": 2023,
+        "ementa": "Altera o art. 121 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940- Código Penal -  para prever como homicídio qualificado aquele praticado contra membros do Ministério Público e Magistratura, no exercício de sua função ou por causa dela e dá outras providências.  NOVA EMENTA: Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e as Leis nºs 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), 12.694, de 24 julho de 2012, e 13.709, de 14 agosto de 2018 (Lei Geral de Proteção de Dados Pessoais), para reconhecer como atividade de risco permanente as atribuições inerentes ao Poder Judiciário e ao Ministério Público e garantir aos seus membros medidas de proteção, bem como recrudescer o tratamento penal destinado aos crimes de homicídio e de lesão corporal dolosa contra eles, desde que no exercício da função ou em decorrência dela, ou contra seu cônjuge, companheiro ou parente, inclusive por afinidade, até o terceiro grau, em razão dessa condição.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/1197773"
+      },
+      "siglaNumero": "PL 4015/2023"
+    },
+    "2454257-27": {
+      "votingId": "2454257-27",
+      "data": "2024-12-05",
+      "descricao": "Aprovado o Substitutivo ao Projeto de Lei Complementar nº 136, de 2024, adotado pela relatora da Comissão de Segurança Pública e Combate ao Crime Organizado. Sim: 348; Não: 57; Total: 405.",
+      "ementa": "Altera a Lei Complementar nº79, de 7 de janeiro de 1994, e a Leinº 13.756, de 12 de dezembro de 2018, para dispor, expressamente, sobre a aplicação de recursos do Fundo Penitenciário Nacional (FUPEN) ",
+      "proposicao": {
+        "id": 2454257,
+        "siglaTipo": "PLP",
+        "numero": 136,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº79, de 7 de janeiro de 1994, e a Leinº 13.756, de 12 de dezembro de 2018, para dispor, expressamente, sobre a aplicação de recursos do Fundo Penitenciário Nacional (FUPEN) e do Fundo Nacional de Segurança Pública (FNSP) em órgãos e entidadesque implementam ações de prevenção e enfrentamento da violência contra a mulher nos âmbitos estadual e municipal.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2454257"
+      },
+      "siglaNumero": "PLP 136/2024"
+    },
+    "2454400-32": {
+      "votingId": "2454400-32",
+      "data": "2024-12-10",
+      "descricao": "Rejeitado o Requerimento. Sim: 6; Não: 422; Abstenção: 2; Total: 430.",
+      "ementa": "Institui o Programa de Pleno Pagamento de Dívidas dos Estados (Propag), destinado a promover a revisão dos termos das dívidas dos Estados e do Distrito Federal com a União firmadas no âmbito das Leis ",
+      "proposicao": {
+        "id": 2454400,
+        "siglaTipo": "PLP",
+        "numero": 121,
+        "ano": 2024,
+        "ementa": "Institui o Programa de Pleno Pagamento de Dívidas dos Estados (Propag), destinado a promover a revisão dos termos das dívidas dos Estados e do Distrito Federal com a União firmadas no âmbito das Leis nºs 8.727, de 5 de novembro de 1993, e 9.496, de 11 de setembro de 1997, das Leis Complementares nºs 159, de 19 de maio de 2017, 178, de 13 de janeiro de 2021, e 201, de 24 de outubro de 2023, e da Medida Provisória nº 2.192-70, de 24 de agosto de 2001, e prevê instituição de fundo de equalização federativa.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2454400"
+      },
+      "siglaNumero": "PLP 121/2024"
+    },
+    "2476749-7": {
+      "votingId": "2476749-7",
+      "data": "2024-12-10",
+      "descricao": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 317; Não: 66; Abstenção: 2; Total: 385.",
+      "ementa": "Autoriza a criação da empresa pública Companhia Docas de Alagoas e a contratação do Banco Nacional de Desenvolvimento Econômico e Social em diversas iniciativas.",
+      "proposicao": {
+        "id": 2450771,
+        "siglaTipo": "PL",
+        "numero": 3034,
+        "ano": 2024,
+        "ementa": "Autoriza a criação da empresa pública Companhia Docas de Alagoas e a contratação do Banco Nacional de Desenvolvimento Econômico e Social em diversas iniciativas.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2450771"
+      },
+      "siglaNumero": "PL 3034/2024"
+    },
+    "2465140-45": {
+      "votingId": "2465140-45",
+      "data": "2024-12-12",
+      "descricao": "Aprovado o Substitutivo ao Projeto de Lei nº 4.120, de 2024, adotado pela relatora da Comissão de Segurança Pública e Combate ao Crime Organizado. Sim: 280; Não: 78; Total: 358.",
+      "ementa": "Dispõe sobre a associação interfederativa para o enfrentamento ao crime organizado transnacional e a persecução penal para os crimes que especifica; estabelece medidas para a segurança jurídica das op",
+      "proposicao": {
+        "id": 2465140,
+        "siglaTipo": "PL",
+        "numero": 4120,
+        "ano": 2024,
+        "ementa": "Dispõe sobre a associação interfederativa para o enfrentamento ao crime organizado transnacional e a persecução penal para os crimes que especifica; estabelece medidas para a segurança jurídica das operações de segurança pública e de inteligência para o enfrentamento às organizações criminosas transnacionais e para a atuação de agentes públicos; tipifica crimes e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2465140"
+      },
+      "siglaNumero": "PL 4120/2024"
+    },
+    "2194861-91": {
+      "votingId": "2194861-91",
+      "data": "2024-12-12",
+      "descricao": "Mantido o texto. Sim: 228; Não: 107; Total: 335.",
+      "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+      "proposicao": {
+        "id": 2194861,
+        "siglaTipo": "PL",
+        "numero": 1637,
+        "ano": 2019,
+        "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2194861"
+      },
+      "siglaNumero": "PL 1637/2019"
+    },
+    "2194861-85": {
+      "votingId": "2194861-85",
+      "data": "2024-12-12",
+      "descricao": "Mantido o texto. Sim: 183; Não: 79; Total: 262.",
+      "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+      "proposicao": {
+        "id": 2194861,
+        "siglaTipo": "PL",
+        "numero": 1637,
+        "ano": 2019,
+        "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2194861"
+      },
+      "siglaNumero": "PL 1637/2019"
+    },
+    "2194861-82": {
+      "votingId": "2194861-82",
+      "data": "2024-12-12",
+      "descricao": "Mantido o texto. Sim: 229; Não: 106; Abstenção: 1; Total: 336.",
+      "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+      "proposicao": {
+        "id": 2194861,
+        "siglaTipo": "PL",
+        "numero": 1637,
+        "ano": 2019,
+        "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2194861"
+      },
+      "siglaNumero": "PL 1637/2019"
+    },
+    "2194861-79": {
+      "votingId": "2194861-79",
+      "data": "2024-12-12",
+      "descricao": "Mantido o texto. Sim: 176; Não: 86; Total: 262.",
+      "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+      "proposicao": {
+        "id": 2194861,
+        "siglaTipo": "PL",
+        "numero": 1637,
+        "ano": 2019,
+        "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2194861"
+      },
+      "siglaNumero": "PL 1637/2019"
+    },
+    "2194861-77": {
+      "votingId": "2194861-77",
+      "data": "2024-12-12",
+      "descricao": "Aprovado o Substitutivo Reformulado ao Projeto de Lei nº 1.637, de 2019, adotado pelo relator da Comissão de Constituição e Justiça e de Cidadania, ressalvados os destaques. Sim: 238; Não: 111; Abstenção: 2; Total: 351.",
+      "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+      "proposicao": {
+        "id": 2194861,
+        "siglaTipo": "PL",
+        "numero": 1637,
+        "ano": 2019,
+        "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2194861"
+      },
+      "siglaNumero": "PL 1637/2019"
+    },
+    "2194861-73": {
+      "votingId": "2194861-73",
+      "data": "2024-12-12",
+      "descricao": "Rejeitado o Requerimento. Sim: 90; Não: 227; Total: 317.",
+      "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+      "proposicao": {
+        "id": 2194861,
+        "siglaTipo": "PL",
+        "numero": 1637,
+        "ano": 2019,
+        "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2194861"
+      },
+      "siglaNumero": "PL 1637/2019"
+    },
+    "2479551-7": {
+      "votingId": "2479551-7",
+      "data": "2024-12-12",
+      "descricao": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 321; Não: 51; Total: 372.",
+      "ementa": "Altera a Lei n. 10.826, de 22 de dezembro de 2003, para aumentar a pena em crime de posse ou porte de arma de fogo de uso restrito ou proibido que possuam alto potencial destrutivo.",
+      "proposicao": {
+        "id": 2401233,
+        "siglaTipo": "PL",
+        "numero": 5352,
+        "ano": 2023,
+        "ementa": "Altera a Lei n. 10.826, de 22 de dezembro de 2003, para aumentar a pena em crime de posse ou porte de arma de fogo de uso restrito ou proibido que possuam alto potencial destrutivo.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2401233"
+      },
+      "siglaNumero": "PL 5352/2023"
+    },
+    "2479094-8": {
+      "votingId": "2479094-8",
+      "data": "2024-12-12",
+      "descricao": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 334; Não: 16; Total: 350.",
+      "ementa": "Regulamenta a Profissão de Alpinismo Industrial e dá outras providências",
+      "proposicao": {
+        "id": 2394688,
+        "siglaTipo": "PL",
+        "numero": 4911,
+        "ano": 2023,
+        "ementa": "Regulamenta a Profissão de Alpinismo Industrial e dá outras providências",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2394688"
+      },
+      "siglaNumero": "PL 4911/2023"
+    },
+    "2258828-105": {
+      "votingId": "2258828-105",
+      "data": "2024-12-12",
+      "descricao": "Aprovada a Emenda de Plenário n° 1. Sim: 267; Não: 85; Abstenção: 14; Total: 366.",
+      "ementa": "Dispõe sobre o cadastro de pedófilos, alterando a Lei nº 8.069, de 13 de julho de 1990, Estatuto da Criança e do Adolescente.",
+      "proposicao": {
+        "id": 2258828,
+        "siglaTipo": "PL",
+        "numero": 3976,
+        "ano": 2020,
+        "ementa": "Dispõe sobre o cadastro de pedófilos, alterando a Lei nº 8.069, de 13 de julho de 1990, Estatuto da Criança e do Adolescente.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2258828"
+      },
+      "siglaNumero": "PL 3976/2020"
+    },
+    "2480330-8": {
+      "votingId": "2480330-8",
+      "data": "2024-12-16",
+      "descricao": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 314; Não: 140; Total: 454.",
+      "ementa": "Institui a Política Nacional de Visitação a Unidades de Conservação, dispõe sobre a visitação a unidades de conservação e autoriza o Instituto Chico Mendes de Conservação da Biodiversidade - Instituto",
+      "proposicao": {
+        "id": 2479834,
+        "siglaTipo": "PL",
+        "numero": 4870,
+        "ano": 2024,
+        "ementa": "Institui a Política Nacional de Visitação a Unidades de Conservação, dispõe sobre a visitação a unidades de conservação e autoriza o Instituto Chico Mendes de Conservação da Biodiversidade - Instituto Chico Mendes e os órgãos estaduais e municipais executores do Sistema Nacional de Unidades de Conservação - SNUC a contratar instituição financeira oficial para criar e gerir fundo privado com objetivo de financiar e apoiar a visitação a unidades de conservação.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2479834"
+      },
+      "siglaNumero": "PL 4870/2024"
+    },
+    "2473389-68": {
+      "votingId": "2473389-68",
+      "data": "2024-12-17",
+      "descricao": "Rejeitada a Emenda de Plenário n° 38. Sim: 59; Não: 385; Abstenção: 1; Total: 445.",
+      "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento soci",
+      "proposicao": {
+        "id": 2473389,
+        "siglaTipo": "PLP",
+        "numero": 210,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473389"
+      },
+      "siglaNumero": "PLP 210/2024"
+    },
+    "2473389-62": {
+      "votingId": "2473389-62",
+      "data": "2024-12-17",
+      "descricao": "Rejeitada a Emenda de Plenário nº 9. Sim: 227; Não: 233; Abstenção: 1; Total: 461.",
+      "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento soci",
+      "proposicao": {
+        "id": 2473389,
+        "siglaTipo": "PLP",
+        "numero": 210,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473389"
+      },
+      "siglaNumero": "PLP 210/2024"
+    },
+    "2473389-58": {
+      "votingId": "2473389-58",
+      "data": "2024-12-17",
+      "descricao": "Aprovado o Substitutivo ao Projeto de Lei Complementar nº 210, de 2024, adotado pelo relator da Comissão Especial. Sim: 318; Não: 149; Total: 467.",
+      "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento soci",
+      "proposicao": {
+        "id": 2473389,
+        "siglaTipo": "PLP",
+        "numero": 210,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473389"
+      },
+      "siglaNumero": "PLP 210/2024"
+    },
+    "2473389-53": {
+      "votingId": "2473389-53",
+      "data": "2024-12-17",
+      "descricao": "Aprovado o Requerimento. Sim: 308; Não: 148; Total: 456.",
+      "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento soci",
+      "proposicao": {
+        "id": 2473389,
+        "siglaTipo": "PLP",
+        "numero": 210,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473389"
+      },
+      "siglaNumero": "PLP 210/2024"
+    },
+    "2473389-45": {
+      "votingId": "2473389-45",
+      "data": "2024-12-17",
+      "descricao": "Rejeitado o Requerimento. Sim: 75; Não: 379; Abstenção: 2; Total: 456.",
+      "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento soci",
+      "proposicao": {
+        "id": 2473389,
+        "siglaTipo": "PLP",
+        "numero": 210,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473389"
+      },
+      "siglaNumero": "PLP 210/2024"
+    },
+    "2430143-144": {
+      "votingId": "2430143-144",
+      "data": "2024-12-17",
+      "descricao": "Aprovada a Emenda de Redação n° 2. Sim: 314; Não: 117; Abstenção: 1; Total: 432.",
+      "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+      "proposicao": {
+        "id": 2430143,
+        "siglaTipo": "PLP",
+        "numero": 68,
+        "ano": 2024,
+        "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2430143"
+      },
+      "siglaNumero": "PLP 68/2024"
+    },
+    "2430143-142": {
+      "votingId": "2430143-142",
+      "data": "2024-12-17",
+      "descricao": "Rejeitados os dispositivos do Substitutivo do Senado Federal ao Projeto de Lei Complementar nº 68, de 2024, com parecer pela rejeição. Sim: 18; Não: 328; Abstenção: 7; Total: 353.",
+      "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+      "proposicao": {
+        "id": 2430143,
+        "siglaTipo": "PLP",
+        "numero": 68,
+        "ano": 2024,
+        "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2430143"
+      },
+      "siglaNumero": "PLP 68/2024"
+    },
+    "2430143-140": {
+      "votingId": "2430143-140",
+      "data": "2024-12-17",
+      "descricao": "Aprovados os dispositivos do Substitutivo do Senado Federal ao Projeto de Lei Complementar nº 68, de 2024, com parecer pela aprovação. Sim: 324; Não: 123; Abstenção: 3; Total: 450.",
+      "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+      "proposicao": {
+        "id": 2430143,
+        "siglaTipo": "PLP",
+        "numero": 68,
+        "ano": 2024,
+        "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2430143"
+      },
+      "siglaNumero": "PLP 68/2024"
+    },
+    "2430143-137": {
+      "votingId": "2430143-137",
+      "data": "2024-12-17",
+      "descricao": "Rejeitado o Requerimento. Sim: 118; Não: 289; Total: 407.",
+      "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+      "proposicao": {
+        "id": 2430143,
+        "siglaTipo": "PLP",
+        "numero": 68,
+        "ano": 2024,
+        "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2430143"
+      },
+      "siglaNumero": "PLP 68/2024"
+    },
+    "2461217-7": {
+      "votingId": "2461217-7",
+      "data": "2024-12-17",
+      "descricao": "Rejeitado o Requerimento de Urgência (Art. 155 do RICD). Sim: 244; Não: 115; Total: 359.",
+      "ementa": "Altera a Lei nº 14.467, de 16 de novembro de 2022, que dispõe sobre o tratamento tributário aplicável às perdas incorridas no recebimento de créditos decorrentes das atividades das instituições financ",
+      "proposicao": {
+        "id": 2460010,
+        "siglaTipo": "PL",
+        "numero": 3802,
+        "ano": 2024,
+        "ementa": "Altera a Lei nº 14.467, de 16 de novembro de 2022, que dispõe sobre o tratamento tributário aplicável às perdas incorridas no recebimento de créditos decorrentes das atividades das instituições financeiras e das demais instituições autorizadas a funcionar pelo Banco Central do Brasil.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2460010"
+      },
+      "siglaNumero": "PL 3802/2024"
+    },
+    "347421-192": {
+      "votingId": "347421-192",
+      "data": "2024-12-18",
+      "descricao": "Aprovada a preferência. Sim: 294; Não: 172; Total: 466.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "347421-188": {
+      "votingId": "347421-188",
+      "data": "2024-12-18",
+      "descricao": "Aprovado o Requerimento. Sim: 320; Não: 136; Abstenção: 2; Total: 458.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "347421-181": {
+      "votingId": "347421-181",
+      "data": "2024-12-18",
+      "descricao": "Rejeitado o Requerimento. Sim: 147; Não: 295; Total: 442.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "2269745-144": {
+      "votingId": "2269745-144",
+      "data": "2024-12-18",
+      "descricao": "Aprovadas as Emendas do Senado Federal ao Projeto de Lei nº 327, de 2021, com parecer pela aprovação, com exceção da Emenda nº 3; do inciso II, do §1º, do art. 3º da Emenda nº 2; do §2º, do art. 3º da Emenda nº 4; e do inciso VIII e da exclusão do §4º promovida pelo art. 1º da Emenda nº 5. Sim: 448; Não: 14; Abstenção: 1; Total: 463.",
+      "ementa": "Dispõe sobre a Política Nacional da Transição Energética - PONTE.  NOVA EMENTA: Institui o Programa de Aceleração da Transição Energética (Paten); e altera as Leis nºs 13.988, de 14 de abril de 2020, ",
+      "proposicao": {
+        "id": 2269745,
+        "siglaTipo": "PL",
+        "numero": 327,
+        "ano": 2021,
+        "ementa": "Dispõe sobre a Política Nacional da Transição Energética - PONTE.  NOVA EMENTA: Institui o Programa de Aceleração da Transição Energética (Paten); e altera as Leis nºs 13.988, de 14 de abril de 2020, 11.484, de 31 de maio de 2007, e 9.991, de 24 de julho de 2000.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2269745"
+      },
+      "siglaNumero": "PL 327/2021"
+    },
+    "2473389-80": {
+      "votingId": "2473389-80",
+      "data": "2024-12-18",
+      "descricao": "Aprovada a Emenda Aglutinativa nº 1. Sim: 444; Não: 16; Abstenção: 1; Total: 461.",
+      "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento soci",
+      "proposicao": {
+        "id": 2473389,
+        "siglaTipo": "PLP",
+        "numero": 210,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473389"
+      },
+      "siglaNumero": "PLP 210/2024"
+    },
+    "2480642-7": {
+      "votingId": "2480642-7",
+      "data": "2024-12-18",
+      "descricao": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 299; Não: 134; Abstenção: 3; Total: 436.",
+      "ementa": "Altera a Lei nº 14.467, de 16 de novembro de 2022, que dispõe sobre o tratamento tributário aplicável às perdas incorridas no recebimento de créditos decorrentes das atividades das instituições financ",
+      "proposicao": {
+        "id": 2460010,
+        "siglaTipo": "PL",
+        "numero": 3802,
+        "ano": 2024,
+        "ementa": "Altera a Lei nº 14.467, de 16 de novembro de 2022, que dispõe sobre o tratamento tributário aplicável às perdas incorridas no recebimento de créditos decorrentes das atividades das instituições financeiras e das demais instituições autorizadas a funcionar pelo Banco Central do Brasil.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2460010"
+      },
+      "siglaNumero": "PL 3802/2024"
+    },
+    "2460010-43": {
+      "votingId": "2460010-43",
+      "data": "2024-12-19",
+      "descricao": "Aprovado o Projeto de Lei nº 3.802, de 2024. Sim: 340; Não: 117; Abstenção: 1; Total: 458.",
+      "ementa": "Altera a Lei nº 14.467, de 16 de novembro de 2022, que dispõe sobre o tratamento tributário aplicável às perdas incorridas no recebimento de créditos decorrentes das atividades das instituições financ",
+      "proposicao": {
+        "id": 2460010,
+        "siglaTipo": "PL",
+        "numero": 3802,
+        "ano": 2024,
+        "ementa": "Altera a Lei nº 14.467, de 16 de novembro de 2022, que dispõe sobre o tratamento tributário aplicável às perdas incorridas no recebimento de créditos decorrentes das atividades das instituições financeiras e das demais instituições autorizadas a funcionar pelo Banco Central do Brasil.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2460010"
+      },
+      "siglaNumero": "PL 3802/2024"
+    },
+    "2473375-78": {
+      "votingId": "2473375-78",
+      "data": "2024-12-19",
+      "descricao": "Mantido o texto. Sim: 277; Não: 174; Abstenção: 1; Total: 452.",
+      "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 8.742, de 7 de dezembro de 1993, a Lei nº 10.633, de 27 de dezembro de 2002, e a Lei nº 14.601, de 19 de junho de 2023, estabelece disposições",
+      "proposicao": {
+        "id": 2473375,
+        "siglaTipo": "PL",
+        "numero": 4614,
+        "ano": 2024,
+        "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 8.742, de 7 de dezembro de 1993, a Lei nº 10.633, de 27 de dezembro de 2002, e a Lei nº 14.601, de 19 de junho de 2023, estabelece disposições para políticas públicas, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473375"
+      },
+      "siglaNumero": "PL 4614/2024"
+    },
+    "2473375-59": {
+      "votingId": "2473375-59",
+      "data": "2024-12-19",
+      "descricao": "Aprovada a Subemenda Substitutiva Global ao Projeto de Lei nº 4.614, de 2024, adotada pelo relator da Comissão Especial, ressalvado o destaque. Sim: 264; Não: 209; Total: 473.",
+      "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 8.742, de 7 de dezembro de 1993, a Lei nº 10.633, de 27 de dezembro de 2002, e a Lei nº 14.601, de 19 de junho de 2023, estabelece disposições",
+      "proposicao": {
+        "id": 2473375,
+        "siglaTipo": "PL",
+        "numero": 4614,
+        "ano": 2024,
+        "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 8.742, de 7 de dezembro de 1993, a Lei nº 10.633, de 27 de dezembro de 2002, e a Lei nº 14.601, de 19 de junho de 2023, estabelece disposições para políticas públicas, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473375"
+      },
+      "siglaNumero": "PL 4614/2024"
+    },
+    "2473375-53": {
+      "votingId": "2473375-53",
+      "data": "2024-12-19",
+      "descricao": "Aprovado o Requerimento. Sim: 290; Não: 170; Total: 460.",
+      "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 8.742, de 7 de dezembro de 1993, a Lei nº 10.633, de 27 de dezembro de 2002, e a Lei nº 14.601, de 19 de junho de 2023, estabelece disposições",
+      "proposicao": {
+        "id": 2473375,
+        "siglaTipo": "PL",
+        "numero": 4614,
+        "ano": 2024,
+        "ementa": "Altera a Lei nº 8.171, de 17 de janeiro de 1991, a Lei nº 8.742, de 7 de dezembro de 1993, a Lei nº 10.633, de 27 de dezembro de 2002, e a Lei nº 14.601, de 19 de junho de 2023, estabelece disposições para políticas públicas, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473375"
+      },
+      "siglaNumero": "PL 4614/2024"
+    },
+    "347421-224": {
+      "votingId": "347421-224",
+      "data": "2024-12-19",
+      "descricao": "Mantido o texto. Sim: 358; Não: 129; Abstenção: 1; Total: 488.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "347421-221": {
+      "votingId": "347421-221",
+      "data": "2024-12-19",
+      "descricao": "Aprovada, em segundo turno, a Proposta de Emenda à Constituição n° 31, de 2007, ressalvado o destaque. Sim: 348; Não: 146; Total: 494.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "2481282-8": {
+      "votingId": "2481282-8",
+      "data": "2024-12-19",
+      "descricao": "Aprovado o Requerimento nº 4.990/2024, dos Senhores Líderes, que solicita a quebra de interstício de 5 sessões previsto no § 6º do art. 202 do RICD, para apreciação do segundo turno da PEC nº 31, de 2007. Sim: 343; Não: 99; Abstenção: 1; Total: 443.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "347421-205": {
+      "votingId": "347421-205",
+      "data": "2024-12-19",
+      "descricao": "Mantido o texto. Sim: 349; Não: 143; Abstenção: 1; Total: 493.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "347421-202": {
+      "votingId": "347421-202",
+      "data": "2024-12-19",
+      "descricao": "Suprimido o texto. Sim: 4; Não: 360; Total: 364.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "347421-200": {
+      "votingId": "347421-200",
+      "data": "2024-12-19",
+      "descricao": "Aprovada, em primeiro turno, a Emenda Aglutinativa Substitutiva à Proposta de Emenda à Constituição nº 31, de 2007. Sim: 344; Não: 154; Abstenção: 2; Total: 500.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "347421-198": {
+      "votingId": "347421-198",
+      "data": "2024-12-19",
+      "descricao": "Rejeitado o Requerimento. Sim: 149; Não: 302; Abstenção: 1; Total: 452.",
+      "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal ",
+      "proposicao": {
+        "id": 347421,
+        "siglaTipo": "PEC",
+        "numero": 31,
+        "ano": 2007,
+        "ementa": "Altera o Sistema Tributário Nacional, unifica a legislação do Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, dentre outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/347421"
+      },
+      "siglaNumero": "PEC 31/2007"
+    },
+    "2162802-89": {
+      "votingId": "2162802-89",
+      "data": "2025-02-11",
+      "descricao": "Aprovado o Substitutivo ao Projeto de Lei nº 9.133, de 2017, adotado pela relatora da Comissão de Educação. Sim: 297; Não: 107; Abstenção: 1; Total: 405.",
+      "ementa": "Acrescenta parágrafo único ao art. 7º da Lei nº 9.394, de 20 de dezembro de 1996, de forma a prever a suspensão de credenciamento pra instituições que negarem matrícula de educandos.",
+      "proposicao": {
+        "id": 2162802,
+        "siglaTipo": "PL",
+        "numero": 9133,
+        "ano": 2017,
+        "ementa": "Acrescenta parágrafo único ao art. 7º da Lei nº 9.394, de 20 de dezembro de 1996, de forma a prever a suspensão de credenciamento pra instituições que negarem matrícula de educandos.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2162802"
+      },
+      "siglaNumero": "PL 9133/2017"
+    },
+    "2438467-47": {
+      "votingId": "2438467-47",
+      "data": "2025-02-12",
+      "descricao": "Aprovado o Projeto de Lei nº 2.215, de 2024. Sim: 273; Não: 136; Total: 409.",
+      "ementa": "Institui o Dia Nacional para a Ação Climática.",
+      "proposicao": {
+        "id": 2438467,
+        "siglaTipo": "PL",
+        "numero": 2215,
+        "ano": 2024,
+        "ementa": "Institui o Dia Nacional para a Ação Climática.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2438467"
+      },
+      "siglaNumero": "PL 2215/2024"
+    },
+    "2438467-41": {
+      "votingId": "2438467-41",
+      "data": "2025-02-12",
+      "descricao": "Rejeitado o Requerimento. Sim: 125; Não: 236; Abstenção: 2; Total: 363.",
+      "ementa": "Institui o Dia Nacional para a Ação Climática.",
+      "proposicao": {
+        "id": 2438467,
+        "siglaTipo": "PL",
+        "numero": 2215,
+        "ano": 2024,
+        "ementa": "Institui o Dia Nacional para a Ação Climática.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2438467"
+      },
+      "siglaNumero": "PL 2215/2024"
+    },
+    "2397890-55": {
+      "votingId": "2397890-55",
+      "data": "2025-02-18",
+      "descricao": "Aprovado o Projeto de Lei Complementar nº 223, de 2023. Sim: 407; Não: 6; Total: 413.",
+      "ementa": "Altera a Lei Complementar 123, de 14 de dezembro de 2006, para dispor sobre a prorrogação do prazo para o recolhimento de impostos para as Microempresas e Empresas de Pequeno Porte, em situação de dec",
+      "proposicao": {
+        "id": 2397890,
+        "siglaTipo": "PLP",
+        "numero": 223,
+        "ano": 2023,
+        "ementa": "Altera a Lei Complementar 123, de 14 de dezembro de 2006, para dispor sobre a prorrogação do prazo para o recolhimento de impostos para as Microempresas e Empresas de Pequeno Porte, em situação de decretação de estado de calamidade pública estadual ou distrital.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2397890"
+      },
+      "siglaNumero": "PLP 223/2023"
+    },
+    "2397890-54": {
+      "votingId": "2397890-54",
+      "data": "2025-02-18",
+      "descricao": "Rejeitado o Substitutivo ao Projeto de Lei Complementar nº 223, de 2023, da Comissão de Indústria, Comércio e Serviços. Sim: 34; Não: 356; Abstenção: 1; Total: 391.",
+      "ementa": "Altera a Lei Complementar 123, de 14 de dezembro de 2006, para dispor sobre a prorrogação do prazo para o recolhimento de impostos para as Microempresas e Empresas de Pequeno Porte, em situação de dec",
+      "proposicao": {
+        "id": 2397890,
+        "siglaTipo": "PLP",
+        "numero": 223,
+        "ano": 2023,
+        "ementa": "Altera a Lei Complementar 123, de 14 de dezembro de 2006, para dispor sobre a prorrogação do prazo para o recolhimento de impostos para as Microempresas e Empresas de Pequeno Porte, em situação de decretação de estado de calamidade pública estadual ou distrital.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2397890"
+      },
+      "siglaNumero": "PLP 223/2023"
+    },
+    "2484059-7": {
+      "votingId": "2484059-7",
+      "data": "2025-02-18",
+      "descricao": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 266; Não: 140; Abstenção: 2; Total: 408.",
+      "ementa": "Institui o dia 17 de fevereiro como Dia Nacional da Axé Music.",
+      "proposicao": {
+        "id": 2466108,
+        "siglaTipo": "PL",
+        "numero": 4187,
+        "ano": 2024,
+        "ementa": "Institui o dia 17 de fevereiro como Dia Nacional da Axé Music.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2466108"
+      },
+      "siglaNumero": "PL 4187/2024"
+    },
+    "2466108-33": {
+      "votingId": "2466108-33",
+      "data": "2025-02-25",
+      "descricao": "Aprovado o Projeto de Lei nº 4.187, de 2024. Sim: 269; Não: 136; Abstenção: 2; Total: 407.",
+      "ementa": "Institui o dia 17 de fevereiro como Dia Nacional da Axé Music.",
+      "proposicao": {
+        "id": 2466108,
+        "siglaTipo": "PL",
+        "numero": 4187,
+        "ano": 2024,
+        "ementa": "Institui o dia 17 de fevereiro como Dia Nacional da Axé Music.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2466108"
+      },
+      "siglaNumero": "PL 4187/2024"
+    },
+    "2466108-28": {
+      "votingId": "2466108-28",
+      "data": "2025-02-25",
+      "descricao": "Rejeitado o Requerimento. Sim: 138; Não: 266; Total: 404.",
+      "ementa": "Institui o dia 17 de fevereiro como Dia Nacional da Axé Music.",
+      "proposicao": {
+        "id": 2466108,
+        "siglaTipo": "PL",
+        "numero": 4187,
+        "ano": 2024,
+        "ementa": "Institui o dia 17 de fevereiro como Dia Nacional da Axé Music.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2466108"
+      },
+      "siglaNumero": "PL 4187/2024"
+    },
+    "255291-105": {
+      "votingId": "255291-105",
+      "data": "2025-02-26",
+      "descricao": "Rejeitada a Emenda de Plenário nº 2. Sim: 57; Não: 331; Total: 388.",
+      "ementa": "Acrescenta art. à Lei nº 9.049, de 18 de maio de 1995, facultando a afixação na Cédula de Identidade do registro da deficiência física do surdo.",
+      "proposicao": {
+        "id": 255291,
+        "siglaTipo": "PL",
+        "numero": 3648,
+        "ano": 2004,
+        "ementa": "Acrescenta art. à Lei nº 9.049, de 18 de maio de 1995, facultando a afixação na Cédula de Identidade do registro da deficiência física do surdo.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/255291"
+      },
+      "siglaNumero": "PL 3648/2004"
+    },
+    "2485066-33": {
+      "votingId": "2485066-33",
+      "data": "2025-03-18",
+      "descricao": "Aprovado o Substitutivo ao Projeto de Lei Complementar nº 22, de 2025, adotado pelo relator da Comissão de Finanças e Tributação. Sim: 347; Não: 114; Total: 461.",
+      "ementa": "Dispõe sobre extensão do prazo para liquidação de restos a pagar não processados de que trata o art. 172 da Lei nº 14.791, de 29 de dezembro de 2023 (Lei de Diretrizes Orçamentárias de 2024).",
+      "proposicao": {
+        "id": 2485066,
+        "siglaTipo": "PLP",
+        "numero": 22,
+        "ano": 2025,
+        "ementa": "Dispõe sobre extensão do prazo para liquidação de restos a pagar não processados de que trata o art. 172 da Lei nº 14.791, de 29 de dezembro de 2023 (Lei de Diretrizes Orçamentárias de 2024).",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2485066"
+      },
+      "siglaNumero": "PLP 22/2025"
+    },
+    "2485066-28": {
+      "votingId": "2485066-28",
+      "data": "2025-03-18",
+      "descricao": "Rejeitado o Requerimento. Sim: 46; Não: 372; Total: 418.",
+      "ementa": "Dispõe sobre extensão do prazo para liquidação de restos a pagar não processados de que trata o art. 172 da Lei nº 14.791, de 29 de dezembro de 2023 (Lei de Diretrizes Orçamentárias de 2024).",
+      "proposicao": {
+        "id": 2485066,
+        "siglaTipo": "PLP",
+        "numero": 22,
+        "ano": 2025,
+        "ementa": "Dispõe sobre extensão do prazo para liquidação de restos a pagar não processados de que trata o art. 172 da Lei nº 14.791, de 29 de dezembro de 2023 (Lei de Diretrizes Orçamentárias de 2024).",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2485066"
+      },
+      "siglaNumero": "PLP 22/2025"
+    },
+    "2486199-35": {
+      "votingId": "2486199-35",
+      "data": "2025-03-18",
+      "descricao": "Mantido o texto. Sim: 386; Não: 27; Total: 413.",
+      "ementa": "Altera a Lei Complementar nº 172, de 15 de abril de 2020, para conceder prazo para que os Estados, o Distrito Federal e os Municípios executem atos de transposição e de transferência e atos de transpo",
+      "proposicao": {
+        "id": 2486199,
+        "siglaTipo": "PLP",
+        "numero": 58,
+        "ano": 2025,
+        "ementa": "Altera a Lei Complementar nº 172, de 15 de abril de 2020, para conceder prazo para que os Estados, o Distrito Federal e os Municípios executem atos de transposição e de transferência e atos de transposição e de reprogramação, respectivamente.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2486199"
+      },
+      "siglaNumero": "PLP 58/2025"
+    },
+    "2486199-32": {
+      "votingId": "2486199-32",
+      "data": "2025-03-18",
+      "descricao": "Aprovado o Projeto de Lei Complementar nº 58, de 2025, ressalvado o destaque. Sim: 413; Não: 1; Total: 414.",
+      "ementa": "Altera a Lei Complementar nº 172, de 15 de abril de 2020, para conceder prazo para que os Estados, o Distrito Federal e os Municípios executem atos de transposição e de transferência e atos de transpo",
+      "proposicao": {
+        "id": 2486199,
+        "siglaTipo": "PLP",
+        "numero": 58,
+        "ano": 2025,
+        "ementa": "Altera a Lei Complementar nº 172, de 15 de abril de 2020, para conceder prazo para que os Estados, o Distrito Federal e os Municípios executem atos de transposição e de transferência e atos de transposição e de reprogramação, respectivamente.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2486199"
+      },
+      "siglaNumero": "PLP 58/2025"
+    },
+    "2379209-61": {
+      "votingId": "2379209-61",
+      "data": "2025-03-25",
+      "descricao": "Mantido o texto. Sim: 300; Não: 99; Total: 399.",
+      "ementa": "Acrescenta o artigo 244-C à Lei nº 8.069, de 13 de julho de 1990, que dispõe sobre o Estatuto da Criança e do Adolescente, para instituir o crime de violência patrimonial contra a criança e o adolesce",
+      "proposicao": {
+        "id": 2379209,
+        "siglaTipo": "PL",
+        "numero": 3914,
+        "ano": 2023,
+        "ementa": "Acrescenta o artigo 244-C à Lei nº 8.069, de 13 de julho de 1990, que dispõe sobre o Estatuto da Criança e do Adolescente, para instituir o crime de violência patrimonial contra a criança e o adolescente.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2379209"
+      },
+      "siglaNumero": "PL 3914/2023"
+    },
+    "2379209-53": {
+      "votingId": "2379209-53",
+      "data": "2025-03-25",
+      "descricao": "Rejeitado o Requerimento. Sim: 93; Não: 292; Total: 385.",
+      "ementa": "Acrescenta o artigo 244-C à Lei nº 8.069, de 13 de julho de 1990, que dispõe sobre o Estatuto da Criança e do Adolescente, para instituir o crime de violência patrimonial contra a criança e o adolesce",
+      "proposicao": {
+        "id": 2379209,
+        "siglaTipo": "PL",
+        "numero": 3914,
+        "ano": 2023,
+        "ementa": "Acrescenta o artigo 244-C à Lei nº 8.069, de 13 de julho de 1990, que dispõe sobre o Estatuto da Criança e do Adolescente, para instituir o crime de violência patrimonial contra a criança e o adolescente.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2379209"
+      },
+      "siglaNumero": "PL 3914/2023"
+    },
+    "2360457-45": {
+      "votingId": "2360457-45",
+      "data": "2025-03-25",
+      "descricao": "Aprovado o Projeto de Lei nº 2.379, de 2023. Sim: 275; Não: 113; Abstenção: 5; Total: 393.",
+      "ementa": "Institui o Dia Nacional dos Congados e Reinados.",
+      "proposicao": {
+        "id": 2360457,
+        "siglaTipo": "PL",
+        "numero": 2379,
+        "ano": 2023,
+        "ementa": "Institui o Dia Nacional dos Congados e Reinados.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2360457"
+      },
+      "siglaNumero": "PL 2379/2023"
+    },
+    "2360457-42": {
+      "votingId": "2360457-42",
+      "data": "2025-03-25",
+      "descricao": "Rejeitado o Requerimento. Sim: 129; Não: 261; Abstenção: 2; Total: 392.",
+      "ementa": "Institui o Dia Nacional dos Congados e Reinados.",
+      "proposicao": {
+        "id": 2360457,
+        "siglaTipo": "PL",
+        "numero": 2379,
+        "ano": 2023,
+        "ementa": "Institui o Dia Nacional dos Congados e Reinados.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2360457"
+      },
+      "siglaNumero": "PL 2379/2023"
+    },
+    "2487358-48": {
+      "votingId": "2487358-48",
+      "data": "2025-06-25",
+      "descricao": "Aprovado o Projeto de Resolução nº 27, de 2025. Sim: 272; Não: 117; Abstenção: 1; Total: 390.",
+      "ementa": "Altera a denominação da atual “Sala de Reuniões do Colégio de Líderes” para “Sala Miguel Arraes”.",
+      "proposicao": {
+        "id": 2487358,
+        "siglaTipo": "PRC",
+        "numero": 27,
+        "ano": 2025,
+        "ementa": "Altera a denominação da atual “Sala de Reuniões do Colégio de Líderes” para “Sala Miguel Arraes”.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2487358"
+      },
+      "siglaNumero": "PRC 27/2025"
+    },
+    "2487358-45": {
+      "votingId": "2487358-45",
+      "data": "2025-06-25",
+      "descricao": "Rejeitado o Requerimento. Sim: 123; Não: 261; Total: 384.",
+      "ementa": "Altera a denominação da atual “Sala de Reuniões do Colégio de Líderes” para “Sala Miguel Arraes”.",
+      "proposicao": {
+        "id": 2487358,
+        "siglaTipo": "PRC",
+        "numero": 27,
+        "ano": 2025,
+        "ementa": "Altera a denominação da atual “Sala de Reuniões do Colégio de Líderes” para “Sala Miguel Arraes”.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2487358"
+      },
+      "siglaNumero": "PRC 27/2025"
+    },
+    "2487358-40": {
+      "votingId": "2487358-40",
+      "data": "2025-06-25",
+      "descricao": "Rejeitado o Requerimento. Sim: 125; Não: 243; Total: 368.",
+      "ementa": "Altera a denominação da atual “Sala de Reuniões do Colégio de Líderes” para “Sala Miguel Arraes”.",
+      "proposicao": {
+        "id": 2487358,
+        "siglaTipo": "PRC",
+        "numero": 27,
+        "ano": 2025,
+        "ementa": "Altera a denominação da atual “Sala de Reuniões do Colégio de Líderes” para “Sala Miguel Arraes”.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2487358"
+      },
+      "siglaNumero": "PRC 27/2025"
+    },
+    "2383019-91": {
+      "votingId": "2383019-91",
+      "data": "2025-06-25",
+      "descricao": "Aprovadas as Emendas do Senado Federal ao Projeto de Lei Complementar nº 177, de 2023. Sim: 361; Não: 36; Abstenção: 30; Total: 427.",
+      "ementa": "Altera a redação da Lei Complementar nº 78, de 30 de dezembro de 1993.",
+      "proposicao": {
+        "id": 2383019,
+        "siglaTipo": "PLP",
+        "numero": 177,
+        "ano": 2023,
+        "ementa": "Altera a redação da Lei Complementar nº 78, de 30 de dezembro de 1993.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2383019"
+      },
+      "siglaNumero": "PLP 177/2023"
+    },
+    "2383019-86": {
+      "votingId": "2383019-86",
+      "data": "2025-06-25",
+      "descricao": "Rejeitado o Requerimento. Sim: 200; Não: 254; Abstenção: 1; Total: 455.",
+      "ementa": "Altera a redação da Lei Complementar nº 78, de 30 de dezembro de 1993.",
+      "proposicao": {
+        "id": 2383019,
+        "siglaTipo": "PLP",
+        "numero": 177,
+        "ano": 2023,
+        "ementa": "Altera a redação da Lei Complementar nº 78, de 30 de dezembro de 1993.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2383019"
+      },
+      "siglaNumero": "PLP 177/2023"
+    },
+    "2515648-44": {
+      "votingId": "2515648-44",
+      "data": "2025-06-25",
+      "descricao": "Aprovado o Substitutivo ao Projeto de Decreto Legislativo nº 214, de 2025, adotado pelo relator da Comissão de Constituição e Justiça e de Cidadania. Sim: 383; Não: 98; Total: 481.",
+      "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.466, de 22 de maio de 2025.",
+      "proposicao": {
+        "id": 2515648,
+        "siglaTipo": "PDL",
+        "numero": 214,
+        "ano": 2025,
+        "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.466, de 22 de maio de 2025.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2515648"
+      },
+      "siglaNumero": "PDL 214/2025"
+    },
+    "2515648-41": {
+      "votingId": "2515648-41",
+      "data": "2025-06-25",
+      "descricao": "Aprovado o Requerimento. Sim: 353; Não: 102; Total: 455.",
+      "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.466, de 22 de maio de 2025.",
+      "proposicao": {
+        "id": 2515648,
+        "siglaTipo": "PDL",
+        "numero": 214,
+        "ano": 2025,
+        "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.466, de 22 de maio de 2025.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2515648"
+      },
+      "siglaNumero": "PDL 214/2025"
+    },
+    "2515648-36": {
+      "votingId": "2515648-36",
+      "data": "2025-06-25",
+      "descricao": "Rejeitado o Requerimento. Sim: 99; Não: 354; Total: 453.",
+      "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.466, de 22 de maio de 2025.",
+      "proposicao": {
+        "id": 2515648,
+        "siglaTipo": "PDL",
+        "numero": 214,
+        "ano": 2025,
+        "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.466, de 22 de maio de 2025.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2515648"
+      },
+      "siglaNumero": "PDL 214/2025"
+    },
+    "2515648-29": {
+      "votingId": "2515648-29",
+      "data": "2025-06-25",
+      "descricao": "Rejeitado o Requerimento. Sim: 104; Não: 349; Total: 453.",
+      "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.466, de 22 de maio de 2025.",
+      "proposicao": {
+        "id": 2515648,
+        "siglaTipo": "PDL",
+        "numero": 214,
+        "ano": 2025,
+        "ementa": "Susta, nos termos do art. 49, V, da Constituição Federal, os efeitos do Decreto nº 12.466, de 22 de maio de 2025.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2515648"
+      },
+      "siglaNumero": "PDL 214/2025"
+    },
+    "2194861-66": {
+      "votingId": "2194861-66",
+      "data": "2024-12-12",
+      "descricao": "Rejeitado o Requerimento. Sim: 108; Não: 248; Abstenção: 2; Total: 358.",
+      "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+      "proposicao": {
+        "id": 2194861,
+        "siglaTipo": "PL",
+        "numero": 1637,
+        "ano": 2019,
+        "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2194861"
+      },
+      "siglaNumero": "PL 1637/2019"
+    },
+    "2473389-65": {
+      "votingId": "2473389-65",
+      "data": "2024-12-17",
+      "descricao": "Rejeitada a Emenda de Plenário nº 19. Sim: 186; Não: 256; Total: 442.",
+      "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento soci",
+      "proposicao": {
+        "id": 2473389,
+        "siglaTipo": "PLP",
+        "numero": 210,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473389"
+      },
+      "siglaNumero": "PLP 210/2024"
+    },
+    "2473389-74": {
+      "votingId": "2473389-74",
+      "data": "2024-12-18",
+      "descricao": "Rejeitado o Requerimento. Sim: 137; Não: 302; Abstenção: 1; Total: 440.",
+      "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento soci",
+      "proposicao": {
+        "id": 2473389,
+        "siglaTipo": "PLP",
+        "numero": 210,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 200, de 30 de agosto de 2023, que institui regime fiscal sustentável para garantir a estabilidade macroeconômica do País e criar as condições adequadas ao crescimento socioeconômico, e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2473389"
+      },
+      "siglaNumero": "PLP 210/2024"
+    },
+    "2460010-35": {
+      "votingId": "2460010-35",
+      "data": "2024-12-19",
+      "descricao": "Rejeitado o Requerimento. Sim: 82; Não: 193; Total: 275.",
+      "ementa": "Altera a Lei nº 14.467, de 16 de novembro de 2022, que dispõe sobre o tratamento tributário aplicável às perdas incorridas no recebimento de créditos decorrentes das atividades das instituições financ",
+      "proposicao": {
+        "id": 2460010,
+        "siglaTipo": "PL",
+        "numero": 3802,
+        "ano": 2024,
+        "ementa": "Altera a Lei nº 14.467, de 16 de novembro de 2022, que dispõe sobre o tratamento tributário aplicável às perdas incorridas no recebimento de créditos decorrentes das atividades das instituições financeiras e das demais instituições autorizadas a funcionar pelo Banco Central do Brasil.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2460010"
+      },
+      "siglaNumero": "PL 3802/2024"
+    },
+    "2463712-40": {
+      "votingId": "2463712-40",
+      "data": "2025-02-25",
+      "descricao": "Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 167, de 2024, adotada pelo relator da Comissão de Indústria, Comércio e Serviços. Sim: 399; Total: 399.",
+      "ementa": "Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para permitir apuração de crédito a microempresas e empresas de pequeno porte optantes pelo Simples Nacional, na hipótese de devolução tota",
+      "proposicao": {
+        "id": 2463712,
+        "siglaTipo": "PLP",
+        "numero": 167,
+        "ano": 2024,
+        "ementa": "Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para permitir apuração de crédito a microempresas e empresas de pequeno porte optantes pelo Simples Nacional, na hipótese de devolução total ou parcial de resíduo tributário remanescente na cadeia de produção de bens exportados.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2463712"
+      },
+      "siglaNumero": "PLP 167/2024"
+    },
+    "2485227-8": {
+      "votingId": "2485227-8",
+      "data": "2025-02-25",
+      "descricao": "Aprovado o Requerimento de Urgência (Art. 155 do RICD). Sim: 347; Não: 29; Abstenção: 3; Total: 379.",
+      "ementa": "Dispõe sobre extensão do prazo para liquidação de restos a pagar não processados de que trata o art. 172 da Lei nº 14.791, de 29 de dezembro de 2023 (Lei de Diretrizes Orçamentárias de 2024).",
+      "proposicao": {
+        "id": 2485066,
+        "siglaTipo": "PLP",
+        "numero": 22,
+        "ano": 2025,
+        "ementa": "Dispõe sobre extensão do prazo para liquidação de restos a pagar não processados de que trata o art. 172 da Lei nº 14.791, de 29 de dezembro de 2023 (Lei de Diretrizes Orçamentárias de 2024).",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2485066"
+      },
+      "siglaNumero": "PLP 22/2025"
+    },
+    "2442848-50": {
+      "votingId": "2442848-50",
+      "data": "2025-03-27",
+      "descricao": "Aprovado o Projeto de Decreto Legislativo nº 311, de 2024. Sim: 270; Não: 7; Abstenção: 5; Total: 282.",
+      "ementa": "Aprova os textos da Convenção entre a República Federativa do Brasil e a República da Colômbia para a Eliminação da Dupla Tributação em Relação aos Tributos sobre a Renda e a Prevenção da Evasão e da ",
+      "proposicao": {
+        "id": 2442848,
+        "siglaTipo": "PDL",
+        "numero": 311,
+        "ano": 2024,
+        "ementa": "Aprova os textos da Convenção entre a República Federativa do Brasil e a República da Colômbia para a Eliminação da Dupla Tributação em Relação aos Tributos sobre a Renda e a Prevenção da Evasão e da Elisão Fiscais e de seu Protocolo, assinados em Brasília, em 5 de agosto de 2022.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2442848"
+      },
+      "siglaNumero": "PDL 311/2024"
+    },
+    "2442848-47": {
+      "votingId": "2442848-47",
+      "data": "2025-03-27",
+      "descricao": "Rejeitado o Requerimento. Sim: 36; Não: 268; Abstenção: 6; Total: 310.",
+      "ementa": "Aprova os textos da Convenção entre a República Federativa do Brasil e a República da Colômbia para a Eliminação da Dupla Tributação em Relação aos Tributos sobre a Renda e a Prevenção da Evasão e da ",
+      "proposicao": {
+        "id": 2442848,
+        "siglaTipo": "PDL",
+        "numero": 311,
+        "ano": 2024,
+        "ementa": "Aprova os textos da Convenção entre a República Federativa do Brasil e a República da Colômbia para a Eliminação da Dupla Tributação em Relação aos Tributos sobre a Renda e a Prevenção da Evasão e da Elisão Fiscais e de seu Protocolo, assinados em Brasília, em 5 de agosto de 2022.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2442848"
+      },
+      "siglaNumero": "PDL 311/2024"
+    },
+    "2410601-41": {
+      "votingId": "2410601-41",
+      "data": "2025-03-27",
+      "descricao": "Rejeitado o Requerimento. Sim: 54; Não: 318; Total: 372.",
+      "ementa": "Aprova o texto atualizado da Convenção Internacional sobre Padrões de Instrução, Certificação e Serviço de Quarto para Marítimos (STCW-1978), incluindo o Anexo e a Parte A do seu respectivo código, em",
+      "proposicao": {
+        "id": 2410601,
+        "siglaTipo": "PDL",
+        "numero": 478,
+        "ano": 2023,
+        "ementa": "Aprova o texto atualizado da Convenção Internacional sobre Padrões de Instrução, Certificação e Serviço de Quarto para Marítimos (STCW-1978), incluindo o Anexo e a Parte A do seu respectivo código, em conformidade com as “Emendas de Manila”, adotadas em 2010, no âmbito da Organização Marítima Internacional (OMI).",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2410601"
+      },
+      "siglaNumero": "PDL 478/2023"
+    },
+    "2465240-36": {
+      "votingId": "2465240-36",
+      "data": "2025-06-25",
+      "descricao": "Mantido o texto. Sim: 295; Não: 80; Abstenção: 2; Total: 377.",
+      "ementa": "Altera a Lei nº 12.858, de 9 de setembro de 2013, para incluir as políticas de assistência aos estudantes da educação superior e da educação profissional, científica e tecnológica entre as prioridades",
+      "proposicao": {
+        "id": 2465240,
+        "siglaTipo": "PL",
+        "numero": 3118,
+        "ano": 2024,
+        "ementa": "Altera a Lei nº 12.858, de 9 de setembro de 2013, para incluir as políticas de assistência aos estudantes da educação superior e da educação profissional, científica e tecnológica entre as prioridades para recebimento de recursos do Fundo Social, e a Lei nº 14.914, de 3 de julho de 2024, para dispor sobre a aplicação de receitas para o atendimento a estudantes beneficiados por políticas de ação afirmativa de reserva de vagas da educação superior e da educação profissional, científica e tecnológica pública federal.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2465240"
+      },
+      "siglaNumero": "PL 3118/2024"
+    },
+    "2381043-91": {
+      "votingId": "2381043-91",
+      "data": "2025-06-26",
+      "descricao": "Mantido o texto. Sim: 226; Não: 109; Total: 335.",
+      "ementa": "Institui Agosto como mês de combate às desigualdades.",
+      "proposicao": {
+        "id": 2381043,
+        "siglaTipo": "PL",
+        "numero": 4035,
+        "ano": 2023,
+        "ementa": "Institui Agosto como mês de combate às desigualdades.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2381043"
+      },
+      "siglaNumero": "PL 4035/2023"
+    },
+    "2381043-85": {
+      "votingId": "2381043-85",
+      "data": "2025-06-26",
+      "descricao": "Rejeitado o Requerimento. Sim: 79; Não: 225; Total: 304.",
+      "ementa": "Institui Agosto como mês de combate às desigualdades.",
+      "proposicao": {
+        "id": 2381043,
+        "siglaTipo": "PL",
+        "numero": 4035,
+        "ano": 2023,
+        "ementa": "Institui Agosto como mês de combate às desigualdades.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2381043"
+      },
+      "siglaNumero": "PL 4035/2023"
+    },
+    "2454400-46": {
+      "votingId": "2454400-46",
+      "data": "2024-12-10",
+      "descricao": "Rejeitada a Emenda de Plenário n° 20. Sim: 110; Não: 307; Total: 417.",
+      "ementa": "Institui o Programa de Pleno Pagamento de Dívidas dos Estados (Propag), destinado a promover a revisão dos termos das dívidas dos Estados e do Distrito Federal com a União firmadas no âmbito das Leis ",
+      "proposicao": {
+        "id": 2454400,
+        "siglaTipo": "PLP",
+        "numero": 121,
+        "ano": 2024,
+        "ementa": "Institui o Programa de Pleno Pagamento de Dívidas dos Estados (Propag), destinado a promover a revisão dos termos das dívidas dos Estados e do Distrito Federal com a União firmadas no âmbito das Leis nºs 8.727, de 5 de novembro de 1993, e 9.496, de 11 de setembro de 1997, das Leis Complementares nºs 159, de 19 de maio de 2017, 178, de 13 de janeiro de 2021, e 201, de 24 de outubro de 2023, e da Medida Provisória nº 2.192-70, de 24 de agosto de 2001, e prevê instituição de fundo de equalização federativa.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2454400"
+      },
+      "siglaNumero": "PLP 121/2024"
+    },
+    "2454400-42": {
+      "votingId": "2454400-42",
+      "data": "2024-12-10",
+      "descricao": "Aprovada a Subemenda Substitutiva Global ao Projeto de Lei Complementar nº 121, de 2024, adotada pelo relator da Comissão de Finanças e Tributação, ressalvado o destaque. Sim: 413; Não: 4; Total: 417.",
+      "ementa": "Institui o Programa de Pleno Pagamento de Dívidas dos Estados (Propag), destinado a promover a revisão dos termos das dívidas dos Estados e do Distrito Federal com a União firmadas no âmbito das Leis ",
+      "proposicao": {
+        "id": 2454400,
+        "siglaTipo": "PLP",
+        "numero": 121,
+        "ano": 2024,
+        "ementa": "Institui o Programa de Pleno Pagamento de Dívidas dos Estados (Propag), destinado a promover a revisão dos termos das dívidas dos Estados e do Distrito Federal com a União firmadas no âmbito das Leis nºs 8.727, de 5 de novembro de 1993, e 9.496, de 11 de setembro de 1997, das Leis Complementares nºs 159, de 19 de maio de 2017, 178, de 13 de janeiro de 2021, e 201, de 24 de outubro de 2023, e da Medida Provisória nº 2.192-70, de 24 de agosto de 2001, e prevê instituição de fundo de equalização federativa.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2454400"
+      },
+      "siglaNumero": "PLP 121/2024"
+    },
+    "2194861-94": {
+      "votingId": "2194861-94",
+      "data": "2024-12-12",
+      "descricao": "Mantido o texto. Sim: 196; Não: 84; Total: 280.",
+      "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+      "proposicao": {
+        "id": 2194861,
+        "siglaTipo": "PL",
+        "numero": 1637,
+        "ano": 2019,
+        "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2194861"
+      },
+      "siglaNumero": "PL 1637/2019"
+    },
+    "2194861-62": {
+      "votingId": "2194861-62",
+      "data": "2024-12-12",
+      "descricao": "Rejeitado o Requerimento. Sim: 90; Não: 247; Total: 337.",
+      "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+      "proposicao": {
+        "id": 2194861,
+        "siglaTipo": "PL",
+        "numero": 1637,
+        "ano": 2019,
+        "ementa": "Altera o art. 97 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 - Código Penal, para dispor sobre a imposição da medida de segurança para inimputável.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2194861"
+      },
+      "siglaNumero": "PL 1637/2019"
+    },
+    "2442848-42": {
+      "votingId": "2442848-42",
+      "data": "2025-03-27",
+      "descricao": "Rejeitado o Requerimento. Sim: 43; Não: 268; Abstenção: 9; Total: 320.",
+      "ementa": "Aprova os textos da Convenção entre a República Federativa do Brasil e a República da Colômbia para a Eliminação da Dupla Tributação em Relação aos Tributos sobre a Renda e a Prevenção da Evasão e da ",
+      "proposicao": {
+        "id": 2442848,
+        "siglaTipo": "PDL",
+        "numero": 311,
+        "ano": 2024,
+        "ementa": "Aprova os textos da Convenção entre a República Federativa do Brasil e a República da Colômbia para a Eliminação da Dupla Tributação em Relação aos Tributos sobre a Renda e a Prevenção da Evasão e da Elisão Fiscais e de seu Protocolo, assinados em Brasília, em 5 de agosto de 2022.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2442848"
+      },
+      "siglaNumero": "PDL 311/2024"
+    },
+    "2410601-46": {
+      "votingId": "2410601-46",
+      "data": "2025-03-27",
+      "descricao": "Aprovado o Projeto de Decreto Legislativo nº 478, de 2023. Sim: 310; Não: 5; Abstenção: 10; Total: 325.",
+      "ementa": "Aprova o texto atualizado da Convenção Internacional sobre Padrões de Instrução, Certificação e Serviço de Quarto para Marítimos (STCW-1978), incluindo o Anexo e a Parte A do seu respectivo código, em",
+      "proposicao": {
+        "id": 2410601,
+        "siglaTipo": "PDL",
+        "numero": 478,
+        "ano": 2023,
+        "ementa": "Aprova o texto atualizado da Convenção Internacional sobre Padrões de Instrução, Certificação e Serviço de Quarto para Marítimos (STCW-1978), incluindo o Anexo e a Parte A do seu respectivo código, em conformidade com as “Emendas de Manila”, adotadas em 2010, no âmbito da Organização Marítima Internacional (OMI).",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2410601"
+      },
+      "siglaNumero": "PDL 478/2023"
+    },
+    "2430143-125": {
+      "votingId": "2430143-125",
+      "data": "2024-12-16",
+      "descricao": "Rejeitado o Requerimento. Sim: 46; Não: 232; Total: 278.",
+      "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+      "proposicao": {
+        "id": 2430143,
+        "siglaTipo": "PLP",
+        "numero": 68,
+        "ano": 2024,
+        "ementa": "Institui o Imposto sobre Bens e Serviços - IBS, a Contribuição Social sobre Bens e Serviços - CBS e o Imposto Seletivo - IS e dá outras providências.",
+        "url": "https://www.camara.leg.br/propostas-legislativas/2430143"
+      },
+      "siglaNumero": "PLP 68/2024"
+    }
+  }
+}

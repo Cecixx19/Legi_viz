@@ -1,0 +1,1056 @@
+{
+  "updatedAt": "2026-03-20T13:08:58.856Z",
+  "source": "Câmara dos Deputados - Dados Abertos API",
+  "totalDeputies": 55,
+  "deputiesWithMultipleParties": 36,
+  "historicoByDeputy": {
+    "69871": [
+      {
+        "partido": "PV",
+        "uf": "BA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PODE",
+        "uf": "BA",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PTN",
+        "uf": "BA",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      }
+    ],
+    "73433": [
+      {
+        "partido": "PT",
+        "uf": "SP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PT",
+        "uf": "SP",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PT",
+        "uf": "SP",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PT",
+        "uf": "SP",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PT",
+        "uf": "SP",
+        "legislature": 53,
+        "anoInicio": 2035,
+        "situacao": "Exercício"
+      }
+    ],
+    "73579": [
+      {
+        "partido": "PL",
+        "uf": "DF",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "DEM",
+        "uf": "DF",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PFL",
+        "uf": "DF",
+        "legislature": 53,
+        "anoInicio": 2035,
+        "situacao": "Exercício"
+      }
+    ],
+    "74057": [
+      {
+        "partido": "PCdoB",
+        "uf": "BA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PCdoB",
+        "uf": "BA",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PCdoB",
+        "uf": "BA",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PCdoB",
+        "uf": "BA",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PCdoB",
+        "uf": "BA",
+        "legislature": 53,
+        "anoInicio": 2035,
+        "situacao": "Exercício"
+      }
+    ],
+    "74090": [
+      {
+        "partido": "PSD",
+        "uf": "AM",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP",
+        "uf": "AM",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PSD",
+        "uf": "AM",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PMDB",
+        "uf": "AM",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PMDB",
+        "uf": "AM",
+        "legislature": 53,
+        "anoInicio": 2035,
+        "situacao": "Exercício"
+      }
+    ],
+    "74646": [
+      {
+        "partido": "PSDB",
+        "uf": "MG",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PSDB",
+        "uf": "MG",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "107970": [
+      {
+        "partido": "PP",
+        "uf": "MG",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "121948": [
+      {
+        "partido": "PP",
+        "uf": "GO",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP",
+        "uf": "GO",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "123086": [
+      {
+        "partido": "PP",
+        "uf": "PI",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "123756": [
+      {
+        "partido": "REPUBLICANOS",
+        "uf": "AC",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PR",
+        "uf": "AC",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PSC",
+        "uf": "AC",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "133439": [
+      {
+        "partido": "PDT",
+        "uf": "CE",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PDT",
+        "uf": "CE",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PDT",
+        "uf": "CE",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PDT",
+        "uf": "CE",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "136811": [
+      {
+        "partido": "PP",
+        "uf": "RS",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP",
+        "uf": "RS",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP**",
+        "uf": "RS",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP**",
+        "uf": "RS",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP**",
+        "uf": "RS",
+        "legislature": 53,
+        "anoInicio": 2035,
+        "situacao": "Exercício"
+      }
+    ],
+    "141391": [
+      {
+        "partido": "CIDADANIA",
+        "uf": "SP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PPS",
+        "uf": "SP",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PPS",
+        "uf": "SP",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PPS",
+        "uf": "SP",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PPS",
+        "uf": "SP",
+        "legislature": 53,
+        "anoInicio": 2035,
+        "situacao": "Exercício"
+      }
+    ],
+    "160512": [
+      {
+        "partido": "SOLIDARIEDADE",
+        "uf": "RJ",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "SOLIDARIEDADE",
+        "uf": "RJ",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "SD",
+        "uf": "RJ",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PRTB",
+        "uf": "RJ",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "160527": [
+      {
+        "partido": "PP",
+        "uf": "PB",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP",
+        "uf": "PB",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP**",
+        "uf": "PB",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP**",
+        "uf": "PB",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "160541": [
+      {
+        "partido": "PP",
+        "uf": "AL",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP",
+        "uf": "AL",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP**",
+        "uf": "AL",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP**",
+        "uf": "AL",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "160545": [
+      {
+        "partido": "UNIÃO",
+        "uf": "SP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "DEM",
+        "uf": "SP",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "DEM",
+        "uf": "SP",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "DEM",
+        "uf": "SP",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "160553": [
+      {
+        "partido": "PSD",
+        "uf": "BA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PSD",
+        "uf": "BA",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PTB",
+        "uf": "BA",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PTB",
+        "uf": "BA",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "160559": [
+      {
+        "partido": "MDB",
+        "uf": "RS",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "MDB",
+        "uf": "RS",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PMDB",
+        "uf": "RS",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PMDB",
+        "uf": "RS",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "160600": [
+      {
+        "partido": "UNIÃO",
+        "uf": "BA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "DEM",
+        "uf": "BA",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "SD",
+        "uf": "BA",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PMDB",
+        "uf": "BA",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "160665": [
+      {
+        "partido": "REPUBLICANOS",
+        "uf": "PE",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "SOLIDARIEDADE",
+        "uf": "PE",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "SD",
+        "uf": "PE",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "DEM",
+        "uf": "PE",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "178831": [
+      {
+        "partido": "PP",
+        "uf": "AP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP",
+        "uf": "AP",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PRB",
+        "uf": "AP",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      }
+    ],
+    "178835": [
+      {
+        "partido": "PDT",
+        "uf": "RS",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PDT",
+        "uf": "RS",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PDT",
+        "uf": "RS",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PDT",
+        "uf": "RS",
+        "legislature": 54,
+        "anoInicio": 2031,
+        "situacao": "Exercício"
+      }
+    ],
+    "178881": [
+      {
+        "partido": "PSC",
+        "uf": "MA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PODE",
+        "uf": "MA",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PSDC",
+        "uf": "MA",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      }
+    ],
+    "178927": [
+      {
+        "partido": "PV",
+        "uf": "PR",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PSB",
+        "uf": "PR",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PCdoB",
+        "uf": "PR",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      }
+    ],
+    "178937": [
+      {
+        "partido": "PL",
+        "uf": "RJ",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PR",
+        "uf": "RJ",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PR",
+        "uf": "RJ",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      }
+    ],
+    "178972": [
+      {
+        "partido": "CIDADANIA",
+        "uf": "SP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PPS",
+        "uf": "SP",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PPS",
+        "uf": "SP",
+        "legislature": 55,
+        "anoInicio": 2027,
+        "situacao": "Exercício"
+      }
+    ],
+    "204356": [
+      {
+        "partido": "REPUBLICANOS",
+        "uf": "ES",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PRB",
+        "uf": "ES",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "204379": [
+      {
+        "partido": "MDB",
+        "uf": "AP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PROS",
+        "uf": "AP",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "204423": [
+      {
+        "partido": "PL",
+        "uf": "PE",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PSC",
+        "uf": "PE",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "204495": [
+      {
+        "partido": "PT",
+        "uf": "PA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PT",
+        "uf": "PA",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "204501": [
+      {
+        "partido": "PT",
+        "uf": "SP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PT",
+        "uf": "SP",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "204515": [
+      {
+        "partido": "AVANTE",
+        "uf": "MG",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "AVANTE",
+        "uf": "MG",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "204528": [
+      {
+        "partido": "NOVO",
+        "uf": "SP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "NOVO",
+        "uf": "SP",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "204549": [
+      {
+        "partido": "PP",
+        "uf": "CE",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PP",
+        "uf": "CE",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "204560": [
+      {
+        "partido": "PSDB",
+        "uf": "BA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PSDB",
+        "uf": "BA",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "204571": [
+      {
+        "partido": "REPUBLICANOS",
+        "uf": "BA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PDT",
+        "uf": "BA",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "220538": [
+      {
+        "partido": "REPUBLICANOS",
+        "uf": "RR",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220542": [
+      {
+        "partido": "REPUBLICANOS",
+        "uf": "TO",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220544": [
+      {
+        "partido": "REPUBLICANOS",
+        "uf": "TO",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220549": [
+      {
+        "partido": "CIDADANIA",
+        "uf": "RS",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220554": [
+      {
+        "partido": "PT",
+        "uf": "RS",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220556": [
+      {
+        "partido": "PT",
+        "uf": "SC",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220576": [
+      {
+        "partido": "UNIÃO",
+        "uf": "AL",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220632": [
+      {
+        "partido": "PT",
+        "uf": "MG",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220638": [
+      {
+        "partido": "PL",
+        "uf": "SP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220657": [
+      {
+        "partido": "PL",
+        "uf": "CE",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220675": [
+      {
+        "partido": "MDB",
+        "uf": "PA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220676": [
+      {
+        "partido": "MDB",
+        "uf": "PA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220707": [
+      {
+        "partido": "PP",
+        "uf": "MA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220714": [
+      {
+        "partido": "REPUBLICANOS",
+        "uf": "AM",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "220715": [
+      {
+        "partido": "CIDADANIA",
+        "uf": "AM",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "221148": [
+      {
+        "partido": "PT",
+        "uf": "SP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      },
+      {
+        "partido": "PT",
+        "uf": "SP",
+        "legislature": 56,
+        "anoInicio": 2023,
+        "situacao": "Exercício"
+      }
+    ],
+    "221328": [
+      {
+        "partido": "PL",
+        "uf": "SP",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ],
+    "226708": [
+      {
+        "partido": "PP",
+        "uf": "MA",
+        "legislature": 57,
+        "anoInicio": 2019,
+        "situacao": "Exercício"
+      }
+    ]
+  }
+}

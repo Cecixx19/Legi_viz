@@ -1,0 +1,487 @@
+{
+  "updatedAt": "2026-03-20T11:08:50.545Z",
+  "source": "Câmara dos Deputados - Dados Abertos API",
+  "totalDeputies": 41,
+  "byTipo": {
+    "Mesa": 22,
+    "Partido": 21,
+    "Comissão": 13,
+    "Bloco": 0
+  },
+  "liderancasByDeputy": {
+    "73586": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Verde",
+        "siglaOrgao": "PV",
+        "dataInicio": "2022-10-25T18:27"
+      }
+    ],
+    "73801": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Comunista do Brasil",
+        "siglaOrgao": "PCdoB",
+        "dataInicio": "2021-02-09T17:31"
+      }
+    ],
+    "74057": [
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Comissão de Direitos Humanos, Minorias e Igualdade Racial",
+        "siglaOrgao": "CDHMIR",
+        "dataInicio": "2026-02-04"
+      }
+    ],
+    "74158": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Democrático Trabalhista",
+        "siglaOrgao": "PDT",
+        "dataInicio": "2025-02-04T12:10"
+      }
+    ],
+    "74537": [
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Comissão de Viação e Transportes",
+        "siglaOrgao": "CVT",
+        "dataInicio": "2026-02-03"
+      }
+    ],
+    "88256": [
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Comissão de Defesa do Consumidor",
+        "siglaOrgao": "CDC",
+        "dataInicio": "2026-02-04"
+      }
+    ],
+    "122974": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "União Brasil",
+        "siglaOrgao": "UNIÃO",
+        "dataInicio": "2025-10-30T14:39"
+      }
+    ],
+    "123086": [
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Comissão de Ciência, Tecnologia e Inovação",
+        "siglaOrgao": "CCTI",
+        "dataInicio": "2026-02-03"
+      }
+    ],
+    "156190": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Novo",
+        "siglaOrgao": "NOVO",
+        "dataInicio": "2025-04-24T19:20"
+      }
+    ],
+    "157130": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Rede Sustentabilidade",
+        "siglaOrgao": "REDE",
+        "dataInicio": "2022-12-13T20:41"
+      }
+    ],
+    "160512": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Solidariedade",
+        "siglaOrgao": "SOLIDARIEDADE",
+        "dataInicio": "2025-10-21T20:48"
+      }
+    ],
+    "160517": [
+      {
+        "tipo": "Mesa",
+        "cargo": "2º Suplente de Secretário",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Suplente",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "160548": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Socialista Brasileiro",
+        "siglaOrgao": "PSB",
+        "dataInicio": "2026-01-02T14:23"
+      }
+    ],
+    "160553": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Social Democrático",
+        "siglaOrgao": "PSD",
+        "dataInicio": "2025-12-22T09:19"
+      }
+    ],
+    "160604": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido dos Trabalhadores",
+        "siglaOrgao": "PT",
+        "dataInicio": "2026-02-05T11:51"
+      }
+    ],
+    "160665": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Republicanos",
+        "siglaOrgao": "REPUBLICANOS",
+        "dataInicio": "2026-02-25T09:42"
+      }
+    ],
+    "160674": [
+      {
+        "tipo": "Mesa",
+        "cargo": "Presidente",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Titular",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Presidência da Câmara dos Deputados",
+        "siglaOrgao": "PRESI",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "178854": [
+      {
+        "tipo": "Mesa",
+        "cargo": "2º Vice-Presidente",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Titular",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Segunda Vice-Presidência",
+        "siglaOrgao": "2VIPR",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "178910": [
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Comissão de Minas e Energia",
+        "siglaOrgao": "CME",
+        "dataInicio": "2026-02-03"
+      }
+    ],
+    "178933": [
+      {
+        "tipo": "Mesa",
+        "cargo": "4º Secretário",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Titular",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "178937": [
+      {
+        "tipo": "Mesa",
+        "cargo": "1º Vice-Presidente",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Titular",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Primeira Vice-Presidência",
+        "siglaOrgao": "1VIPR",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "178972": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Cidadania",
+        "siglaOrgao": "CIDADANIA",
+        "dataInicio": "2021-03-02T13:23"
+      }
+    ],
+    "204426": [
+      {
+        "tipo": "Mesa",
+        "cargo": "1º Secretário",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Titular",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "204436": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Movimento Democrático Brasileiro",
+        "siglaOrgao": "MDB",
+        "dataInicio": "2024-10-07T08:39"
+      }
+    ],
+    "204450": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Progressistas",
+        "siglaOrgao": "PP",
+        "dataInicio": "2025-11-24T10:06"
+      }
+    ],
+    "204494": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Renovação Democrática",
+        "siglaOrgao": "PRD",
+        "dataInicio": "2024-04-16T20:47"
+      }
+    ],
+    "204518": [
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Comissão de Legislação Participativa",
+        "siglaOrgao": "CLP",
+        "dataInicio": "2026-02-04"
+      }
+    ],
+    "204526": [
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Comissão de Relações Exteriores e de Defesa Nacional",
+        "siglaOrgao": "CREDN",
+        "dataInicio": "2026-02-03"
+      }
+    ],
+    "204536": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Missão",
+        "siglaOrgao": "MISSÃO",
+        "dataInicio": "2026-03-10T12:14"
+      }
+    ],
+    "204560": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido da Social Democracia Brasileira",
+        "siglaOrgao": "PSDB",
+        "dataInicio": "2023-02-01T14:42"
+      }
+    ],
+    "210989": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Avante",
+        "siglaOrgao": "AVANTE",
+        "dataInicio": "2026-02-19T15:27"
+      }
+    ],
+    "220528": [
+      {
+        "tipo": "Mesa",
+        "cargo": "3º Suplente de Secretário",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Suplente",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "220561": [
+      {
+        "tipo": "Mesa",
+        "cargo": "3º Secretário",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Titular",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "220568": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Liberal",
+        "siglaOrgao": "PL",
+        "dataInicio": "2025-12-19T14:40"
+      }
+    ],
+    "220598": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Partido Socialismo e Liberdade",
+        "siglaOrgao": "PSOL",
+        "dataInicio": "2026-02-05T18:21"
+      }
+    ],
+    "220607": [
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Comissão de Trabalho",
+        "siglaOrgao": "CTRAB",
+        "dataInicio": "2026-02-03"
+      }
+    ],
+    "220638": [
+      {
+        "tipo": "Mesa",
+        "cargo": "1º Suplente de Secretário",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Suplente",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "220641": [
+      {
+        "tipo": "Partido",
+        "cargo": "Líder",
+        "orgao": "Podemos",
+        "siglaOrgao": "PODE",
+        "dataInicio": "2025-02-03T15:50"
+      }
+    ],
+    "220650": [
+      {
+        "tipo": "Mesa",
+        "cargo": "4º Suplente de Secretário",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Suplente",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "220669": [
+      {
+        "tipo": "Mesa",
+        "cargo": "2º Secretário",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      },
+      {
+        "tipo": "Mesa",
+        "cargo": "Titular",
+        "orgao": "Mesa Diretora da Câmara dos Deputados",
+        "siglaOrgao": "MESA",
+        "dataInicio": "2025-02-01"
+      }
+    ],
+    "220677": [
+      {
+        "tipo": "Comissão",
+        "cargo": "Presidente",
+        "orgao": "Comissão de Desenvolvimento Urbano",
+        "siglaOrgao": "CDU",
+        "dataInicio": "2026-02-04"
+      }
+    ]
+  }
+}

@@ -29,7 +29,6 @@ type SortMode = 'nome' | 'partido' | 'uf' | 'mandatos'
 const CLUSTER_OPTIONS: { mode: ClusterMode; label: string; icon: React.ReactNode; desc: string }[] = [
   { mode: 'partido',    label: 'Partido',      icon: <Users size={13} />,       desc: 'Agrupa pelos 18 partidos' },
   { mode: 'uf',         label: 'Estado',       icon: <MapPin size={13} />,      desc: 'Distribuição geográfica' },
-  { mode: 'tema',       label: 'Tema',         icon: <Tag size={13} />,        desc: '8 macro temas legislativos' },
   { mode: 'tipo',       label: 'Casa',         icon: <BarChart2 size={13} />,  desc: 'Câmara vs Senado' },
   { mode: 'bancada',    label: 'Bancada',      icon: <Users size={13} />,      desc: 'Frentes parlamentares' },
   { mode: 'genero',     label: 'Gênero',       icon: <Users size={13} />,      desc: 'Homem Cis · Mulher Cis · Mulher Trans · Não-binárie' },

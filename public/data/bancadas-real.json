@@ -1,0 +1,4500 @@
+{
+  "updatedAt": "2026-03-20T12:23:25.512Z",
+  "source": "Derived from frentes reais",
+  "totalDeputies": 513,
+  "bancadaCounts": {
+    "Empresarial": 491,
+    "Sindical": 402,
+    "Ambientalista": 441,
+    "Ruralista": 481,
+    "Feminina": 414,
+    "Negra": 318,
+    "Bala": 478,
+    "Evangelica": 443
+  },
+  "bancadasByDeputy": {
+    "62881": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Bala",
+      "Evangelica"
+    ],
+    "66385": [
+      "Ambientalista",
+      "Bala",
+      "Empresarial",
+      "Ruralista"
+    ],
+    "66828": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "69871": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "72442": [
+      "Sindical",
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Negra",
+      "Ruralista",
+      "Feminina"
+    ],
+    "73433": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Bala",
+      "Ambientalista",
+      "Negra",
+      "Evangelica"
+    ],
+    "73441": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "73486": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "73531": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Feminina"
+    ],
+    "73579": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "73604": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "73692": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "73701": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "73768": [
+      "Empresarial",
+      "Ruralista",
+      "Evangelica",
+      "Bala",
+      "Ambientalista"
+    ],
+    "73778": [
+      "Sindical",
+      "Empresarial",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Bala"
+    ],
+    "73788": [
+      "Empresarial",
+      "Evangelica",
+      "Feminina",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Negra"
+    ],
+    "73801": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "73808": [
+      "Evangelica",
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Sindical",
+      "Feminina",
+      "Negra"
+    ],
+    "74041": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Evangelica"
+    ],
+    "74043": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Sindical",
+      "Negra",
+      "Feminina"
+    ],
+    "74044": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "74057": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Feminina",
+      "Negra",
+      "Evangelica",
+      "Ruralista"
+    ],
+    "74060": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "74065": [
+      "Ruralista",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Empresarial",
+      "Evangelica",
+      "Negra"
+    ],
+    "74075": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Sindical",
+      "Negra",
+      "Empresarial",
+      "Evangelica",
+      "Feminina"
+    ],
+    "74079": [
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Negra",
+      "Sindical"
+    ],
+    "74084": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "74090": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "74156": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Bala",
+      "Evangelica",
+      "Negra"
+    ],
+    "74158": [
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Sindical",
+      "Evangelica",
+      "Ruralista",
+      "Negra"
+    ],
+    "74159": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Bala",
+      "Evangelica"
+    ],
+    "74160": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "74161": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "74171": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Feminina",
+      "Evangelica"
+    ],
+    "74253": [
+      "Sindical",
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "74262": [
+      "Sindical",
+      "Empresarial",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Evangelica",
+      "Ambientalista"
+    ],
+    "74270": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Negra",
+      "Feminina"
+    ],
+    "74273": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Ambientalista",
+      "Negra",
+      "Feminina"
+    ],
+    "74283": [
+      "Empresarial",
+      "Sindical",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Bala",
+      "Evangelica"
+    ],
+    "74299": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Sindical",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "74317": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Ambientalista",
+      "Negra"
+    ],
+    "74356": [
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Negra"
+    ],
+    "74371": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "74374": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "74376": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Negra",
+      "Feminina",
+      "Evangelica"
+    ],
+    "74383": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "74398": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "74400": [
+      "Sindical",
+      "Ruralista",
+      "Bala",
+      "Ambientalista",
+      "Negra",
+      "Evangelica",
+      "Empresarial",
+      "Feminina"
+    ],
+    "74428": [
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Sindical"
+    ],
+    "74454": [
+      "Bala",
+      "Ambientalista",
+      "Negra",
+      "Sindical",
+      "Empresarial"
+    ],
+    "74467": [
+      "Sindical",
+      "Ruralista",
+      "Empresarial",
+      "Evangelica",
+      "Bala",
+      "Ambientalista",
+      "Negra",
+      "Feminina"
+    ],
+    "74478": [
+      "Bala",
+      "Empresarial",
+      "Feminina",
+      "Ruralista",
+      "Ambientalista"
+    ],
+    "74537": [
+      "Empresarial",
+      "Ambientalista",
+      "Sindical",
+      "Negra",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "74550": [
+      "Empresarial",
+      "Ruralista",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "74554": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Negra",
+      "Sindical"
+    ],
+    "74574": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Evangelica",
+      "Ambientalista",
+      "Ruralista"
+    ],
+    "74585": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Sindical",
+      "Negra"
+    ],
+    "74646": [
+      "Ambientalista",
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista"
+    ],
+    "74784": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "74848": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "74856": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "74858": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Bala",
+      "Evangelica"
+    ],
+    "80815": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Feminina",
+      "Negra"
+    ],
+    "81055": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "88256": [
+      "Empresarial",
+      "Sindical",
+      "Feminina",
+      "Negra",
+      "Ambientalista",
+      "Bala",
+      "Evangelica"
+    ],
+    "91228": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "92102": [
+      "Empresarial",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Negra",
+      "Ambientalista"
+    ],
+    "92699": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista",
+      "Evangelica",
+      "Negra"
+    ],
+    "92776": [
+      "Sindical",
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "98057": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "98148": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "98615": [
+      "Sindical",
+      "Bala",
+      "Empresarial",
+      "Evangelica",
+      "Ruralista"
+    ],
+    "104552": [
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Empresarial",
+      "Evangelica"
+    ],
+    "107970": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "109429": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Sindical"
+    ],
+    "121948": [
+      "Sindical",
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "122158": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "122974": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Sindical",
+      "Evangelica",
+      "Negra"
+    ],
+    "123086": [
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Ruralista"
+    ],
+    "123756": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "128760": [
+      "Evangelica"
+    ],
+    "129618": [
+      "Bala",
+      "Sindical",
+      "Negra",
+      "Empresarial",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista"
+    ],
+    "133439": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Feminina",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Negra"
+    ],
+    "133810": [
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "136811": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "137070": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "138286": [
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Bala"
+    ],
+    "139285": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "141391": [
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Bala",
+      "Negra",
+      "Sindical"
+    ],
+    "141398": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Evangelica",
+      "Feminina"
+    ],
+    "141408": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra",
+      "Sindical"
+    ],
+    "141411": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "141421": [
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Sindical",
+      "Negra",
+      "Empresarial",
+      "Feminina"
+    ],
+    "141431": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "141450": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Sindical",
+      "Ambientalista",
+      "Negra"
+    ],
+    "141456": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "141458": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Sindical",
+      "Ambientalista",
+      "Negra"
+    ],
+    "141459": [
+      "Empresarial",
+      "Ruralista",
+      "Bala",
+      "Sindical",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "141464": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Bala",
+      "Negra",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "141470": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "141485": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra",
+      "Ambientalista"
+    ],
+    "141487": [
+      "Sindical",
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Evangelica",
+      "Negra"
+    ],
+    "141516": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Sindical",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "141518": [
+      "Empresarial",
+      "Bala",
+      "Sindical",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "141531": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Sindical",
+      "Negra"
+    ],
+    "141533": [
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista"
+    ],
+    "141555": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "143084": [
+      "Ruralista",
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Negra",
+      "Sindical",
+      "Evangelica"
+    ],
+    "143632": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina",
+      "Ruralista",
+      "Negra"
+    ],
+    "143942": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista"
+    ],
+    "150418": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "153423": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "156190": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Evangelica",
+      "Feminina"
+    ],
+    "157130": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Feminina",
+      "Evangelica"
+    ],
+    "160161": [
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Negra",
+      "Ruralista",
+      "Empresarial",
+      "Evangelica"
+    ],
+    "160510": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Sindical",
+      "Feminina"
+    ],
+    "160512": [
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Negra",
+      "Sindical"
+    ],
+    "160517": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Negra"
+    ],
+    "160518": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Sindical",
+      "Ruralista",
+      "Evangelica",
+      "Negra"
+    ],
+    "160527": [
+      "Sindical",
+      "Ambientalista",
+      "Evangelica",
+      "Bala",
+      "Empresarial",
+      "Ruralista",
+      "Feminina",
+      "Negra"
+    ],
+    "160535": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Negra",
+      "Bala",
+      "Evangelica",
+      "Feminina"
+    ],
+    "160538": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Negra",
+      "Bala",
+      "Evangelica",
+      "Feminina"
+    ],
+    "160541": [
+      "Ruralista",
+      "Bala",
+      "Empresarial",
+      "Evangelica",
+      "Ambientalista",
+      "Sindical",
+      "Feminina"
+    ],
+    "160545": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "160548": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Negra",
+      "Sindical"
+    ],
+    "160552": [
+      "Evangelica",
+      "Ruralista",
+      "Sindical",
+      "Bala",
+      "Empresarial",
+      "Ambientalista"
+    ],
+    "160553": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Bala",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "160556": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Negra",
+      "Ambientalista"
+    ],
+    "160558": [
+      "Bala",
+      "Empresarial",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Ambientalista",
+      "Negra",
+      "Feminina"
+    ],
+    "160559": [
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "160561": [
+      "Empresarial",
+      "Bala",
+      "Sindical",
+      "Ambientalista",
+      "Negra",
+      "Evangelica",
+      "Ruralista"
+    ],
+    "160569": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Feminina"
+    ],
+    "160575": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "160588": [
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Negra"
+    ],
+    "160591": [
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Sindical",
+      "Empresarial",
+      "Evangelica"
+    ],
+    "160592": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "160598": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "160599": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Negra",
+      "Empresarial",
+      "Sindical"
+    ],
+    "160600": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Negra",
+      "Feminina"
+    ],
+    "160601": [
+      "Bala",
+      "Empresarial",
+      "Evangelica",
+      "Ruralista",
+      "Sindical",
+      "Ambientalista",
+      "Negra"
+    ],
+    "160604": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "160610": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "160629": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "160632": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Negra",
+      "Sindical"
+    ],
+    "160635": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "160640": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "160641": [
+      "Ruralista",
+      "Empresarial",
+      "Bala",
+      "Feminina",
+      "Sindical",
+      "Ambientalista",
+      "Negra",
+      "Evangelica"
+    ],
+    "160642": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Negra",
+      "Ambientalista"
+    ],
+    "160665": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Sindical",
+      "Feminina",
+      "Negra"
+    ],
+    "160666": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista",
+      "Sindical",
+      "Negra",
+      "Evangelica"
+    ],
+    "160673": [
+      "Empresarial",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "160674": [
+      "Ambientalista",
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Ruralista",
+      "Sindical",
+      "Negra"
+    ],
+    "160758": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Feminina",
+      "Negra"
+    ],
+    "160976": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Sindical",
+      "Negra"
+    ],
+    "161440": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "161550": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra",
+      "Sindical"
+    ],
+    "162067": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Feminina",
+      "Bala",
+      "Negra",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "162332": [
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Empresarial",
+      "Evangelica",
+      "Bala"
+    ],
+    "165470": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "166402": [
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Feminina",
+      "Ambientalista",
+      "Negra"
+    ],
+    "171617": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "171623": [
+      "Ruralista",
+      "Empresarial",
+      "Bala",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Ambientalista"
+    ],
+    "171786": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Ambientalista"
+    ],
+    "175765": [
+      "Empresarial",
+      "Sindical"
+    ],
+    "178829": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Sindical"
+    ],
+    "178831": [
+      "Ruralista",
+      "Empresarial",
+      "Bala",
+      "Feminina",
+      "Sindical",
+      "Ambientalista",
+      "Negra",
+      "Evangelica"
+    ],
+    "178835": [
+      "Sindical",
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "178843": [
+      "Sindical",
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Negra"
+    ],
+    "178854": [
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "178857": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "178858": [
+      "Empresarial",
+      "Ruralista",
+      "Bala",
+      "Evangelica",
+      "Ambientalista",
+      "Sindical",
+      "Feminina",
+      "Negra"
+    ],
+    "178860": [
+      "Empresarial",
+      "Ruralista",
+      "Evangelica",
+      "Bala",
+      "Sindical"
+    ],
+    "178866": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "178871": [
+      "Bala",
+      "Ambientalista",
+      "Empresarial",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Sindical"
+    ],
+    "178873": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "178876": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "178881": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Sindical",
+      "Negra"
+    ],
+    "178884": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Evangelica",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Negra"
+    ],
+    "178886": [
+      "Sindical",
+      "Evangelica",
+      "Ruralista",
+      "Ambientalista",
+      "Empresarial",
+      "Negra"
+    ],
+    "178887": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "178895": [
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Negra",
+      "Feminina",
+      "Evangelica"
+    ],
+    "178896": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Sindical",
+      "Negra",
+      "Evangelica"
+    ],
+    "178908": [
+      "Bala",
+      "Empresarial",
+      "Feminina",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Ambientalista",
+      "Negra"
+    ],
+    "178910": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "178927": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Sindical",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "178929": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "178931": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Ambientalista",
+      "Bala",
+      "Evangelica"
+    ],
+    "178933": [
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Bala",
+      "Feminina",
+      "Sindical",
+      "Evangelica",
+      "Negra"
+    ],
+    "178934": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Negra"
+    ],
+    "178937": [
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Empresarial",
+      "Ruralista",
+      "Feminina",
+      "Sindical",
+      "Negra"
+    ],
+    "178943": [
+      "Evangelica",
+      "Feminina",
+      "Empresarial",
+      "Ruralista",
+      "Bala"
+    ],
+    "178946": [
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Sindical",
+      "Negra"
+    ],
+    "178947": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Empresarial",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "178954": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "178962": [
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Empresarial",
+      "Evangelica",
+      "Negra",
+      "Ruralista",
+      "Sindical"
+    ],
+    "178963": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "178964": [
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Sindical",
+      "Evangelica"
+    ],
+    "178966": [
+      "Bala",
+      "Empresarial",
+      "Evangelica",
+      "Ruralista",
+      "Sindical",
+      "Negra",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "178970": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "178972": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Ambientalista",
+      "Negra"
+    ],
+    "178975": [
+      "Empresarial",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Bala",
+      "Sindical",
+      "Feminina"
+    ],
+    "178983": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina",
+      "Ruralista",
+      "Sindical"
+    ],
+    "178985": [
+      "Bala",
+      "Ruralista",
+      "Empresarial",
+      "Evangelica",
+      "Sindical",
+      "Feminina",
+      "Ambientalista",
+      "Negra"
+    ],
+    "178986": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "178987": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Bala",
+      "Evangelica"
+    ],
+    "178989": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Evangelica"
+    ],
+    "178992": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "178993": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "178997": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "179000": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Feminina",
+      "Sindical"
+    ],
+    "179001": [
+      "Bala",
+      "Ruralista",
+      "Empresarial",
+      "Evangelica",
+      "Feminina",
+      "Sindical",
+      "Ambientalista",
+      "Negra"
+    ],
+    "180214": [
+      "Empresarial",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "188097": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Negra",
+      "Evangelica"
+    ],
+    "191923": [
+      "Sindical",
+      "Empresarial",
+      "Bala",
+      "Negra",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista"
+    ],
+    "198197": [
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Empresarial",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Sindical"
+    ],
+    "198783": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Sindical",
+      "Evangelica"
+    ],
+    "204351": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "204355": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Sindical"
+    ],
+    "204356": [
+      "Bala",
+      "Empresarial",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina",
+      "Sindical"
+    ],
+    "204358": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Negra"
+    ],
+    "204360": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Evangelica",
+      "Sindical",
+      "Negra",
+      "Feminina"
+    ],
+    "204361": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Sindical",
+      "Evangelica",
+      "Negra"
+    ],
+    "204362": [
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Ruralista",
+      "Sindical"
+    ],
+    "204364": [
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Sindical"
+    ],
+    "204365": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "204367": [
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Ambientalista"
+    ],
+    "204368": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "204369": [
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Bala",
+      "Sindical",
+      "Ambientalista"
+    ],
+    "204372": [
+      "Bala",
+      "Empresarial",
+      "Sindical",
+      "Evangelica",
+      "Negra",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista"
+    ],
+    "204374": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Evangelica"
+    ],
+    "204378": [
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Empresarial",
+      "Feminina",
+      "Evangelica"
+    ],
+    "204379": [
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "204387": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Sindical"
+    ],
+    "204388": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista",
+      "Evangelica",
+      "Sindical"
+    ],
+    "204390": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Sindical"
+    ],
+    "204391": [
+      "Empresarial",
+      "Feminina",
+      "Ruralista",
+      "Bala",
+      "Evangelica"
+    ],
+    "204394": [
+      "Bala",
+      "Empresarial",
+      "Evangelica",
+      "Negra",
+      "Ruralista",
+      "Sindical",
+      "Ambientalista"
+    ],
+    "204395": [
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Ruralista",
+      "Ambientalista"
+    ],
+    "204396": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina"
+    ],
+    "204398": [
+      "Empresarial",
+      "Bala",
+      "Feminina",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Negra",
+      "Sindical"
+    ],
+    "204404": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Negra",
+      "Feminina",
+      "Sindical"
+    ],
+    "204406": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Feminina",
+      "Sindical"
+    ],
+    "204407": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "204408": [
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Empresarial",
+      "Evangelica"
+    ],
+    "204409": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "204410": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Negra"
+    ],
+    "204411": [
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Ambientalista"
+    ],
+    "204412": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Negra",
+      "Ruralista",
+      "Sindical"
+    ],
+    "204416": [
+      "Bala",
+      "Empresarial",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Sindical",
+      "Feminina"
+    ],
+    "204419": [
+      "Evangelica",
+      "Bala",
+      "Empresarial",
+      "Feminina",
+      "Ruralista"
+    ],
+    "204422": [
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Ruralista",
+      "Sindical",
+      "Ambientalista"
+    ],
+    "204423": [
+      "Bala",
+      "Empresarial",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Ambientalista",
+      "Sindical"
+    ],
+    "204426": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "204427": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra",
+      "Ambientalista"
+    ],
+    "204431": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Sindical",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "204436": [
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Feminina",
+      "Bala",
+      "Sindical",
+      "Negra"
+    ],
+    "204441": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "204444": [
+      "Bala",
+      "Empresarial",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Ambientalista",
+      "Sindical"
+    ],
+    "204445": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Ambientalista"
+    ],
+    "204449": [
+      "Ruralista",
+      "Empresarial",
+      "Evangelica",
+      "Bala",
+      "Ambientalista"
+    ],
+    "204450": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "204453": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "204455": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "204456": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Empresarial",
+      "Evangelica",
+      "Feminina",
+      "Sindical"
+    ],
+    "204457": [
+      "Empresarial",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Ambientalista",
+      "Bala",
+      "Feminina",
+      "Sindical"
+    ],
+    "204459": [
+      "Empresarial",
+      "Sindical",
+      "Evangelica",
+      "Feminina",
+      "Bala",
+      "Negra",
+      "Ruralista",
+      "Ambientalista"
+    ],
+    "204460": [
+      "Bala",
+      "Empresarial",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Sindical",
+      "Ambientalista"
+    ],
+    "204462": [
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Empresarial",
+      "Ruralista",
+      "Feminina"
+    ],
+    "204464": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Sindical",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "204472": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina",
+      "Sindical"
+    ],
+    "204473": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Feminina"
+    ],
+    "204474": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Ambientalista"
+    ],
+    "204479": [
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Empresarial",
+      "Feminina",
+      "Evangelica"
+    ],
+    "204480": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Negra",
+      "Feminina",
+      "Evangelica"
+    ],
+    "204481": [
+      "Evangelica",
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "204482": [
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Bala",
+      "Feminina",
+      "Sindical"
+    ],
+    "204485": [
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Sindical",
+      "Ambientalista"
+    ],
+    "204486": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista",
+      "Evangelica",
+      "Negra"
+    ],
+    "204488": [
+      "Empresarial",
+      "Sindical",
+      "Feminina",
+      "Bala",
+      "Ambientalista",
+      "Negra",
+      "Ruralista"
+    ],
+    "204489": [
+      "Empresarial",
+      "Bala",
+      "Sindical",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "204491": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "204492": [
+      "Empresarial",
+      "Sindical",
+      "Feminina",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Negra"
+    ],
+    "204494": [
+      "Sindical",
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "204495": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Negra",
+      "Feminina",
+      "Evangelica"
+    ],
+    "204496": [
+      "Ambientalista",
+      "Evangelica",
+      "Sindical",
+      "Ruralista",
+      "Bala",
+      "Empresarial",
+      "Feminina",
+      "Negra"
+    ],
+    "204497": [
+      "Sindical",
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "204498": [
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Bala",
+      "Sindical",
+      "Negra",
+      "Feminina"
+    ],
+    "204501": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "204504": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "204506": [
+      "Bala",
+      "Ambientalista",
+      "Empresarial",
+      "Evangelica",
+      "Feminina",
+      "Ruralista"
+    ],
+    "204508": [
+      "Empresarial",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista"
+    ],
+    "204511": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "204512": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "204515": [
+      "Empresarial",
+      "Feminina",
+      "Bala",
+      "Evangelica",
+      "Ambientalista",
+      "Negra",
+      "Ruralista",
+      "Sindical"
+    ],
+    "204517": [
+      "Sindical",
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "204518": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Sindical"
+    ],
+    "204520": [
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Empresarial"
+    ],
+    "204524": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Negra",
+      "Ruralista",
+      "Sindical"
+    ],
+    "204525": [
+      "Bala",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Ambientalista",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "204526": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina"
+    ],
+    "204528": [
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Bala",
+      "Evangelica",
+      "Negra"
+    ],
+    "204531": [
+      "Ruralista",
+      "Empresarial",
+      "Evangelica",
+      "Bala",
+      "Sindical",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "204534": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Negra",
+      "Bala",
+      "Feminina",
+      "Evangelica",
+      "Ruralista"
+    ],
+    "204535": [
+      "Empresarial",
+      "Sindical",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "204536": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "204539": [
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Bala",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "204540": [
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Empresarial",
+      "Feminina",
+      "Ruralista",
+      "Negra"
+    ],
+    "204549": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "204550": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "204553": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Ambientalista",
+      "Negra"
+    ],
+    "204557": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Negra",
+      "Feminina"
+    ],
+    "204559": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "204560": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "204567": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Bala",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "204570": [
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Bala",
+      "Empresarial",
+      "Sindical"
+    ],
+    "204571": [
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista",
+      "Negra",
+      "Sindical"
+    ],
+    "204572": [
+      "Sindical",
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "204574": [
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Sindical",
+      "Ambientalista"
+    ],
+    "205476": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "205550": [
+      "Empresarial",
+      "Evangelica",
+      "Ruralista",
+      "Bala",
+      "Feminina",
+      "Sindical",
+      "Ambientalista"
+    ],
+    "205865": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Ambientalista",
+      "Negra"
+    ],
+    "206018": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Feminina",
+      "Evangelica"
+    ],
+    "209189": [
+      "Empresarial",
+      "Sindical",
+      "Feminina",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Bala"
+    ],
+    "209787": [
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Empresarial",
+      "Ruralista"
+    ],
+    "210989": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "213762": [
+      "Sindical",
+      "Empresarial",
+      "Evangelica"
+    ],
+    "214694": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Sindical",
+      "Evangelica",
+      "Feminina"
+    ],
+    "215043": [
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "218086": [
+      "Ruralista",
+      "Evangelica"
+    ],
+    "220526": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista"
+    ],
+    "220527": [
+      "Sindical",
+      "Empresarial",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Ambientalista"
+    ],
+    "220528": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista",
+      "Sindical",
+      "Evangelica"
+    ],
+    "220529": [
+      "Sindical",
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "220530": [
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Negra",
+      "Empresarial",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220532": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "220533": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "220534": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Evangelica",
+      "Sindical"
+    ],
+    "220536": [
+      "Sindical",
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220537": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "220538": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Empresarial",
+      "Negra"
+    ],
+    "220539": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Bala",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "220540": [
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "220542": [
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "220543": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "220544": [
+      "Bala",
+      "Empresarial",
+      "Evangelica",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220545": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220546": [
+      "Bala",
+      "Evangelica",
+      "Empresarial",
+      "Ruralista"
+    ],
+    "220547": [
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Feminina"
+    ],
+    "220548": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Negra",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220549": [
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Empresarial",
+      "Feminina"
+    ],
+    "220550": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Evangelica",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220551": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220552": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "220553": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "220554": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Bala",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220555": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra"
+    ],
+    "220556": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220557": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Evangelica"
+    ],
+    "220558": [
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220559": [
+      "Bala",
+      "Evangelica",
+      "Empresarial",
+      "Feminina",
+      "Ruralista"
+    ],
+    "220560": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Feminina",
+      "Ruralista"
+    ],
+    "220561": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220563": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "220564": [
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Empresarial",
+      "Evangelica",
+      "Negra"
+    ],
+    "220565": [
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Empresarial",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "220566": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra"
+    ],
+    "220567": [
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "220568": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220569": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Negra"
+    ],
+    "220570": [
+      "Sindical",
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220571": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220572": [
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista",
+      "Empresarial"
+    ],
+    "220573": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "220574": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "220576": [
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Empresarial"
+    ],
+    "220578": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Evangelica",
+      "Negra"
+    ],
+    "220581": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista"
+    ],
+    "220582": [
+      "Empresarial",
+      "Sindical",
+      "Bala"
+    ],
+    "220583": [
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Feminina"
+    ],
+    "220584": [
+      "Sindical",
+      "Feminina",
+      "Bala",
+      "Evangelica",
+      "Empresarial",
+      "Ruralista"
+    ],
+    "220585": [
+      "Sindical",
+      "Ambientalista",
+      "Evangelica",
+      "Empresarial",
+      "Bala",
+      "Ruralista"
+    ],
+    "220586": [
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Empresarial",
+      "Negra"
+    ],
+    "220588": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "220589": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Empresarial",
+      "Feminina"
+    ],
+    "220590": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220591": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "220592": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "220594": [
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "220595": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220597": [
+      "Empresarial",
+      "Ruralista",
+      "Bala",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "220598": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220599": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Negra",
+      "Sindical",
+      "Feminina"
+    ],
+    "220602": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "220603": [
+      "Ambientalista",
+      "Bala",
+      "Negra",
+      "Evangelica",
+      "Ruralista",
+      "Feminina",
+      "Empresarial"
+    ],
+    "220604": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Negra",
+      "Bala",
+      "Ruralista"
+    ],
+    "220605": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Negra",
+      "Ruralista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220606": [
+      "Sindical",
+      "Empresarial",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Ambientalista",
+      "Feminina"
+    ],
+    "220607": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Ambientalista",
+      "Evangelica",
+      "Negra",
+      "Sindical"
+    ],
+    "220608": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "220609": [
+      "Empresarial",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220610": [
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Empresarial",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220611": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Sindical"
+    ],
+    "220612": [
+      "Sindical",
+      "Empresarial",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "220613": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Ruralista",
+      "Sindical"
+    ],
+    "220615": [
+      "Empresarial",
+      "Sindical",
+      "Negra",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Ruralista"
+    ],
+    "220616": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Empresarial",
+      "Negra"
+    ],
+    "220617": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Sindical"
+    ],
+    "220618": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Negra"
+    ],
+    "220620": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220621": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "220622": [
+      "Empresarial",
+      "Feminina",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista"
+    ],
+    "220623": [
+      "Empresarial",
+      "Sindical",
+      "Feminina",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Negra"
+    ],
+    "220624": [
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Feminina"
+    ],
+    "220625": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220626": [
+      "Empresarial",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220628": [
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Feminina"
+    ],
+    "220629": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista"
+    ],
+    "220630": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "220631": [
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial"
+    ],
+    "220632": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "220633": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Evangelica",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220635": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "220638": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220640": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Bala"
+    ],
+    "220641": [
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica",
+      "Bala",
+      "Empresarial"
+    ],
+    "220642": [],
+    "220644": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Feminina"
+    ],
+    "220645": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220646": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Sindical",
+      "Negra",
+      "Evangelica"
+    ],
+    "220647": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Empresarial",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "220648": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "220649": [
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "220650": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "220651": [
+      "Bala",
+      "Empresarial",
+      "Evangelica",
+      "Feminina",
+      "Ruralista"
+    ],
+    "220652": [
+      "Empresarial",
+      "Bala",
+      "Feminina"
+    ],
+    "220653": [],
+    "220654": [
+      "Bala",
+      "Empresarial",
+      "Evangelica",
+      "Sindical",
+      "Ruralista"
+    ],
+    "220655": [
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Empresarial",
+      "Feminina"
+    ],
+    "220657": [
+      "Bala",
+      "Evangelica",
+      "Empresarial",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220658": [
+      "Empresarial",
+      "Sindical",
+      "Ruralista",
+      "Negra"
+    ],
+    "220661": [
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Empresarial",
+      "Bala",
+      "Evangelica"
+    ],
+    "220662": [
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Empresarial",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "220663": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Evangelica",
+      "Negra"
+    ],
+    "220664": [
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Negra"
+    ],
+    "220665": [
+      "Bala",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220666": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220667": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Negra",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220668": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220669": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Negra",
+      "Feminina",
+      "Evangelica",
+      "Ruralista"
+    ],
+    "220670": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Feminina"
+    ],
+    "220671": [
+      "Empresarial",
+      "Sindical",
+      "Negra",
+      "Bala",
+      "Ambientalista",
+      "Evangelica"
+    ],
+    "220672": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220673": [
+      "Bala",
+      "Evangelica",
+      "Empresarial",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220674": [
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Empresarial",
+      "Feminina",
+      "Evangelica"
+    ],
+    "220675": [
+      "Bala",
+      "Ruralista",
+      "Empresarial"
+    ],
+    "220676": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Bala",
+      "Negra",
+      "Feminina"
+    ],
+    "220677": [
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Empresarial"
+    ],
+    "220681": [],
+    "220682": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra"
+    ],
+    "220683": [
+      "Sindical",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Feminina",
+      "Bala"
+    ],
+    "220684": [
+      "Ruralista",
+      "Empresarial",
+      "Bala",
+      "Sindical",
+      "Negra"
+    ],
+    "220685": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "220686": [
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Empresarial",
+      "Evangelica"
+    ],
+    "220687": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Evangelica"
+    ],
+    "220688": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Evangelica",
+      "Feminina"
+    ],
+    "220690": [
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Sindical",
+      "Feminina",
+      "Ruralista"
+    ],
+    "220691": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Feminina",
+      "Ruralista",
+      "Negra",
+      "Evangelica"
+    ],
+    "220692": [
+      "Ruralista",
+      "Feminina",
+      "Ambientalista",
+      "Empresarial",
+      "Bala"
+    ],
+    "220693": [
+      "Empresarial",
+      "Bala",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina",
+      "Ruralista"
+    ],
+    "220694": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Negra"
+    ],
+    "220695": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Feminina"
+    ],
+    "220696": [
+      "Empresarial",
+      "Ruralista",
+      "Sindical",
+      "Negra",
+      "Bala",
+      "Ambientalista"
+    ],
+    "220697": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Bala",
+      "Negra",
+      "Evangelica"
+    ],
+    "220699": [
+      "Empresarial",
+      "Sindical",
+      "Bala"
+    ],
+    "220700": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Negra"
+    ],
+    "220701": [
+      "Bala",
+      "Ambientalista",
+      "Empresarial",
+      "Feminina",
+      "Ruralista"
+    ],
+    "220702": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Empresarial",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "220703": [
+      "Bala",
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Evangelica",
+      "Sindical",
+      "Empresarial"
+    ],
+    "220704": [
+      "Empresarial",
+      "Sindical",
+      "Feminina",
+      "Ambientalista",
+      "Ruralista",
+      "Negra",
+      "Bala",
+      "Evangelica"
+    ],
+    "220706": [
+      "Empresarial",
+      "Ambientalista",
+      "Bala",
+      "Ruralista",
+      "Feminina"
+    ],
+    "220707": [
+      "Ambientalista",
+      "Feminina",
+      "Empresarial",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Sindical",
+      "Negra"
+    ],
+    "220708": [
+      "Empresarial",
+      "Bala",
+      "Evangelica",
+      "Ruralista"
+    ],
+    "220712": [
+      "Bala",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Sindical",
+      "Feminina"
+    ],
+    "220713": [
+      "Ambientalista",
+      "Ruralista",
+      "Feminina",
+      "Negra",
+      "Bala",
+      "Empresarial",
+      "Sindical"
+    ],
+    "220714": [
+      "Sindical",
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Negra"
+    ],
+    "220715": [
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Bala",
+      "Ruralista",
+      "Evangelica",
+      "Negra",
+      "Empresarial"
+    ],
+    "221148": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Negra",
+      "Ambientalista",
+      "Evangelica",
+      "Feminina"
+    ],
+    "221328": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "221329": [
+      "Empresarial",
+      "Evangelica",
+      "Ruralista",
+      "Bala"
+    ],
+    "221338": [
+      "Empresarial",
+      "Sindical",
+      "Ambientalista",
+      "Feminina",
+      "Negra",
+      "Bala",
+      "Ruralista",
+      "Evangelica"
+    ],
+    "222429": [
+      "Ambientalista",
+      "Empresarial",
+      "Evangelica",
+      "Bala",
+      "Feminina",
+      "Ruralista"
+    ],
+    "222565": [
+      "Bala"
+    ],
+    "223128": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Evangelica",
+      "Feminina",
+      "Ruralista"
+    ],
+    "224117": [
+      "Sindical",
+      "Ruralista",
+      "Ambientalista",
+      "Bala",
+      "Empresarial",
+      "Evangelica"
+    ],
+    "224333": [
+      "Empresarial",
+      "Sindical",
+      "Bala",
+      "Ruralista",
+      "Ambientalista",
+      "Feminina",
+      "Evangelica"
+    ],
+    "225730": [
+      "Empresarial",
+      "Feminina",
+      "Bala"
+    ],
+    "226179": [
+      "Empresarial",
+      "Ambientalista",
+      "Ruralista"
+    ],
+    "226708": [
+      "Sindical",
+      "Bala"
+    ],
+    "226837": [
+      "Sindical"
+    ],
+    "227310": [],
+    "227991": [
+      "Ruralista"
+    ],
+    "229585": [],
+    "230765": [
+      "Empresarial",
+      "Sindical"
+    ],
+    "230767": [
+      "Ruralista",
+      "Empresarial"
+    ],
+    "230768": [
+      "Ruralista",
+      "Empresarial"
+    ],
+    "230957": [
+      "Ruralista"
+    ],
+    "231911": [],
+    "233594": [
+      "Ruralista"
+    ],
+    "234253": [],
+    "234310": [],
+    "234673": [],
+    "234788": [],
+    "235088": []
+  }
+}

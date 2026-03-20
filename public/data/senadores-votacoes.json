@@ -1,0 +1,731 @@
+{
+  "22": {
+    "codigo": 22,
+    "nome": "Esperidião Amin",
+    "votou": 191,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 52
+  },
+  "35": {
+    "codigo": 35,
+    "nome": "Jader Barbalho",
+    "votou": 68,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 19
+  },
+  "70": {
+    "codigo": 70,
+    "nome": "Renan Calheiros",
+    "votou": 97,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 26
+  },
+  "285": {
+    "codigo": 285,
+    "nome": "Marcio Bittar",
+    "votou": 84,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 23
+  },
+  "345": {
+    "codigo": 345,
+    "nome": "Flávio Arns",
+    "votou": 156,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 43
+  },
+  "470": {
+    "codigo": 470,
+    "nome": "Chico Rodrigues",
+    "votou": 148,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 40
+  },
+  "475": {
+    "codigo": 475,
+    "nome": "Confúcio Moura",
+    "votou": 146,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 40
+  },
+  "581": {
+    "codigo": 581,
+    "nome": "Jaques Wagner",
+    "votou": 146,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 40
+  },
+  "631": {
+    "codigo": 631,
+    "nome": "Magno Malta",
+    "votou": 88,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 24
+  },
+  "739": {
+    "codigo": 739,
+    "nome": "Ciro Nogueira",
+    "votou": 85,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 23
+  },
+  "742": {
+    "codigo": 742,
+    "nome": "Marcelo Castro",
+    "votou": 128,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 35
+  },
+  "825": {
+    "codigo": 825,
+    "nome": "Paulo Paim",
+    "votou": 184,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 50
+  },
+  "1173": {
+    "codigo": 1173,
+    "nome": "Wellington Fagundes",
+    "votou": 73,
+    "totalSessoes": 288,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 25
+  },
+  "1186": {
+    "codigo": 1186,
+    "nome": "Luis Carlos Heinze",
+    "votou": 151,
+    "totalSessoes": 331,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 46
+  },
+  "3777": {
+    "codigo": 3777,
+    "nome": "Eduardo Gomes",
+    "votou": 120,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 33
+  },
+  "3806": {
+    "codigo": 3806,
+    "nome": "Zequinha Marinho",
+    "votou": 161,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 44
+  },
+  "3830": {
+    "codigo": 3830,
+    "nome": "Davi Alcolumbre",
+    "votou": 102,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 28
+  },
+  "4531": {
+    "codigo": 4531,
+    "nome": "Jayme Campos",
+    "votou": 153,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 42
+  },
+  "4560": {
+    "codigo": 4560,
+    "nome": "Sérgio Petecão",
+    "votou": 129,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 35
+  },
+  "4639": {
+    "codigo": 4639,
+    "nome": "Beto Faro",
+    "votou": 177,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 48
+  },
+  "4642": {
+    "codigo": 4642,
+    "nome": "Efraim Filho",
+    "votou": 116,
+    "totalSessoes": 340,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 34
+  },
+  "4694": {
+    "codigo": 4694,
+    "nome": "Rogerio Marinho",
+    "votou": 108,
+    "totalSessoes": 333,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 32
+  },
+  "4770": {
+    "codigo": 4770,
+    "nome": "Izalci Lucas",
+    "votou": 161,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 44
+  },
+  "4811": {
+    "codigo": 4811,
+    "nome": "Laércio Oliveira",
+    "votou": 154,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 42
+  },
+  "4994": {
+    "codigo": 4994,
+    "nome": "Eduardo Braga",
+    "votou": 100,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 27
+  },
+  "5008": {
+    "codigo": 5008,
+    "nome": "Humberto Costa",
+    "votou": 107,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 29
+  },
+  "5012": {
+    "codigo": 5012,
+    "nome": "Randolfe Rodrigues",
+    "votou": 167,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 46
+  },
+  "5070": {
+    "codigo": 5070,
+    "nome": "Wilder Morais",
+    "votou": 73,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 20
+  },
+  "5352": {
+    "codigo": 5352,
+    "nome": "Rogério Carvalho",
+    "votou": 153,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 42
+  },
+  "5376": {
+    "codigo": 5376,
+    "nome": "Mara Gabrilli",
+    "votou": 26,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 7
+  },
+  "5385": {
+    "codigo": 5385,
+    "nome": "Irajá",
+    "votou": 53,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 14
+  },
+  "5386": {
+    "codigo": 5386,
+    "nome": "Professora Dorinha Seabra",
+    "votou": 153,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 42
+  },
+  "5411": {
+    "codigo": 5411,
+    "nome": "Weverton",
+    "votou": 125,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 34
+  },
+  "5422": {
+    "codigo": 5422,
+    "nome": "Marcos Rogério",
+    "votou": 150,
+    "totalSessoes": 335,
+    "primeiroVoto": "2023-06-14",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 45
+  },
+  "5502": {
+    "codigo": 5502,
+    "nome": "Plínio Valério",
+    "votou": 159,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 43
+  },
+  "5523": {
+    "codigo": 5523,
+    "nome": "Otto Alencar",
+    "votou": 176,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 48
+  },
+  "5525": {
+    "codigo": 5525,
+    "nome": "Omar Aziz",
+    "votou": 135,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 37
+  },
+  "5672": {
+    "codigo": 5672,
+    "nome": "Alan Rick",
+    "votou": 127,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 35
+  },
+  "5718": {
+    "codigo": 5718,
+    "nome": "Eliziane Gama",
+    "votou": 63,
+    "totalSessoes": 354,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 18
+  },
+  "5732": {
+    "codigo": 5732,
+    "nome": "Rodrigo Pacheco",
+    "votou": 180,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 49
+  },
+  "5736": {
+    "codigo": 5736,
+    "nome": "Tereza Cristina",
+    "votou": 152,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 41
+  },
+  "5748": {
+    "codigo": 5748,
+    "nome": "Veneziano Vital do Rêgo",
+    "votou": 138,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 38
+  },
+  "5783": {
+    "codigo": 5783,
+    "nome": "Zenaide Maia",
+    "votou": 172,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 47
+  },
+  "5793": {
+    "codigo": 5793,
+    "nome": "Dr. Hiran",
+    "votou": 125,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 34
+  },
+  "5894": {
+    "codigo": 5894,
+    "nome": "Flávio Bolsonaro",
+    "votou": 158,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 43
+  },
+  "5895": {
+    "codigo": 5895,
+    "nome": "Jorge Kajuru",
+    "votou": 101,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 28
+  },
+  "5899": {
+    "codigo": 5899,
+    "nome": "Vanderlan Cardoso",
+    "votou": 76,
+    "totalSessoes": 303,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 25
+  },
+  "5906": {
+    "codigo": 5906,
+    "nome": "Dra. Eudócia",
+    "votou": 65,
+    "totalSessoes": 131,
+    "primeiroVoto": "2025-02-19",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 50
+  },
+  "5917": {
+    "codigo": 5917,
+    "nome": "Fernando Dueire",
+    "votou": 107,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 29
+  },
+  "5924": {
+    "codigo": 5924,
+    "nome": "Oriovisto Guimarães",
+    "votou": 93,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 25
+  },
+  "5926": {
+    "codigo": 5926,
+    "nome": "Lucas Barreto",
+    "votou": 140,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 38
+  },
+  "5936": {
+    "codigo": 5936,
+    "nome": "Carlos Portinho",
+    "votou": 91,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 25
+  },
+  "5942": {
+    "codigo": 5942,
+    "nome": "Marcos do Val",
+    "votou": 113,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 31
+  },
+  "5953": {
+    "codigo": 5953,
+    "nome": "Fabiano Contarato",
+    "votou": 121,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 33
+  },
+  "5959": {
+    "codigo": 5959,
+    "nome": "Styvenson Valentim",
+    "votou": 148,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 40
+  },
+  "5967": {
+    "codigo": 5967,
+    "nome": "Angelo Coronel",
+    "votou": 137,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 37
+  },
+  "5973": {
+    "codigo": 5973,
+    "nome": "Cid Gomes",
+    "votou": 95,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 26
+  },
+  "5976": {
+    "codigo": 5976,
+    "nome": "Eduardo Girão",
+    "votou": 136,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 37
+  },
+  "5979": {
+    "codigo": 5979,
+    "nome": "Leila Barros",
+    "votou": 159,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 43
+  },
+  "5982": {
+    "codigo": 5982,
+    "nome": "Alessandro Vieira",
+    "votou": 79,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 22
+  },
+  "5985": {
+    "codigo": 5985,
+    "nome": "Nelsinho Trad",
+    "votou": 116,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 32
+  },
+  "5988": {
+    "codigo": 5988,
+    "nome": "Soraya Thronicke",
+    "votou": 130,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 35
+  },
+  "5990": {
+    "codigo": 5990,
+    "nome": "Carlos Viana",
+    "votou": 101,
+    "totalSessoes": 352,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 29
+  },
+  "5998": {
+    "codigo": 5998,
+    "nome": "Daniella Ribeiro",
+    "votou": 77,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 21
+  },
+  "6008": {
+    "codigo": 6008,
+    "nome": "Giordano",
+    "votou": 85,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 23
+  },
+  "6009": {
+    "codigo": 6009,
+    "nome": "Astronauta Marcos Pontes",
+    "votou": 137,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 37
+  },
+  "6010": {
+    "codigo": 6010,
+    "nome": "Ivete da Silveira",
+    "votou": 156,
+    "totalSessoes": 348,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 45
+  },
+  "6025": {
+    "codigo": 6025,
+    "nome": "Roberta Acioly",
+    "votou": 0,
+    "totalSessoes": 0,
+    "primeiroVoto": "",
+    "ultimoVoto": "",
+    "taxaPresenca": 0
+  },
+  "6304": {
+    "codigo": 6304,
+    "nome": "Margareth Buzetti",
+    "votou": 168,
+    "totalSessoes": 309,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 54
+  },
+  "6331": {
+    "codigo": 6331,
+    "nome": "Sergio Moro",
+    "votou": 162,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 44
+  },
+  "6335": {
+    "codigo": 6335,
+    "nome": "Damares Alves",
+    "votou": 177,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 48
+  },
+  "6337": {
+    "codigo": 6337,
+    "nome": "Cleitinho",
+    "votou": 185,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 50
+  },
+  "6338": {
+    "codigo": 6338,
+    "nome": "Teresa Leitão",
+    "votou": 170,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 46
+  },
+  "6340": {
+    "codigo": 6340,
+    "nome": "Jaime Bagattoli",
+    "votou": 139,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 38
+  },
+  "6341": {
+    "codigo": 6341,
+    "nome": "Hamilton Mourão",
+    "votou": 181,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 49
+  },
+  "6342": {
+    "codigo": 6342,
+    "nome": "Jorge Seif",
+    "votou": 126,
+    "totalSessoes": 367,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 34
+  },
+  "6345": {
+    "codigo": 6345,
+    "nome": "Fernando Farias",
+    "votou": 141,
+    "totalSessoes": 350,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 40
+  },
+  "6350": {
+    "codigo": 6350,
+    "nome": "Augusta Brito",
+    "votou": 111,
+    "totalSessoes": 316,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 35
+  },
+  "6358": {
+    "codigo": 6358,
+    "nome": "Ana Paula Lobato",
+    "votou": 112,
+    "totalSessoes": 365,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 31
+  },
+  "6369": {
+    "codigo": 6369,
+    "nome": "Jussara Lima",
+    "votou": 149,
+    "totalSessoes": 352,
+    "primeiroVoto": "2023-02-08",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 42
+  },
+  "6372": {
+    "codigo": 6372,
+    "nome": "Bruno Bonetti",
+    "votou": 0,
+    "totalSessoes": 11,
+    "primeiroVoto": "2025-12-16",
+    "ultimoVoto": "2026-02-25",
+    "taxaPresenca": 0
+  }
+}

@@ -34,8 +34,6 @@ export function FilterBar({
   const clusterModes: { mode: ClusterMode; icon: React.ReactNode; label: string }[] = [
     { mode: 'partido', icon: <Users size={14} />, label: 'Partido' },
     { mode: 'uf', icon: <MapPin size={14} />, label: 'Estado' },
-    { mode: 'tema', icon: <Grid3X3 size={14} />, label: 'Tema' },
-    { mode: 'alinhamento', icon: <TrendingUp size={14} />, label: 'Alinhamento' },
   ]
 
   const clearFilters = () => {

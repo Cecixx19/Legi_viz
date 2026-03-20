@@ -2,6 +2,9 @@
  * API Route para carregar parlamentares (contorna CORS)
  */
 
+import { readFileSync, existsSync } from 'fs'
+import { join } from 'path'
+
 // Depurados cassados ou renunciados (até 2024)
 // Fonte: TSE, Câmara dos Deputados
 const CASSADOS: Record<number, string> = {
@@ -9,6 +12,19 @@ const CASSADOS: Record<number, string> = {
   220705: 'Cassado pelo TSE em jun/2023 (infidelidade partidária)',
   220634: 'Cassado pelo TSE em nov/2023 (infidelidade partidária)',
   // Adicionar mais conforme necessário
+}
+
+function loadVotacoesReais(): Record<number, any> {
+  try {
+    const path = join(process.cwd(), 'public/data/votacoes-real.json')
+    if (existsSync(path)) {
+      const data = JSON.parse(readFileSync(path, 'utf8'))
+      return data.stats || {}
+    }
+  } catch (e) {
+    console.log('[API] Failed to load votacoes-real.json:', e)
+  }
+  return {}
 }
 
 interface RawDeputado {
@@ -151,6 +167,10 @@ export async function GET() {
       cassado: CASSADOS[d.id] || undefined
     }))
     
+    // Load real voting data
+    const votacoesReais = loadVotacoesReais()
+    console.log('[API] Loaded votacoesReais for', Object.keys(votacoesReais).length, 'deputies')
+    
     return Response.json({
       deputados: depRawWithCassado,
       senadores: senRaw,
@@ -158,7 +178,8 @@ export async function GET() {
         deputados: depRawWithCassado.length,
         senadores: senRaw.length,
         total: depRawWithCassado.length + senRaw.length,
-      }
+      },
+      votacoesReais
     }, {
       headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' }
     })
