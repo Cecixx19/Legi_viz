@@ -1228,6 +1228,12 @@ interface RawSenador {
   }
 }
 
+interface DeputadoInfoEntry {
+  nome?: string
+  partido?: string
+  uf?: string
+}
+
 // Real senator data from Senate API
 interface SenatorRealData {
   codigo: number
@@ -1425,12 +1431,10 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
         fetch(`${base}/data/deputados-info.json`, { cache: 'force-cache' }),
         fetch(`${base}/data/senadores-real.json`, { cache: 'force-cache' }),
       ])
-      // Note: These files have different formats, so we handle them separately
       if (dRes.ok && depRaw.length === 0) {
         const data = await dRes.json()
-        // Convert from object format to array format if needed
         if (data.partyInfo) {
-          depRaw = Object.entries(data.partyInfo).map(([id, info]: [string, any]) => ({
+          depRaw = Object.entries(data.partyInfo).map(([id, info]: [string, DeputadoInfoEntry]) => ({
             id: parseInt(id),
             nome: info.nome || `Deputado ${id}`,
             siglaPartido: info.partido,
@@ -1442,9 +1446,8 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
       }
       if (sRes.ok && senRaw.length === 0) {
         const data = await sRes.json()
-        // Convert from object format to array format if needed
         if (data && typeof data === 'object' && !Array.isArray(data)) {
-          senRaw = Object.values(data).map((info: any) => ({
+          senRaw = Object.values(data).map((info: SenatorRealData) => ({
             codigo: info.codigo,
             nome: info.nome,
             partido: info.partido,

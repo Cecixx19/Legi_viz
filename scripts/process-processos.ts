@@ -5,21 +5,11 @@
 
 import { readFileSync, writeFileSync, readdirSync } from 'fs'
 import { join } from 'path'
+import { normalizeName } from './normalize'
 
 const TSE_DIR = join(process.cwd(), '.tse-tmp')
 const CASSACAO_FILE = join(process.cwd(), 'public/data/cassacao-real.json')
 const OUTPUT_FILE = join(process.cwd(), 'public/data/processos-real.json')
-
-function normalizeName(name: string): string {
-  if (!name) return ''
-  return name
-    .toUpperCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^A-Z0-9 ]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
 
 function parseCSVLine(line: string): string[] {
   const result: string[] = []
