@@ -29,7 +29,7 @@ async function loadLiderancasData(): Promise<Record<number, LiderancaData[]>> {
   _liderancasCache = {}
   
   try {
-    const base = typeof window !== 'undefined' ? '' : ''
+    const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
     const res = await fetch(`${base}/data/liderancas-real.json?t=${Date.now()}`, { cache: 'no-store' })
     if (res.ok) {
       const data = await res.json()
@@ -56,7 +56,7 @@ async function loadComissoesData(): Promise<Record<number, ComissaoData[]>> {
   _comissoesCache = {}
   
   try {
-    const base = typeof window !== 'undefined' ? '' : ''
+    const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
     const res = await fetch(`${base}/data/comissoes-real.json?t=${Date.now()}`, { cache: 'no-store' })
     if (res.ok) {
       const data = await res.json()
@@ -86,7 +86,7 @@ async function loadProjetosData(): Promise<Record<number, ProjetoData>> {
   _projetosCache = {}
   
   try {
-    const base = typeof window !== 'undefined' ? '' : ''
+    const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
     const res = await fetch(`${base}/data/projetos-real.json?t=${Date.now()}`, { cache: 'no-store' })
     if (res.ok) {
       const data = await res.json()
@@ -175,7 +175,7 @@ async function loadSenadorVotosData(): Promise<Record<number, SenatorVotosData>>
   _senadorVotosCache = {}
   
   try {
-    const base = typeof window !== 'undefined' ? '' : ''
+    const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
     const res = await fetch(`${base}/data/senadores-votacoes-detail.json?t=${Date.now()}`, { cache: 'no-store' })
     if (res.ok) {
       _senadorVotosCache = await res.json()
@@ -191,7 +191,7 @@ async function loadSenadorLiderancasData(): Promise<Record<number, SenatorLidera
   _senadorLiderancasCache = {}
   
   try {
-    const base = typeof window !== 'undefined' ? '' : ''
+    const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
     const res = await fetch(`${base}/data/senadores-liderancas.json?t=${Date.now()}`, { cache: 'no-store' })
     if (res.ok) {
       _senadorLiderancasCache = await res.json()
@@ -207,7 +207,7 @@ async function loadSenadorComissoesData(): Promise<Record<number, SenatorComissa
   _senadorComissoesCache = {}
   
   try {
-    const base = typeof window !== 'undefined' ? '' : ''
+    const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
     const res = await fetch(`${base}/data/senadores-comissoes.json?t=${Date.now()}`, { cache: 'no-store' })
     if (res.ok) {
       _senadorComissoesCache = await res.json()

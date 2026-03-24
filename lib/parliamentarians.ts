@@ -324,7 +324,7 @@ async function loadCotasCache(): Promise<Record<number, number>> {
   if (Object.keys(_cotasCache).length > 0) return _cotasCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/cotas.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -348,7 +348,7 @@ async function loadPresencaCache(): Promise<Record<string, { presencas: number; 
   if (_presencaCache) return _presencaCache as Record<string, { presencas: number; sessoes: number; taxa: number }>
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     // Try name-based presenca first (new format)
     let res = await fetch(`${base}/data/presenca-by-name.json${cacheBust}`, { cache: 'no-store' })
@@ -381,7 +381,7 @@ async function loadProcessosCache(): Promise<Record<string, { count: number; mot
   if (_processosCache) return _processosCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/processos-real.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -400,7 +400,7 @@ async function loadMandatosCache(): Promise<Record<number, number>> {
   if (_mandatosCache) return _mandatosCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/mandatos-real.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -419,7 +419,7 @@ async function loadTramitacaoCache(): Promise<Record<number, { total: number; tr
   if (_tramitacaoCache) return _tramitacaoCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/tramitacao-real.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -457,7 +457,7 @@ async function loadRealExpensesCache(): Promise<Record<number, RealExpenseData>>
   if (_realExpensesCache && Object.keys(_realExpensesCache).length > 0) return _realExpensesCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/real-expenses.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -475,7 +475,7 @@ async function loadPixDataCache(): Promise<PixData> {
   if (_pixDataCache) return _pixDataCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/emendas-pix-2025.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -496,7 +496,7 @@ async function loadCpfCache(): Promise<Record<string, string>> {
   if (_cpfCache) return _cpfCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/tse-deputados-cpf-2022.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -548,7 +548,7 @@ async function loadFinanciamentoCache(): Promise<FinanciamentoData> {
   if (_financiamentoCache) return _financiamentoCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/financiamento-real.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -595,7 +595,7 @@ async function loadDoadoresCache(): Promise<DoadoresData> {
   if (_doadoresCache) return _doadoresCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/doadores-reais.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -618,7 +618,7 @@ async function loadBancadasCache(): Promise<Record<number, string[]>> {
   if (Object.keys(_bancadasCache).length > 0) return _bancadasCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     // Try real data first, fallback to generated
     let res = await fetch(`${base}/data/bancadas-real.json${cacheBust}`, { cache: 'no-store' })
@@ -644,7 +644,7 @@ let _frentesCache: Record<number, { id: number; titulo: string }[]> = {}
 async function loadFrentesCache(): Promise<Record<number, { id: number; titulo: string }[]>> {
   if (Object.keys(_frentesCache).length > 0) return _frentesCache
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/frentes-real.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -690,7 +690,7 @@ async function loadVotacoesCache(): Promise<VotacoesRaw | null> {
   if (_votacoesCache) return _votacoesCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/votacoes-real.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -712,7 +712,7 @@ async function loadTemasCache(): Promise<Record<number, { temas: number[]; mainT
   const cache: Record<number, { temas: number[]; mainTheme: number }> = {}
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/temas-real.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -732,7 +732,7 @@ async function loadProjetosAprovadosCache(): Promise<Record<number, number>> {
   if (Object.keys(_proposicoesCache).length > 0) return _proposicoesCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/projetos-aprovados.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -784,7 +784,7 @@ let _tseByCpf: Record<string, TseDado> = {}
 async function loadTseCache(): Promise<Record<string, TseDado>> {
   if (_tseCache) return _tseCache
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?v=${Date.now()}`
     // Try tse-dados.json first (has more race data including Indigenous)
     let res = await fetch(`${base}/data/tse-dados.json${cacheBust}`, { cache: 'no-store' })
@@ -1276,7 +1276,7 @@ async function loadSenadoresRealCache(): Promise<Record<number, SenatorRealData>
   if (_senadoresRealCache) return _senadoresRealCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/senadores-real.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -1294,7 +1294,7 @@ async function loadSenadoresVotacoesCache(): Promise<Record<number, { votou: num
   if (_senadoresVotacoesCache) return _senadoresVotacoesCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/senadores-votacoes.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -1312,7 +1312,7 @@ async function loadSenadoresLiderancasCache(): Promise<Record<number, SenatorLid
   if (_senadoresLiderancasCache) return _senadoresLiderancasCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/senadores-liderancas.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -1330,7 +1330,7 @@ async function loadSenadoresComissoesCache(): Promise<Record<number, SenatorComi
   if (_senadoresComissoesCache) return _senadoresComissoesCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const cacheBust = `?t=${Date.now()}`
     const res = await fetch(`${base}/data/senadores-comissoes.json${cacheBust}`, { cache: 'no-store' })
     if (res.ok) {
@@ -1419,7 +1419,7 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
   // 2. Arquivos estáticos pré-gerados
   if (depRaw.length === 0 || senRaw.length === 0) {
     try {
-      const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+      const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
       const [dRes, sRes] = await Promise.all([
         fetch(`${base}/data/deputados.json`, { cache: 'force-cache' }),
         fetch(`${base}/data/senadores.json`, { cache: 'force-cache' }),
@@ -2068,7 +2068,7 @@ async function loadVotacoesDetalhesCache(): Promise<VotacoesDetalhes | null> {
   if (_votacoesDetalhesCache) return _votacoesDetalhesCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const res = await fetch(`${base}/data/votacoes-detalhes.json?t=${Date.now()}`, { cache: 'no-store' })
     if (res.ok) {
       _votacoesDetalhesCache = await res.json()
@@ -2084,7 +2084,7 @@ async function loadProposicoesFullCache(): Promise<ProposicaoCache | null> {
   if (_proposicoesFullCache) return _proposicoesFullCache
   
   try {
-    const base = typeof window !== 'undefined' ? '' : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
+    const base = typeof window !== 'undefined' ? (process.env.NEXT_PUBLIC_BASE_PATH ?? '') : (process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000')
     const res = await fetch(`${base}/data/votacoes-proposicoes.json?t=${Date.now()}`, { cache: 'no-store' })
     if (res.ok) {
       const data = await res.json()
