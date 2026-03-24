@@ -39,23 +39,67 @@ quando disponíveis.
 - **Next.js 14** + TypeScript + Tailwind CSS
 - **D3 / Canvas 2D** — network graph de força com 594 nós
 - **SVG Patterns** — Design System de pixelagem para gráficos
+- **Zustand** — Gerenciamento de estado global
 
 ## Arquitetura
 
+### Estrutura do Projeto
+
 ```
 app/
-  page.tsx          — Página principal (network graph + filtros)
-  perfil/page.tsx   — Dashboard do usuário (coleções, favoritos)
-  api/parlamentares — Proxy API para contornar CORS
+  page.tsx                    — Página principal (orquestra componentes)
+  perfil/
+    page.tsx                  — Dashboard do usuário
+    [id]/page.tsx             — Perfil individual do parlamentar
+  api/                        — Rotas de API (extensível)
 components/
-  network-graph.tsx         — Canvas force-graph com animação Congresso Nacional
-  parliamentarian-profile.tsx — Card de perfil com 10 abas
-  pixel-patterns.tsx        — Design system de padrões SVG
+  network-graph.tsx           — Canvas force-graph (594 parlamentares)
+  parliamentarian-profile.tsx — Perfil completo com 10 abas de informação
+  dashboard/                  — Componentes do dashboard do usuário
+    top-bar.tsx               — Barra de navegação e busca
+    sidebar-menu.tsx          — Menu lateral
+    saved-card.tsx            — Card de parlamentar salvo
+    collection-modals.tsx     — Modais de coleção
+    dashboard-view.tsx        — View completa do dashboard
+  filters/
+    filter-panel.tsx          — Painel de filtros (partido, UF, etc.)
 lib/
-  parliamentarians.ts       — Tipos, dados, congressLayout()
+  parliamentarians.ts         — Tipos, dados, layout do Congresso
+  constants/                  — Constantes centralizadas
+    colors.ts                 — Cores de partidos, estados, temas
+    clusters.ts               — Configurações de agrupamento
+    layouts.ts                — Posições e constantes de layout
+    data.ts                   — Aliases e normalização de dados
+  stores/                     — Estado global (Zustand)
+    filter-store.ts           — Filtros e busca
+    collections-store.ts      — Parlamentares salvos e coleções
+    ui-store.ts               — Tema, views, menus, animações
 scripts/
-  fetch-tse-data.ts         — Baixa dados reais do TSE
+  fetch-*.ts                  — Scripts de coleta de dados (37 arquivos)
+  process-*.ts                — Scripts de processamento de dados
+public/data/                  — Dados estáticos pré-processados
+  deputados-info.json         — Informações dos deputados
+  senadores-real.json         — Dados dos senadores
+  *.json                      — Dados de votações, cotas, patrimônio, etc.
+docs/                         — Documentação do projeto
+  CLEANUP.md                  — Log de limpeza e refatoração
+  SIMPLIFICATION.md           — Guia de migração e uso
 ```
+
+### Padrões de Design
+
+- **Componentes Funcionais** — React 19 com hooks
+- **Estado Global** — Zustand para gerenciamento de estado
+- **Renderização** — Next.js estático (output: 'export')
+- **Visualização** — Canvas 2D para graph de rede com D3
+- **Tipagem** — TypeScript estrito
+
+### Fluxo de Dados
+
+1. **Build time**: Scripts em `scripts/` coletam dados das APIs governamentais
+2. **Static generation**: Dados pré-processados em `public/data/`
+3. **Client-side**: Zustand stores gerenciam estado da UI
+4. **Persistência**: localStorage para favoritos e coleções do usuário
 
 ## Licença
 
