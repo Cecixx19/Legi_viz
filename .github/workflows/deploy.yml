@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Remove API routes (not supported in static export)
+        run: rm -rf app/api
+
       - name: Build
         run: pnpm build
 

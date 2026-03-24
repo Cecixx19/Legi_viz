@@ -1,5 +1,3 @@
-export const dynamic = 'force-static'
-
 import { NextRequest, NextResponse } from 'next/server'
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY
