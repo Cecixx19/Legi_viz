@@ -1404,10 +1404,11 @@ export async function getAllParliamentariansAsync(): Promise<Parlamentar[]> {
   let depRaw: RawDeputado[]  = []
   let senRaw: RawSenador[]   = []
 
-  // 1. API route interna (contorna CORS no client)
-  if (typeof window !== 'undefined') {
+  // 1. API route interna (contorna CORS no client) — skip in static export
+  if (typeof window !== 'undefined' && !process.env.NEXT_PUBLIC_BASE_PATH) {
     try {
-      const res = await fetch('/api/parlamentares')
+      const base = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+      const res = await fetch(base + '/api/parlamentares')
       if (res.ok) {
         const data = await res.json()
         depRaw = data.deputados ?? []
