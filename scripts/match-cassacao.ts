@@ -5,20 +5,11 @@
 
 import { readFileSync, writeFileSync } from 'fs'
 import { join } from 'path'
+import { normalizeName } from './normalize'
 
 const TSE_DATA_FILE = join(process.cwd(), 'public/data/tse-dados.json')
 const CASSACAO_FILE = join(process.cwd(), 'public/data/cassacao-real.json')
 const OUTPUT_FILE = join(process.cwd(), 'public/data/processos-real.json')
-
-function normalizeName(name: string): string {
-  return name
-    .toUpperCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^A-Z0-9 ]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
 
 async function main() {
   console.log('📥 Loading data...')
